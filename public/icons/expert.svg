@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="81" viewBox="0 0 80 81">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#32fbfc"/>
+      <stop offset="1" stop-color="#3214f2"/>
+    </linearGradient>
+    <filter id="Rectangle_9" x="0" y="0" width="80" height="81" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#0826a8" flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_8" data-name="Group 8" transform="translate(5.644 4.333)">
+    <g transform="matrix(1, 0, 0, 1, -5.64, -4.33)" filter="url(#Rectangle_9)">
+      <rect id="Rectangle_9-2" data-name="Rectangle 9" width="68" height="69" rx="14" transform="translate(6 4)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="bxs-brain" d="M4.949,26.394a4.914,4.914,0,0,0,4.719,3.273H9.75A4.17,4.17,0,0,0,13.835,33a4.063,4.063,0,0,0,1.893-.47,1.488,1.488,0,0,0,.772-1.323V4.54a1.5,1.5,0,0,0-1.177-1.474,3.486,3.486,0,0,0-2.219.3,3.261,3.261,0,0,0-1.77,2.967v.083a4.167,4.167,0,0,0-4.116,6.649A5,5,0,0,0,5.3,22.218a5.171,5.171,0,0,0-.351,4.176ZM28.783,13.066a4.167,4.167,0,0,0-4.116-6.649V6.334A3.262,3.262,0,0,0,22.9,3.367a3.48,3.48,0,0,0-2.217-.3A1.5,1.5,0,0,0,19.5,4.54V31.206a1.488,1.488,0,0,0,.774,1.323A4.043,4.043,0,0,0,22.166,33a4.17,4.17,0,0,0,4.085-3.334h.084a4.915,4.915,0,0,0,4.719-3.273,5.167,5.167,0,0,0-.351-4.176,5,5,0,0,0-1.921-9.151Z" transform="translate(16.356 16.666)" fill="#fff"/>
+  </g>
+</svg>
