@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import DarkCard from "./DarkCard";
 
 const DarkMode = () => {
+  const { setTheme } = useContext(ThemeContext);
+
+  const toggleTheme = (val) => {
+    if (val === "dark") {
+      setTheme("dark");
+      return;
+    }
+    setTheme("light");
+  };
+
   return (
     <>
       <div className="w-full relative overflow-x-clip bg-[#1D2028] ">
@@ -9,16 +20,26 @@ const DarkMode = () => {
           <div className="flex justify-between items-center ">
             <div className="font-poppins flex flex-col mr-6 xl:mr-0">
               <h3 className="font-bold text-xl md:text-2xl xl:text-4xl mb-8 text-white">
-                <span className="text-purple2">
-                  <span className="font-light">|</span> Dark
-                </span>{" "}
-                Mode
-              </h3>
+                <span className="text-purple2 mr-1 whitespace-nowrap">
+                  <span className="font-light ">|</span> Dark</span>Mode </h3>
 
               <div className="bg-purple2 h-8 w-8 rounded-[50%] shadow-[0px_3px_38px_#00000029] border-3 border-white mb-8"></div>
               <p className="font-medium text-sm lg:text-xl text-white">
                 Design with a white <br /> background.
               </p>
+
+              <button
+                className="p-2 bg-white text-dark1 rounded my-2"
+                onClick={() => toggleTheme("dark")}
+              >
+                Dark
+              </button>
+              <button
+                className="p-2 bg-white text-dark1 rounded my-2"
+                onClick={() => toggleTheme("light")}
+              >
+                Light
+              </button>
             </div>
             <div className="">
               <div className="flex justify-between slant ">
