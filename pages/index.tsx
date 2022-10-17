@@ -44,7 +44,7 @@ export default function Home() {
         />
       </Head>
       <Navbar />
-      <main>
+      <main className="bg-white dark:bg-darkBg">
         <HomePage projects={projects} />
       </main>
     </div>

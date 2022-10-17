@@ -5,8 +5,13 @@ import Instagram from "../../public/icons/instagram-nav.svg";
 import Facebook from "../../public/icons/facebook-nav.svg";
 import Twitter from "../../public/icons/twitter-nav.svg";
 import LinkedIn from "../../public/icons/linkedin-nav.svg";
+import Light from "../../public/icons/sun.png";
+import Dark from "../../public/icons/moon.png";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from 'next-themes';
+
 const navItems = [
   {
     name: "About Us",
@@ -80,9 +85,33 @@ const MobileTab = ({ item, active, setActive, setIsOpen }) => {
 const Navbar = () => {
   const [active, setActive] = useState(navItems[1]);
   const [isOpen, setIsOpen] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  const renderThemeToggle = () => {
+    const currentTheme = theme === "system" ? systemTheme : theme;
+    if (currentTheme === "dark") {
+      return (
+        <button
+        className=' rounded-sm p-2 shadow-md'
+          onClick={() => setTheme("light")}
+          type="button"
+        > <Image src={Light} alt="" width={25} height={25} /> </button>
+      );
+    }
+    return (
+      <button
+      className=" rounded-sm p-2 shadow-md"
+      onClick={() => setTheme("dark")}
+      type="button"
+    > <Image src={Dark} alt="" width={25} height={25} /> </button>
+    );
+  };
   return (
     <div className="sticky top-0 z-50 bg-white dark:bg-darkBg dark:text-white">
-      <div className="w-full hidden md:block pt-4">
+      <div className="w-full hidden md:block pt-4 relative">
+        <div className="absolute top-3 right-3">
+        {renderThemeToggle()}
+        </div>
         <div className="w-fit  mx-auto ">
           <h2 className="mx-auto  font-poppins font-semibold text-4xl py-3">
             <Link href={"/"}>Solustack</Link>
@@ -106,6 +135,10 @@ const Navbar = () => {
           </div>
 
           <div className="">
+        {renderThemeToggle()}
+        </div>
+
+          <div className="">
             {isOpen ? (
               <div onClick={() => setIsOpen(false)}>
                 <Image src={Close} alt="" width={25} height={25} />
@@ -119,7 +152,7 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="absolute w-full mx-auto bg-white dark:bg-darkBg dark:text-white py-6">
+          <div className="absolute w-full mx-auto bg-white dark:bg-darkBg dark:text-white py-6 ">
             <ul className="flex  flex-col justify-between items-center font-generalSans font-medium mb-4">
               {navItems.map((item, i) => (
                 <MobileTab

@@ -3,10 +3,12 @@ import "tailwindcss/tailwind.css";
 import type { AppProps } from "next/app";
 import * as React from "react";
 import { ContextProvider } from "../context";
-import { ThemeProvider } from "../context/ThemeContext";
+// import { ThemeProvider } from "../context/ThemeContext";
+import { ThemeProvider } from 'next-themes'
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider initialTheme={"light"}>
+    <ThemeProvider enableSystem={false} attribute="class">
       <ContextProvider>
         <Component {...pageProps} />
       </ContextProvider>
