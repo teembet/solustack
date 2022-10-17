@@ -1,6 +1,10 @@
 import React from "react";
-
-const DarkCard = ({ shadowLg, shadowMd, purple }) => {
+type Props = {
+  shadowLg?: boolean;
+  shadowMd?: boolean;
+  purple?: boolean;
+};
+const DarkCard = ({ shadowLg, shadowMd, purple }: Props) => {
   return (
     <div
       className={` ${shadowLg ? "shadow-[0px_70px_70px_#707D924D]" : ""} ${

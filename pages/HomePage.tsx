@@ -9,6 +9,7 @@ import Contact from "../components/home/Contact";
 import Image from "next/image";
 import * as React from "react";
 import Circle from "../public/icons/circle.svg";
+import Footer from "../components/shared/Footer";
 
 const HomePage = ({ projects }) => {
   return (
@@ -41,6 +42,7 @@ const HomePage = ({ projects }) => {
         <Testimonial />
       </div>
       <Contact />
+      <Footer />
     </div>
   );
 };

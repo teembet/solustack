@@ -51,14 +51,14 @@ const Slide = ({ item }) => {
         </div>
 
         <div className="absolute bottom-6 left-4">
-          <div className="">
+          <div className="text-white">
             <div className="mb-4">
-              <p className="text-sm text-white">App Name</p>
-              <p className="font-semibold text-lg text-white">{item.name}</p>
+              <p className="text-sm ">App Name</p>
+              <p className="font-semibold text-lg ">{item.name}</p>
             </div>
             <div>
-              <p className="text-sm text-white">Client Name</p>
-              <p className="font-semibold text-lg text-white">{item.client}</p>
+              <p className="text-sm">Client Name</p>
+              <p className="font-semibold text-lg ">{item.client}</p>
             </div>
           </div>
         </div>

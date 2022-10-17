@@ -69,7 +69,7 @@ const Header = () => {
               <h1 className="font-semibold text-dark1 text-3xl  xl:text-[3.5rem]">
                 WE BUILD THE
               </h1>
-              <h1 className="font-semibold text-blue1  text-3xl xl:text-[3.5rem]">
+              <h1 className="font-semibold text-blue2  text-3xl xl:text-[3.5rem]">
                 BEST DIGITAL EXPERIENCES.
               </h1>
             </div>
@@ -99,7 +99,7 @@ const Header = () => {
                   src={item.img}
                   alt=""
                   width={35}
-                  height={25}
+                  height={30}
                   quality={100}
                   className=""
                 />

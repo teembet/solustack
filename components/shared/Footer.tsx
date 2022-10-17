@@ -1,8 +1,9 @@
 import React from "react";
-import  Instagram from "../../assets/icons/instagram-white.svg"
-import Facebook  from "../../assets/icons/facebook-white.svg"
-import  LinkedIn  from "../../assets/icons/linkedin-white.svg"
-import Twitter  from "../../assets/icons/twitter-white.svg"
+import Instagram from "../../public/icons/instagram-white.svg";
+import Facebook from "../../public/icons/facebook-white.svg";
+import LinkedIn from "../../public/icons/linkedin-white.svg";
+import Twitter from "../../public/icons/twitter-white.svg";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -26,25 +27,32 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="grid grid-cols-5">
               <div className="col-span-2 lg:text-center">
-              <h6 className="font-semibold mb-6">Company</h6>
-              <ul className="list-none flex flex-col text-xs">
-                <li className="mb-2">Work</li>
-                <li className="mb-2">Services</li>
-                <li className="mb-2">About Us</li>
-              </ul>
+                <h6 className="font-semibold mb-6">Company</h6>
+                <ul className="list-none flex flex-col text-xs">
+                  <li className="mb-2">Work</li>
+                  <li className="mb-2">Services</li>
+                  <li className="mb-2">About Us</li>
+                </ul>
+              </div>
+              <div className="col-span-3 text-lg">
+                <p>+8801913876520</p>
+                <p>company@gmail.com</p>
+                <ul className="list-none flex items-center my-4">
+                  <li className="mr-4">
+                    <Image src={Facebook.src} alt="" width={20} height={20} />
+                  </li>
+                  <li className="mr-4">
+                    <Image src={LinkedIn.src} alt="" width={20} height={20} />
+                  </li>
+                  <li className="mr-4">
+                    <Image src={Twitter.src} alt="" width={20} height={20} />
+                  </li>
+                  <li className="mr-4">
+                    <Image src={Instagram.src} alt="" width={20} height={20} />
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="col-span-3 text-lg">
-              <p>+8801913876520</p>
-              <p>company@gmail.com</p>
-              <ul className="list-none flex items-center my-4">
-                <li className="mr-4"><Facebook className="w-6"/></li>
-                <li className="mr-4"><LinkedIn className="w-6"/></li>
-                <li className="mr-4"><Twitter className="w-6"/></li>
-                <li className="mr-4"><Instagram className="w-6"/></li>
-              </ul>
-            </div>
-            </div>
-            
           </div>
         </div>
       </div>

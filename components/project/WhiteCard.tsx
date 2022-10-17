@@ -1,6 +1,12 @@
 import React from "react";
-
-const WhiteCard = ({ rotate, shadowLg, shadowMd , shadowRd}) => {
+type Props = {
+  shadowLg?: boolean;
+  shadowMd?: boolean;
+  rotate?: boolean;
+  shadowRd?: boolean;
+  border?: boolean;
+};
+const WhiteCard = ({ rotate, shadowLg, shadowMd, shadowRd, border }: Props) => {
   return (
     <div
       className={` bg-white rounded-[30px] ${

@@ -8,7 +8,7 @@ import DesignScreen2 from "../../components/project/DesignScreen2";
 import DesignScreen3 from "../../components/project/DesignScreen3";
 import useFetchProjects from "../../hooks/useFetchProjects";
 import { useProjectContext } from "../../hooks/useProjectContext";
-import { query } from "firebase/firestore";
+import Navbar from "../../components/shared/Navbar";
 const Title = ({ title }) => {
   return (
     <h4 className="font-semibold text-2xl lg:text-4xl xl:text-5xl mb-3">
@@ -54,14 +54,17 @@ const Project = () => {
   }, [router]);
 
   return (
-    <div className="font-generalSans w-full mb-36">
-      <div
-        className="h-[60vh] bg-cover bg-center bg-no-repeat relative"
-        style={{
-          backgroundImage: `url('${project.bg}')`,
-        }}
-      >
-        {/* <div className="absolute bottom-3 left-0 right-0">
+    <>
+      <Navbar />
+
+      <div className="font-generalSans w-full mb-36">
+        <div
+          className="h-[60vh] bg-cover bg-center bg-no-repeat relative"
+          style={{
+            backgroundImage: `url('${project.bg}')`,
+          }}
+        >
+          {/* <div className="absolute bottom-3 left-0 right-0">
           <div className="w-fit mx-auto">
             {project.tags.map((tag, i) => (
               <button
@@ -73,33 +76,34 @@ const Project = () => {
             ))}
           </div>
         </div> */}
-      </div>
-      <div className="p-4 w-full lg:w-11/12 mx-auto">
-        <div className="lg:w-9/12 py-4">
-          <div className="mb-8">
-            <Title title="App Name" />
-            <Text text={project.name} />
-          </div>
-          <div className="mb-8">
-            <Title title="Challenge" />
-            <Text text={project.challenge} />
-          </div>
-          <div className="mb-8">
-            <Title title="Brief" />
-            <Text text={project.brief} />
-          </div>
-          <div className="mb-8">
-            <Title title="Functional Requirements" />
-            <Text text={project.requirements} />
+        </div>
+        <div className="p-4 w-full lg:w-11/12 mx-auto">
+          <div className="lg:w-9/12 py-4">
+            <div className="mb-8">
+              <Title title="App Name" />
+              <Text text={project.name} />
+            </div>
+            <div className="mb-8">
+              <Title title="Challenge" />
+              <Text text={project.challenge} />
+            </div>
+            <div className="mb-8">
+              <Title title="Brief" />
+              <Text text={project.brief} />
+            </div>
+            <div className="mb-8">
+              <Title title="Functional Requirements" />
+              <Text text={project.requirements} />
+            </div>
           </div>
         </div>
+        <LightMode />
+        <DarkMode />
+        <DesignScreen3 />
+        <DesignScreen2 />
+        <DesignScreen3 />
       </div>
-      <LightMode />
-      <DarkMode />
-      <DesignScreen3 />
-      <DesignScreen2 />
-      <DesignScreen3 />
-    </div>
+    </>
   );
 };
 
