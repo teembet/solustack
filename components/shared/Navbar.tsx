@@ -91,25 +91,17 @@ const Navbar = () => {
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
-        <button
-          className=" rounded-sm p-2 shadow-md"
-          onClick={() => setTheme("light")}
-          type="button"
-        >
+        <div className=" rounded-sm p-2 " onClick={() => setTheme("light")}>
           {" "}
           <Image src={Light} alt="" width={25} height={25} />{" "}
-        </button>
+        </div>
       );
     }
     return (
-      <button
-        className=" rounded-sm p-2 shadow-md"
-        onClick={() => setTheme("dark")}
-        type="button"
-      >
+      <div className=" rounded-sm p-2 " onClick={() => setTheme("dark")}>
         {" "}
         <Image src={Dark} alt="" width={25} height={25} />{" "}
-      </button>
+      </div>
     );
   };
   return (

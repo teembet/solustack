@@ -9,6 +9,7 @@ import DesignScreen3 from "../../components/project/DesignScreen3";
 import useFetchProjects from "../../hooks/useFetchProjects";
 import { useProjectContext } from "../../hooks/useProjectContext";
 import Navbar from "../../components/shared/Navbar";
+import Contact from "../../components/home/Contact";
 const Title = ({ title }) => {
   return (
     <h4 className="font-semibold text-2xl lg:text-4xl xl:text-5xl mb-3">
@@ -99,9 +100,10 @@ const Project = () => {
         </div>
         <LightMode />
         <DarkMode />
-        <DesignScreen3 />
+        {/* <DesignScreen3 /> */}
         <DesignScreen2 />
-        <DesignScreen3 />
+        {/* <DesignScreen3 /> */}
+        <Contact />
       </div>
     </>
   );
