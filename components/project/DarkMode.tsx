@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+// import { ThemeContext } from "../../context/ThemeContext";
 import DarkCard from "./DarkCard";
 const DarkMode = () => {
-  const { setTheme } = useContext(ThemeContext);
+  // const { setTheme } = useContext(ThemeContext);
 
-  const toggleTheme = (val) => {
-    if (val === "dark") {
-      setTheme("dark");
-      return;
-    }
-    setTheme("light");
-  };
+  // const toggleTheme = (val) => {
+  //   if (val === "dark") {
+  //     setTheme("dark");
+  //     return;
+  //   }
+  //   setTheme("light");
+  // };
 
   return (
     <>
@@ -29,7 +29,7 @@ const DarkMode = () => {
               <p className="font-medium text-sm lg:text-xl text-white">
                 Design with a white <br /> background.
               </p>
-              <button
+              {/* <button
                 className="p-2 bg-white text-dark1 rounded my-2"
                 onClick={() => toggleTheme("dark")}
               >
@@ -40,7 +40,7 @@ const DarkMode = () => {
                 onClick={() => toggleTheme("light")}
               >
                 Light
-              </button>
+              </button> */}
             </div>
             <div className="">
               <div className="flex justify-between slant ">

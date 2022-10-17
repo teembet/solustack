@@ -64,7 +64,7 @@ const Slide = ({ item }) => {
   return (
     <div className=" relative ">
       <div className="w-20 flex justify-center items-center h-20 border-3 border-white  dark:border-darkBg rounded-full shadow-[0px_11px_10px_#00000008]  mx-auto mb-[-40px]">
-        <Image src={image} alt="" width={40} height={40} />
+        <Image src={image} alt="" width={40} height={40} className="rounded-full" />
 
         {/* <img src={image} alt="" className="w-full h-full rounded-full" /> */}
       </div>

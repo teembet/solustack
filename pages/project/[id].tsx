@@ -57,7 +57,7 @@ const Project = () => {
     <>
       <Navbar />
 
-      <div className="font-generalSans w-full mb-36">
+      <div className="font-generalSans w-full  bg-white dark:bg-darkBg">
         <div
           className="h-[60vh] bg-cover bg-center bg-no-repeat relative"
           style={{

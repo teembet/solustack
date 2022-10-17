@@ -50,7 +50,7 @@ const defaultOptions = {
 // });
 const Header = () => {
   return (
-    <div className="min-h-[70vh] h-[85vh]  md:h-[82vh]  font-generalSans">
+    <div className="min-h-[70vh] h-[85vh]  md:min-h-fit  font-generalSans">
       <div
         className="w-full h-full  relative bg-no-repeat bg-cover bg-center  text-center py-10 flex flex-col justify-end"
         style={{

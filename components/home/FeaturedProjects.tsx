@@ -78,11 +78,11 @@ const Slide = ({ item }) => {
 
 const FeaturedProjects = ({ projects }) => {
   return (
-    <div className="w-full p-4">
+    <div className="w-full p-4 ">
       <div className="w-11/12 mx-auto flex md:items-center justify-between">
         <div className="md:w-3/5 ">
           <h4 className="font-semibold text-2xl">Our Featured Projects</h4>
-          <p className=" md:text-justify my-5 text-grey4">
+          <p className=" md:text-justify my-5 text-grey4 dark:text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis.
