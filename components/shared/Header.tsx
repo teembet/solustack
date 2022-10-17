@@ -1,11 +1,11 @@
 import React from "react";
 import HeaderImage from "../../public/images/hero1.svg";
 import Animation from "../../public/images/header_animation.jpg";
-import Netflix from "../../public/icons/netflix.png";
+import Netflix from "../../public/icons/netflix1.png";
 import AppleBlack from "../../public/icons/apple-black.jpg";
 import AndroidBlack from "../../public/icons/android-black.jpg";
 import Windows from "../../public/icons/windows.jpg";
-import Synology from "../../public/icons/synology.jpg";
+import Synology from "../../public/icons/synology.png";
 import Image from "next/image";
 import animationData from "../../public/air.json";
 import Lottie from "react-lottie";
@@ -99,8 +99,7 @@ const Header = () => {
                   src={item.img}
                   alt=""
                   width={35}
-                  height={30}
-                  quality={100}
+                  height={35}
                   className=""
                 />
               </li>
