@@ -92,7 +92,7 @@ const Header = () => {
 
         <div className="w-fit mx-auto opacity-40 my-8">
           <h3 className="mb-6 mt-6 text-sm font-medium">TRUSTED BY</h3>
-          <ul className="flex items-center">
+          {/* <ul className="flex items-center">
             {trustees.map((item, i) => (
               <li key={i} className="mr-8">
                 <Image
@@ -104,7 +104,7 @@ const Header = () => {
                 />
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>

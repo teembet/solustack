@@ -126,7 +126,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center px-6">
           <div>
             <h2 className="  font-poppins font-semibold text-2xl py-3">
-              Solustack
+              <Link href={"/"}>Solustack</Link>
             </h2>
           </div>
 
