@@ -10,13 +10,13 @@ import Image from "next/image";
 import * as React from "react";
 import Circle from "../public/icons/circle.svg";
 
-const HomePage = () => {
+const HomePage = ({ projects }) => {
   return (
     <div>
       <Header />
       <Services />
       <Process />
-      <FeaturedProjects />
+      {projects && <FeaturedProjects projects={projects} />}
       <WhyUs />
       <AboutSection />
       <div className="relative">

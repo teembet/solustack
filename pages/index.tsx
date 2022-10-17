@@ -1,20 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import * as React from "react";
 import HomePage from "./HomePage";
 import Navbar from "../components/shared/Navbar";
-import { collection, addDoc, getDocs } from "firebase/firestore";
-import { app, database } from "../firebaseConfig";
-import Project from "./project/[id]";
+import useFetchProjects from "../hooks/useFetchProjects";
+import { useProjectContext } from "../hooks/useProjectContext";
 export default function Home() {
-  const dbInstance = collection(database, "projects");
-  const getProjects = () => {
-    getDocs(dbInstance).then((data) => {
-      console.log(data);
-    });
-  };
-
+  const { getProjects } = useFetchProjects();
+  const { projects } = useProjectContext();
   React.useEffect(() => {
     getProjects();
   }, []);
@@ -28,7 +21,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <main>
-        <HomePage />
+        <HomePage projects={projects} />
       </main>
     </div>
   );

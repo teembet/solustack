@@ -1,10 +1,11 @@
 import React from "react";
-import { useRouter } from "next/router";
+
 import Image from "next/image";
 import CaretRight from "../../public/icons/caret-right.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { projects } from "../../data/projects";
+import useFetchProjects from "../../hooks/useFetchProjects";
+//import { projects } from "../../data/projects";
 
 const responsive = {
   desktop: {
@@ -25,9 +26,10 @@ const responsive = {
 };
 
 const Slide = ({ item }) => {
-  const route = useRouter();
+  const { getProject } = useFetchProjects();
+
   const viewProject = (id) => {
-    route.push(`/project/${id}`);
+    getProject(id);
   };
   return (
     <div id="projects">
@@ -74,7 +76,7 @@ const Slide = ({ item }) => {
   );
 };
 
-const FeaturedProjects = () => {
+const FeaturedProjects = ({ projects }) => {
   return (
     <div className="w-full p-4">
       <div className="w-11/12 mx-auto flex md:items-center justify-between">
@@ -111,11 +113,12 @@ const FeaturedProjects = () => {
           itemClass="carousel-item-padding-40-px"
           // renderDotsOutside={true}
         >
-          {projects.map((item, i) => (
-            <div key={i} className=" mx-4">
-              <Slide item={item} />
-            </div>
-          ))}
+          {projects &&
+            projects.map((item, i) => (
+              <div key={i} className=" mx-4">
+                <Slide item={item} />
+              </div>
+            ))}
         </Carousel>
       </div>
     </div>

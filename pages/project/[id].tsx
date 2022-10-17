@@ -6,7 +6,8 @@ import LightMode from "../../components/project/LightMode";
 import DarkMode from "../../components/project/DarkMode";
 import DesignScreen2 from "../../components/project/DesignScreen2";
 import DesignScreen3 from "../../components/project/DesignScreen3";
-
+import useFetchProjects from "../../hooks/useFetchProjects";
+import { useProjectContext } from "../../hooks/useProjectContext";
 const Title = ({ title }) => {
   return (
     <h4 className="font-semibold text-2xl lg:text-4xl xl:text-5xl mb-3">
@@ -20,15 +21,24 @@ const Text = ({ text }) => {
 
 const Project = () => {
   const router = useRouter();
-  const id = Number(router.query.id);
-  const project = projects.find((item) => {
-    Number(item.id) == Number(router.query.id);
-    return item;
-  });
+  const id = router.query.id;
+  const { getProject } = useFetchProjects();
+  const { project } = useProjectContext();
+
+  console.log(id, "id");
+  console.log(project, "pro");
+  // const project = projects.find((item) => {
+  //   Number(item.id) == Number(router.query.id);
+  //   return item;
+  // });
 
   useEffect(() => {
-    if (!project || project === undefined || null) {
-      router.push("/");
+    if (
+      project && // 👈 null and undefined check
+      Object.keys(project).length === 0 &&
+      Object.getPrototypeOf(project) === Object.prototype
+    ) {
+      getProject(id);
     }
   }, [project]);
 
@@ -40,7 +50,7 @@ const Project = () => {
           backgroundImage: `url('${project.bg}')`,
         }}
       >
-        <div className="absolute bottom-3 left-0 right-0">
+        {/* <div className="absolute bottom-3 left-0 right-0">
           <div className="w-fit mx-auto">
             {project.tags.map((tag, i) => (
               <button
@@ -51,7 +61,7 @@ const Project = () => {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="p-4 w-full lg:w-11/12 mx-auto">
         <div className="lg:w-9/12 py-4">
