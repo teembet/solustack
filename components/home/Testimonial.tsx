@@ -63,12 +63,12 @@ const Slide = ({ item }) => {
   const { image, name, testimony, status } = item;
   return (
     <div className=" relative ">
-      <div className="w-20 flex justify-center items-center h-20 border-3 border-white rounded-full shadow-[0px_11px_10px_#00000008]  mx-auto mb-[-40px]">
+      <div className="w-20 flex justify-center items-center h-20 border-3 border-white  dark:border-darkBg rounded-full shadow-[0px_11px_10px_#00000008]  mx-auto mb-[-40px]">
         <Image src={image} alt="" width={40} height={40} />
 
         {/* <img src={image} alt="" className="w-full h-full rounded-full" /> */}
       </div>
-      <div className="bg-white shadow-[0px_15px_40px_#0000000A] pt-[45px] pb-6 rounded-lg  text-center px-4 md:px-8 lg:px-12 ">
+      <div className="bg-white dark:bg-darkBg dark:text-white shadow-[0px_15px_30px_#0000000A] dark:shadow-[0px_7px_30px_#7F7F7F] pt-[45px] pb-6 rounded-lg  text-center px-4 md:px-8 lg:px-12 ">
         <div className=" text-center">
           <h5 className="font-generalSans   font-medium text-sm">{name}</h5>
           <p className="text-xs my-2 font-graphie ">{status}</p>
@@ -89,7 +89,7 @@ const Testimonial = () => {
           Client Testimonials
         </h3>
         <div className="xl:w-3/5 mx-auto mb-6">
-          <p className="text-sm text-grey4">
+          <p className="text-sm text-grey4  dark:text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores

@@ -4,6 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -56,6 +57,7 @@ module.exports = {
       purple1: "#917FE5",
       purple2: "#674BD2",
       inputGrey: "rgba(193, 193, 193,0.2)",
+      darkBg:"#1D2028",
       // inputBgGrey: "#FEFCFC",
       // borderGrey: "#ECECEC",
       // lightGrey: "#E8E8E8",

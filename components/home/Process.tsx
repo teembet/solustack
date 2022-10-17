@@ -29,7 +29,7 @@ const Process = () => {
           <h4 className="font-semibold text-2xl">
             Our 3 Step Process to Creating Scalable Apps
           </h4>
-          <p className="text-justify my-5 text-grey4">
+          <p className="text-justify my-5 text-grey4  dark:text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores

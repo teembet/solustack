@@ -99,7 +99,7 @@ const Header = () => {
                   src={item.img}
                   alt=""
                   width={35}
-                  height={25}
+                  height={30}
                   quality={100}
                   className=""
                 />

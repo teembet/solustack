@@ -39,7 +39,7 @@ const WhyUs = () => {
         </h3>
       </div>
       <div className="xl:w-3/5 mx-auto mb-6">
-        <p className="text-sm text-grey4">
+        <p className="text-sm text-grey4  dark:text-white">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -52,10 +52,10 @@ const WhyUs = () => {
               {" "}
               <Image src={item.icon} alt="" width={40} height={40} />
             </div>
-            <h5 className="font-semibold text-xs text-center my-1">
+            <h5 className="font-semibold text-sm text-center my-1">
               {item.title}
             </h5>
-            <p className="text-black text-xs text-center">{item.text}</p>
+            <p className="text-black  dark:text-white text-xs text-center">{item.text}</p>
           </div>
         ))}
       </div>

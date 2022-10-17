@@ -49,7 +49,7 @@ const DarkMode = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white h-[4rem] md:h-[8rem]  m-0 p-0"></div>
+      <div className="bg-white  dark:bg-darkBg h-[4rem] md:h-[8rem]  m-0 p-0"></div>
     </>
   );
 };
