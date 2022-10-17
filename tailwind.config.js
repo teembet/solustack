@@ -56,8 +56,9 @@ module.exports = {
       green: "#9ACF61",
       purple1: "#917FE5",
       purple2: "#674BD2",
+
       inputGrey: "rgba(193, 193, 193,0.2)",
-      darkBg: "#1D2028",
+      darkBg: "#000",
       // inputBgGrey: "#FEFCFC",
       // borderGrey: "#ECECEC",
       // lightGrey: "#E8E8E8",

@@ -52,13 +52,13 @@ const Header = () => {
   return (
     <div className="min-h-[70vh] h-[85vh]  md:min-h-fit  font-generalSans">
       <div
-        className="w-full h-full  relative bg-no-repeat bg-cover bg-center  text-center py-10 flex flex-col justify-end"
+        className="w-full h-full  relative bg-no-repeat bg-cover bg-center dark:!bg-none dark:!bg-darkBg  text-center py-10 flex flex-col justify-end"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)),url('${HeaderImage.src}')`,
         }}
       >
         {/* fix animation here */}
-        <div className="h-1/2 absolute top-1/4 left-1/3 opacity-25 hidden lg:block">
+        <div className="h-1/2 absolute top-1/4 left-1/3 opacity-25 hidden lg:block dark:hidden">
           <Lottie options={defaultOptions} height={500} width={500} />
           {/* <Image src={Animation} alt="" className="h-full" /> */}
         </div>
@@ -66,7 +66,7 @@ const Header = () => {
         <div className="z-[10] absolute top-10 w-full  ">
           <div className="w-full md:w-4/6 xl:w-3/5 mx-auto">
             <div>
-              <h1 className="font-semibold text-dark1 text-3xl  xl:text-[3.5rem]">
+              <h1 className="font-semibold text-dark1 text-3xl dark:text-white  xl:text-[3.5rem]">
                 WE BUILD THE
               </h1>
               <h1 className="font-semibold text-blue2  text-3xl xl:text-[3.5rem]">
@@ -74,7 +74,7 @@ const Header = () => {
               </h1>
             </div>
             <div className="w-11/12 xl:w-9/12 mx-auto my-4">
-              <h5 className="font-medium text-dark2 text-lg lg:text-2xl text-center">
+              <h5 className="font-medium text-dark2 text-lg lg:text-2xl text-center dark:text-white">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore.
               </h5>
@@ -91,7 +91,7 @@ const Header = () => {
         </div>
 
         <div className="w-fit mx-auto opacity-40 my-8">
-          <h3 className="mb-6 mt-6">TRUSTED BY</h3>
+          <h3 className="mb-6 mt-6 text-sm font-medium">TRUSTED BY</h3>
           <ul className="flex items-center">
             {trustees.map((item, i) => (
               <li key={i} className="mr-8">
