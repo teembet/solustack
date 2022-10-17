@@ -90,8 +90,8 @@ code {
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
+  border-bottom: 2px solid grey;
+  border-right: 2px solid grey;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
