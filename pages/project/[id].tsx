@@ -8,6 +8,7 @@ import DesignScreen2 from "../../components/project/DesignScreen2";
 import DesignScreen3 from "../../components/project/DesignScreen3";
 import useFetchProjects from "../../hooks/useFetchProjects";
 import { useProjectContext } from "../../hooks/useProjectContext";
+import { query } from "firebase/firestore";
 const Title = ({ title }) => {
   return (
     <h4 className="font-semibold text-2xl lg:text-4xl xl:text-5xl mb-3">
@@ -21,26 +22,36 @@ const Text = ({ text }) => {
 
 const Project = () => {
   const router = useRouter();
-  const id = router.query.id;
+
   const { getProject } = useFetchProjects();
   const { project } = useProjectContext();
-
-  console.log(id, "id");
-  console.log(project, "pro");
   // const project = projects.find((item) => {
   //   Number(item.id) == Number(router.query.id);
   //   return item;
   // });
-
+  // useEffect(() => {
+  //   if (router.asPath !== router.route) {
+  //     // router.query.lang is defined
+  //   }
+  // }, [router]);
   useEffect(() => {
-    if (
-      project && // 👈 null and undefined check
-      Object.keys(project).length === 0 &&
-      Object.getPrototypeOf(project) === Object.prototype
-    ) {
-      getProject(id);
+    if (router.asPath !== router.route) {
+      const id = router.query.id;
+      console.log(router.query, "id");
+      if (
+        project && // 👈 null and undefined check
+        Object.keys(project).length === 0 &&
+        Object.getPrototypeOf(project) === Object.prototype
+      ) {
+        if (id != undefined || null || "") {
+          getProject(id);
+        } else {
+          router.push(`/`);
+        }
+      }
+    } else {
     }
-  }, [project]);
+  }, [router]);
 
   return (
     <div className="font-generalSans w-full mb-36">
