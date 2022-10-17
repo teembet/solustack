@@ -101,7 +101,7 @@ const Project = () => {
         <LightMode />
         <DarkMode />
         {/* <DesignScreen3 /> */}
-        <DesignScreen2 />
+        {/* <DesignScreen2 /> */}
         {/* <DesignScreen3 /> */}
         <Contact />
       </div>
