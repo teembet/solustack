@@ -89,9 +89,11 @@ const FeaturedProjects = ({ projects }) => {
           </p>
         </div>
         <div className="md:w-2/5  text-end">
-          <button className="bg-blue1 py-2 px-12 text-white rounded">
-            Get in Touch
-          </button>
+          <a href="#contact">
+            <button className="bg-blue1 py-2 px-12 text-white rounded">
+              Get in Touch
+            </button>
+          </a>
         </div>
       </div>
 

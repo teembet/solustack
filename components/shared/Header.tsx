@@ -50,7 +50,7 @@ const defaultOptions = {
 // });
 const Header = () => {
   return (
-    <div className="min-h-[85vh]   font-generalSans">
+    <div className="min-h-[70vh]   font-generalSans">
       <div
         className="w-full h-full  relative bg-no-repeat bg-cover bg-center dark:!bg-none dark:!bg-darkBg  text-center py-10 flex flex-col justify-end"
         style={{
@@ -58,12 +58,12 @@ const Header = () => {
         }}
       >
         {/* fix animation here */}
-        <div className="h-1/2 p-2 absolute top-1/4  inset-x-1/4 opacity-25  lg:block ">
+        <div className="h-1/2 p-2 absolute top-1/4  inset-x-1/4 opacity-25 hidden lg:block ">
           {/* <Lottie options={defaultOptions} height={500} width={500} /> */}
           <Image
             src={Animation}
             alt=""
-            className="h-full w-1/2 animate-[bounce_4s_infinite]"
+            className="h-full w-1/2 animate-[bounce_3s_infinite]"
           />
         </div>
         {/* fix animation here */}
