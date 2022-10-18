@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderImage from "../../public/images/hero1.svg";
-import Animation from "../../public/images/header_animation.jpg";
+import Animation from "../../public/images/header_animation.png";
 import Netflix from "../../public/icons/netflix1.png";
 import AppleBlack from "../../public/icons/apple-black.jpg";
 import AndroidBlack from "../../public/icons/android-black.jpg";
@@ -58,9 +58,9 @@ const Header = () => {
         }}
       >
         {/* fix animation here */}
-        <div className="h-1/2 absolute top-1/4 left-1/3 opacity-25 hidden lg:block dark:hidden">
-          <Lottie options={defaultOptions} height={500} width={500} />
-          {/* <Image src={Animation} alt="" className="h-full" /> */}
+        <div className="h-1/2 p-2 absolute top-1/4  inset-x-1/4 opacity-25 hidden lg:block dark:hidden">
+          {/* <Lottie options={defaultOptions} height={500} width={500} /> */}
+          <Image src={Animation} alt="" className="h-full w-1/2 animate-bounce" />
         </div>
         {/* fix animation here */}
         <div className="z-[10] mt w-full  ">
