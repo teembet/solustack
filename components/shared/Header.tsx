@@ -66,15 +66,15 @@ const Header = () => {
         <div className="z-[10] mt w-full  ">
           <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
             <div className="mb-3">
-              <h1 className="font-semibold text-dark1 text-3xl md:text-5xl lg:text-6xl dark:text-white  xl:text-81">
+              <h1 className="font-bold text-dark1 text-3xl md:text-4xl lg:text-5xl dark:text-white ">
                 WE BUILD THE
               </h1>
-              <h1 className="font-semibold text-blue2  text-3xl md:text-5xl lg:text-6xl xl:text-81">
+              <h1 className="font-bold text-blue2  text-3xl md:text-4xl lg:text-5xl">
                 BEST DIGITAL EXPERIENCES. 
               </h1>
             </div>
             <div className="w-11/12 xl:w-9/12 mx-auto mb-5">
-              <h5 className="font-medium text-dark2 text-lg lg:text-2xl xl:text-31 text-center dark:text-white">
+              <h5 className="font-medium text-dark2 text-sm md:text-lg lg:text-xl  text-center dark:text-white">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore.
               </h5>
@@ -82,7 +82,7 @@ const Header = () => {
 
             <div className="font-poppins mt-8 md:mt-20 lg:mb-5">
               <a href="#contact">
-                <button className="bg-blue1 text-18 text-white py-2 px-12  rounded">
+                <button className="bg-blue1 text-sm text-white py-2 px-12  rounded">
                   Contact Us
                 </button>
               </a>

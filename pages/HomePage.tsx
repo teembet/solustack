@@ -20,25 +20,13 @@ const HomePage = ({ projects }) => {
       {projects && <FeaturedProjects projects={projects} />}
       <WhyUs />
       <AboutSection />
-      <div className="relative">
+      <div className="relative overflow-x-clip">
         <div
-          className="fixed right-[-50%] top-1/2 bg-blue1 rounded-[50%] h-50 w-40 z-20 "
+          className="absolute bg-blue1 rounded-[50%] h-32 w-32 -right-20 -top-16 lg:h-40 lg:w-40 lg:-top-20 lg:-right-24   xl:h-52 xl:w-48 xl:-right-28 xl:-top-24"
           style={{
             backgroundImage: `url('${Circle.src}')`,
-            width: "100%",
-            height: "auto",
           }}
-        >
-          <div className="fixed right-[-50%] top-1/2 bg-blue1 rounded-[50%] h-50 w-40 z-20">
-            <Image
-              src={Circle.src}
-              alt=""
-              width={40}
-              height={40}
-              className="fixed right-[-50%] top-1/2 bg-blue1 rounded-[50%] h-50 w-40 z-20"
-            />
-          </div>
-        </div>
+        ></div>
         <Testimonial />
       </div>
       <Contact />

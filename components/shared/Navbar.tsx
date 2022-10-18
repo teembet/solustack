@@ -61,7 +61,7 @@ const Tab = ({ item, active, setActive }) => {
       }}
       className={` ${
         active === item ? "border-b-4 border-b-blue2" : ""
-      }  px-3 py-2 text-18  lg:text-22 xl:text-25 cursor-pointer`}
+      }  px-3 py-2 text-sm  lg:text-base  cursor-pointer`}
     >
       <a href={`#${item.link}`}> {item.name}</a>
     </li>
@@ -76,7 +76,7 @@ const MobileTab = ({ item, active, setActive, setIsOpen }) => {
       }}
       className={` ${
         active === item ? "border-b-4 border-b-blue2" : ""
-      }  p-3 my-4 text-18 lg:text-25 cursor-pointer`}
+      }  p-3 my-4 text-sm lg:text-base cursor-pointer`}
     >
       <a href={`#${item.link}`}> {item.name}</a>
     </li>
@@ -109,12 +109,12 @@ const Navbar = () => {
       <div className="w-full hidden md:block pt-4 relative">
         <div className="absolute top-3 right-3">{renderThemeToggle()}</div>
         <div className="w-fit  mx-auto ">
-          <h2 className="mx-auto  font-poppins font-semibold text-45 py-3">
+          <h2 className="mx-auto  font-poppins font-semibold text-3xl py-3">
             <Link href={"/"}>Solustack</Link>
           </h2>
         </div>
 
-        <div className="w-full md:w-5/6  xl:w-4/6 mx-auto ">
+        <div className="w-full md:w-5/6  xl:w-3/6 mx-auto ">
           <ul className="flex justify-between font-generalSans font-medium">
             {navItems.map((item, i) => (
               <Tab key={i} item={item} active={active} setActive={setActive} />

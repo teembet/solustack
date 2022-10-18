@@ -51,7 +51,7 @@ const Slide = ({ item }) => {
         </div>
 
         <div className="absolute bottom-6 left-4">
-          <div className="text-white">
+          <div className="text-white capitalize">
             <div className="mb-4">
               <p className="text-sm ">App Name</p>
               <p className="font-semibold text-lg ">{item.name}</p>

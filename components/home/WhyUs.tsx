@@ -32,14 +32,14 @@ const reasons = [
 const WhyUs = () => {
   return (
     <div id="why-us" className="w-full py-10 px-4 lg:px-12">
-      <div className="xl:w-2/6 mx-auto">
-        <h3 className="font-semibold text-2xl mb-6">
+      <div className="w-full xl:w-2/6 mx-auto text-center">
+        <h3 className="font-semibold text-2xl xl:text-40 mb-6">
           Why Choose Solustack <br />
           For Your Next Project
         </h3>
       </div>
-      <div className="xl:w-3/5 mx-auto mb-6">
-        <p className="text-sm text-grey4  dark:text-white">
+      <div className="lg:w-4/5 xl:w-3/5 mx-auto mb-6">
+        <p className="text-sm text-grey4 text-center dark:text-white">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores

@@ -21,9 +21,9 @@ const AboutSection = () => {
     <div id="about-us" className="w-full bg-dark1 p-4 text-white">
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 xl:grid-cols-5">
-          <div className="xl:col-span-3">
-            <div className="">
-              <h3 className="font-semibold text-2xl mb-2">About Us</h3>
+          <div className="xl:col-span-3 py-8">
+            <div className="mb-10 xl:w-4/5">
+              <h3 className="font-semibold text-2xl xl:text-40 mb-2">About Us</h3>
               <p className="text-sm">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -32,7 +32,7 @@ const AboutSection = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
               {about.map((item, i) => (
-                <div key={i}>
+                <div className="xl:w-5/6" key={i}>
                   <p className="font-semibold text-xl">{i + 1}.</p>
                   <p className="font-semibold text-xl my-3">{item.title}</p>
                   <p className="font-normal text-sm">{item.text}</p>

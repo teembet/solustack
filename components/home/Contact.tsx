@@ -46,21 +46,21 @@ const Contact = () => {
             </div>
 
             <div>
-              <h5 className="font-semibold text-sm mt-5">Direct channels</h5>
+              <h5 className="font-semibold text-sm mt-5 mb-2">Direct channels</h5>
 
               <div className="flex items-center text-sm font-poppins">
                 <Image src={Phone.src} alt="" width={20} height={20} />
-                <span>+509 1234 5678</span>
+                <span className="mx-2">+509 1234 5678</span>
               </div>
               <div className="flex items-center text-sm">
                 <Image src={Email.src} alt="" width={20} height={20} />
                 {/* <Email className="mr-3 w-6" /> */}
-                <span> support@solustack.com</span>
+                <span className="mx-2"> support@solustack.com</span>
               </div>
             </div>
 
             <div className="mt-5">
-              <h5 className="font-semibold text-sm ">Social Media</h5>
+              <h5 className="font-semibold text-sm mb-2">Social Media</h5>
               <ul className="list-none flex ">
                 {sms.map((item, i) => (
                   <li key={i} className="mr-5">
