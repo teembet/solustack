@@ -15,11 +15,12 @@ const HomePage = ({ projects }) => {
   return (
     <div>
       <Header />
+      <AboutSection />
       <Services />
       <Process />
       {projects && <FeaturedProjects projects={projects} />}
       <WhyUs />
-      <AboutSection />
+
       <div className="relative overflow-x-clip">
         <div
           className="absolute bg-blue1 rounded-[50%] h-32 w-32 -right-20 -top-16 lg:h-40 lg:w-40 lg:-top-20 lg:-right-24   xl:h-52 xl:w-48 xl:-right-28 xl:-top-24"
