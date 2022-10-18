@@ -44,10 +44,10 @@ const Services = () => {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
         <div className="lg:col-span-2 flex items-center justify-between">
           <div className="md:w-4/6 mx-auto my-auto p-6">
-            <h3 className="font-semibold text-2xl leading-loose">
+            <h3 className="font-semibold text-2xl xl:text-35 leading-loose">
               We Offer The <br /> Following Services
             </h3>
-            <p className="text-justify mt-4">
+            <p className="text-justify mt-4 xl:text-25">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
@@ -66,13 +66,13 @@ const Services = () => {
                   <Image
                     src={item.icon}
                     alt=""
-                    width={30}
-                    height={30}
+                    width={35}
+                    height={35}
                     quality={100}
                   />
                 </div>
-                <p className="font-semibold text-xl my-2">{item.title}</p>
-                <p className="text-justify text-sm">
+                <p className="font-semibold text-xl xl:text-30 my-2">{item.title}</p>
+                <p className="text-justify text-sm xl:text-20">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis.
