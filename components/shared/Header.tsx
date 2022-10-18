@@ -60,7 +60,7 @@ const Header = () => {
         {/* fix animation here */}
         <div className="h-1/2 p-2 absolute top-1/4  inset-x-1/4 opacity-25 hidden lg:block dark:hidden">
           {/* <Lottie options={defaultOptions} height={500} width={500} /> */}
-          <Image src={Animation} alt="" className="h-full w-1/2 animate-bounce" />
+          <Image src={Animation} alt="" className="h-full w-1/2 animate-[bounce_4s_infinite]" />
         </div>
         {/* fix animation here */}
         <div className="z-[10] mt w-full  ">
