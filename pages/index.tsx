@@ -44,7 +44,7 @@ export default function Home() {
         />
       </Head>
       <Navbar />
-      <main className="bg-white dark:bg-darkBg">
+      <main className="bg-white dark:bg-darkBg overflow-x-clip">
         <HomePage projects={projects} />
       </main>
     </div>

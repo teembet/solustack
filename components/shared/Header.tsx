@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import HeaderImage from "../../public/images/hero1.svg";
 import Animation from "../../public/images/header_animation.png";
 import Netflix from "../../public/icons/netflix1.png";
@@ -9,6 +10,7 @@ import Synology from "../../public/icons/synology.png";
 import Image from "next/image";
 import animationData from "../../public/air.json";
 import Lottie from "react-lottie";
+
 const trustees = [
   {
     img: Netflix,
@@ -50,7 +52,7 @@ const defaultOptions = {
 // });
 const Header = () => {
   return (
-    <div className="min-h-[70vh]   font-generalSans">
+    <motion.div className="min-h-[70vh]   font-generalSans">
       <div
         className="w-full h-full  relative bg-no-repeat bg-cover bg-center dark:!bg-none dark:!bg-darkBg  text-center py-10 flex flex-col justify-end"
         style={{
@@ -67,7 +69,32 @@ const Header = () => {
           />
         </div>
         {/* fix animation here */}
-        <div className="z-[10] mt w-full  ">
+        <motion.div
+          transition={{
+            delay: 0.2,
+            x: { duration: 1.5 },
+            from: -300,
+            to: 0,
+            repeat: 3,
+            repeatType: "reverse",
+            default: { ease: "linear" },
+          }}
+          initial="initial"
+          animate="animate"
+          variants={{
+            initial: {
+              opacity: 0.5,
+              scale: 0.8,
+              x: -100,
+            },
+            animate: {
+              opacity: 1,
+              scale: 1,
+              x: 0,
+            },
+          }}
+          className="z-[10] mt w-full  "
+        >
           <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
             <div className="mb-3">
               <h1 className="font-bold text-dark1 text-3xl md:text-4xl lg:text-5xl dark:text-white ">
@@ -86,13 +113,17 @@ const Header = () => {
 
             <div className="font-poppins mt-8 md:mt-20 lg:mb-5">
               <a href="#contact">
-                <button className="bg-blue1 text-sm text-white py-2 px-12  rounded">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-blue1 text-sm text-white py-2 px-12  rounded"
+                >
                   Contact Us
-                </button>
+                </motion.button>
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="w-fit mx-auto opacity-40 my-8">
           <h3 className="mb-6 mt-6 text-sm font-medium">TRUSTED BY</h3>
@@ -116,7 +147,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import AboutSectionImage from "../../public/images/about_section_bg.svg";
 
 const about = [
@@ -18,12 +19,29 @@ const about = [
 
 const AboutSection = () => {
   return (
-    <div id="about-us" className="w-full bg-dark1 p-4 text-white">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{duration:1.5}}
+      viewport={{ once: true }}
+      id="about-us"
+      className="w-full bg-dark1 p-4 text-white"
+    >
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 xl:grid-cols-5">
-          <div className="xl:col-span-3 py-8">
+          <motion.div 
+          initial={{ x: -100 }}
+          whileInView={{ x: 0, }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration:2
+          }}
+           className="xl:col-span-3 py-8">
             <div className="mb-10 xl:w-4/5">
-              <h3 className="font-semibold text-2xl xl:text-40 mb-2">About Us</h3>
+              <h3 className="font-semibold text-2xl xl:text-40 mb-2">
+                About Us
+              </h3>
               <p className="text-sm">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -39,15 +57,15 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             className="hidden xl:block xl:col-span-2 bg-cover bg-no-repeat bg-center"
             style={{ backgroundImage: `url('${AboutSectionImage.src}')` }}
-          ></div>
+          ></motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

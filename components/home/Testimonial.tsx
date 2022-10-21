@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Avatar from "../../public/images/avatar.jpeg";
@@ -64,7 +65,13 @@ const Slide = ({ item }) => {
   return (
     <div className=" relative ">
       <div className="w-20 flex justify-center items-center h-20 border-3 border-white  dark:border-darkBg rounded-full shadow-[0px_11px_10px_#00000008]  mx-auto mb-[-40px]">
-        <Image src={image} alt="" width={60} height={60} className="rounded-full" />
+        <Image
+          src={image}
+          alt=""
+          width={60}
+          height={60}
+          className="rounded-full"
+        />
 
         {/* <img src={image} alt="" className="w-full h-full rounded-full" /> */}
       </div>
@@ -83,8 +90,23 @@ const Slide = ({ item }) => {
 
 const Testimonial = () => {
   return (
-    <div className="w-full p-4 py-12 lg:py-20 font-generalSans relative">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      className="w-full p-4 py-12 lg:py-20 font-generalSans relative"
+    >
       <div>
+        <motion.div 
+        initial={{ x: -100 }}
+        whileInView={{ x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          delay: 0.4,
+          duration: 2,
+        }}
+        >
         <h3 className="font-semibold  text-2xl mb-6 text-center">
           Client Testimonials
         </h3>
@@ -94,9 +116,17 @@ const Testimonial = () => {
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
           </p>
-        </div>
+        </div></motion.div>
 
-        <div className="w-full relative ">
+        <motion.div
+        initial={{ x: -200 }}
+        whileInView={{ x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          delay: 0.4,
+          duration: 2.5,
+        }}
+        className="w-full relative ">
           <Carousel
             swipeable={true}
             draggable={true}
@@ -120,13 +150,13 @@ const Testimonial = () => {
               </div>
             ))}
           </Carousel>
-        </div>
+        </motion.div>
       </div>
       <div className="h-6 w-6 bg-green rounded-[50%] absolute top-5 inset-x-1/2"></div>
       <div className="h-4 w-4 bg-[#EEEDF2] rounded-[50%] absolute top-5 right-1/3 "></div>
       <div className="h-4 w-4 bg-yellow rounded-[50%] absolute  left-[50%] lg:left-[44%] bottom-[55%]"></div>
       <div className="h-3 w-3 bg-purple1 rounded-[50%] absolute left-[75%]  lg:left-[60%] bottom-[55%]"></div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Collaborate from "../../public/icons/collaborate.svg";
 import Implement from "../../public/icons/implement.svg";
 import Scale from "../../public/icons/scale.svg";
@@ -21,11 +22,42 @@ const process = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 1.0,
+    },
+  },
+};
+
+const item_animate = {
+  hidden: { opacity: 0, scale: 0.5 },
+  show: { opacity: 1, scale: 1, transition: { duration: 2, ease: "easeIn" } },
+};
+
 const Process = () => {
   return (
-    <div className="w-full p-4 font-generalSans">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
+      className="w-full p-4 font-generalSans"
+    >
       <div className="w-11/12 mx-auto py-2">
-        <div className="w-full lg:w-3/5 ">
+        <motion.div
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration: 1.5,
+            ease: "easeIn"
+          }}
+          className="w-full lg:w-3/5 "
+        >
           <h4 className="font-semibold text-2xl">
             Our 3 Step Process to Creating Scalable Apps
           </h4>
@@ -35,20 +67,29 @@ const Process = () => {
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
             et ea rebum. Stet
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.div>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {process.map((item, i) => (
-            <div key={i} className="bg-dark1 p-6 text-white">
+            <motion.div
+              variants={item_animate}
+              key={i}
+              className="bg-dark1 p-6 text-white"
+            >
               <div className="mb-2">
                 <Image src={item.icon} alt="" width={40} height={40} />
               </div>
               <p className="font-semibold text-xl my-3">{item.title}</p>
               <p className=" text-sm">{item.text}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
