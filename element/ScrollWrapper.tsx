@@ -24,18 +24,7 @@ type Props = {
  * Use this on Modules that have scroll and/or observer triggers.
  */
 const ScrollWrapper = ({ children, style, inView, ...props }: Props) => {
-  return (
-    <div {...props}>
-      <Status inView={inView} />
-      {/* <section style={{ ...defaultStyle, ...style }}>
-        <h1>⬇ Scroll Down ⬇</h1>
-      </section> */}
-      {children}
-      {/* <section style={{ ...defaultStyle, ...style }}>
-        <h1>⬆︎ Scroll up ⬆︎</h1>
-      </section> */}
-    </div>
-  );
+  return <div {...props}>{children}</div>;
 };
 
 export default ScrollWrapper;
