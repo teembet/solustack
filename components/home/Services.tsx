@@ -1,4 +1,5 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import Apple from "../../public/icons/apple.svg";
 import Android from "../../public/icons/android.svg";
 import Hybrid from "../../public/icons/hybrid.svg";
@@ -36,13 +37,23 @@ const services = [
 
 const Services = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{duration:1.5}}
+      viewport={{ once: true }}
       id="services"
       className="w-full bg-dark1 relative  font-generalSans text-white"
     >
       <div className="absolute top-0 left-0 h-20 w-5 bg-blue1"></div>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-        <div className="lg:col-span-2 flex items-center justify-between">
+        <motion.div  initial={{ x: -100 }}
+          whileInView={{ x: 0, }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration:2
+          }} className="lg:col-span-2 flex items-center justify-between">
           <div className="md:w-4/6 mx-auto my-auto p-6">
             <h3 className="font-semibold text-2xl  leading-loose">
               We Offer The <br /> Following Services
@@ -54,8 +65,15 @@ const Services = () => {
               dolores et ea rebum. Stet
             </p>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+         initial={{ x: 100 }}
+         whileInView={{ x: 0, }}
+         viewport={{ once: true }}
+         transition={{
+           delay: 0.4,
+           duration:2
+         }}
           className=" lg:col-span-3 p-6 bg-center bg-cover"
           style={{ backgroundImage: `url('${ServicesBg.src}')` }}
         >
@@ -80,9 +98,9 @@ const Services = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

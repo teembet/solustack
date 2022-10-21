@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Hamburger from "../../public/icons/nav_icon.svg";
 import Close from "../../public/icons/close_nav.svg";
 import Instagram from "../../public/icons/instagram-nav.svg";
@@ -120,7 +121,12 @@ const Navbar = ({ activeTab }: Prop) => {
         </div>
 
         <div className="w-full md:w-5/6  xl:w-3/6 mx-auto ">
-          <ul className="flex justify-between font-generalSans font-medium">
+          <motion.ul
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-between font-generalSans font-medium"
+          >
             {navItems.map((item, i) => (
               <Tab
                 key={i}
@@ -129,7 +135,7 @@ const Navbar = ({ activeTab }: Prop) => {
                 setActive={setActive}
               />
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </div>
       <div className="w-full pt-6 pb-2  md:hidden  relative">
