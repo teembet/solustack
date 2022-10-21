@@ -54,9 +54,11 @@ const Project = () => {
     }
   }, [router]);
 
+  const activeTab = () => "Featured Projects";
+
   return (
     <>
-      <Navbar />
+      <Navbar activeTab={activeTab} />
 
       <div className="font-generalSans w-full  bg-white dark:bg-darkBg">
         <div
