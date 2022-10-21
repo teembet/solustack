@@ -2,15 +2,12 @@ import * as React from "react";
 import { CSSProperties } from "react";
 
 const sharedStyle: CSSProperties = {
-  display: "flex",
-  minHeight: "25vh",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  textAlign: "center",
-  background: "#148bb4",
-  color: "azure",
-  border: "1px solid black",
+  // display: "flex",
+ // minHeight: "25vh",
+  // flexDirection: "column",
+  // justifyContent: "center",
+  // alignItems: "center",
+  // textAlign: "center",
 };
 
 type Props = {
