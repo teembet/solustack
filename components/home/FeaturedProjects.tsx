@@ -84,7 +84,7 @@ const FeaturedProjects = ({ projects }) => {
     transition={{ duration:2 }}
     viewport={{ once: true }}
     className="w-full p-4 ">
-      <div className="w-11/12 mx-auto flex md:items-center justify-between">
+      <div className="w-11/12 mx-auto flex md:items-center justify-between overflow-x-clip">
         <motion.div 
         initial={{ x: -100 }}
         whileInView={{ x: 0 }}

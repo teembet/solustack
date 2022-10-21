@@ -43,7 +43,7 @@ const Services = () => {
       transition={{duration:1.5}}
       viewport={{ once: true }}
       id="services"
-      className="w-full bg-dark1 relative  font-generalSans text-white"
+      className="w-full bg-dark1 relative  font-generalSans text-white overflow-x-clip"
     >
       <div className="absolute top-0 left-0 h-20 w-5 bg-blue1"></div>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">

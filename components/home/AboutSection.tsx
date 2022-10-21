@@ -25,7 +25,7 @@ const AboutSection = () => {
       transition={{duration:1.5}}
       viewport={{ once: true }}
       id="about-us"
-      className="w-full bg-dark1 p-4 text-white"
+      className="w-full bg-dark1 p-4 text-white overflow-x-clip"
     >
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 xl:grid-cols-5">

@@ -95,7 +95,7 @@ const Testimonial = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2 }}
       viewport={{ once: true }}
-      className="w-full p-4 py-12 lg:py-20 font-generalSans relative"
+      className="w-full p-4 py-12 lg:py-20 font-generalSans relative overflow-x-clip"
     >
       <div>
         <motion.div 

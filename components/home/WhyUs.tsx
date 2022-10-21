@@ -38,7 +38,7 @@ const WhyUs = () => {
       transition={{ duration: 2 }}
       viewport={{ once: true }}
       id="why-us"
-      className="w-full py-10 px-4 lg:px-12"
+      className="w-full py-10 px-4 lg:px-12 overflow-x-clip"
     >
       <motion.div
         initial={{ x: -100 }}

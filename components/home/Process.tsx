@@ -44,7 +44,7 @@ const Process = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="w-full p-4 font-generalSans"
+      className="w-full p-4 font-generalSans overflow-x-clip"
     >
       <div className="w-11/12 mx-auto py-2">
         <motion.div
