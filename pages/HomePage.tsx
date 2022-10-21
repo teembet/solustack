@@ -13,24 +13,33 @@ import Footer from "../components/shared/Footer";
 import Wrapper from "../element/Wrapper";
 import ScrollWrapper from "../element/ScrollWrapper";
 import { useInView } from "react-intersection-observer";
-const HomePage = ({ projects }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-  });
+const HomePage = ({
+  projects,
+  ref,
+  ref1,
+  ref2,
+  ref3,
+  ref4,
+  ref5,
 
-  const [ref2, inView2] = useInView({
-    threshold: 0.1,
-  });
+  inView,
+  inView1,
+  inView2,
+  inView3,
+  inView4,
+  inView5,
 
-  const activeTab = () => {
-    if (inView) {
-      return 1;
-    } else if (inView2 && !inView) {
-      return 2;
-    }
-  };
+  activeTab,
+}) => {
+  // const items = [
+  //   { reference: "ref", view:" inView", component: <Header /> },
+  //   { reference: "ref1", view: "inView1", component: <AboutSection/>},
+  //   { reference: "ref2", view: "inView2", component: <Services/>},
+  //   { reference: "ref3", view: "inView3", component: <Process/> },
+  //   { reference: "ref4", view: "inView4", component: FeaturedProjects },
+  //   { reference: "ref5", view: "inView5", component: Header },
+  // ];
 
-  console.log(activeTab(), "active tab");
   return (
     <ScrollWrapper inView={inView}>
       <div>
@@ -40,30 +49,30 @@ const HomePage = ({ projects }) => {
           </section>
         </Wrapper>
 
-        <Wrapper ref={ref2}>
+        <Wrapper ref={ref1}>
           <section>
             <AboutSection />
           </section>
         </Wrapper>
 
-        <Wrapper>
+        <Wrapper ref={ref2}>
           <section>
             <Services />
           </section>
         </Wrapper>
 
-        <Wrapper>
+        <Wrapper ref={ref2}>
           <section>
             <Process />
           </section>
         </Wrapper>
 
-        <Wrapper>
+        <Wrapper ref={ref3}>
           <section>
             {projects && <FeaturedProjects projects={projects} />}
           </section>
         </Wrapper>
-        <Wrapper>
+        <Wrapper ref={ref4}>
           <section>
             <WhyUs />
           </section>
@@ -75,9 +84,13 @@ const HomePage = ({ projects }) => {
               backgroundImage: `url('${Circle.src}')`,
             }}
           ></div>
-          <Testimonial />
+          <Wrapper ref={ref5}>
+            <Testimonial />
+          </Wrapper>
         </div>
-        <Contact />
+        <Wrapper ref={ref5}>
+          <Contact />
+        </Wrapper>
         <Footer />
       </div>
     </ScrollWrapper>
