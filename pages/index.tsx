@@ -7,12 +7,54 @@ import useFetchProjects from "../hooks/useFetchProjects";
 import { useProjectContext } from "../hooks/useProjectContext";
 import { Router } from "next/router";
 import NProgress from "nprogress";
+import { useInView } from "react-intersection-observer";
 export default function Home() {
   const { getProjects } = useFetchProjects();
   const { projects, isLoading } = useProjectContext();
   React.useEffect(() => {
     getProjects();
   }, []);
+
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref1, inView1] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref2, inView2] = useInView({
+    threshold: 0.1,
+  });
+  const [ref3, inView3] = useInView({
+    threshold: 0.5,
+  });
+  const [ref4, inView4] = useInView({
+    threshold: 0.5,
+  });
+  const [ref5, inView5] = useInView({
+    threshold: 0.5,
+  });
+  const [ref6, inView6] = useInView({
+    threshold: 0.5,
+  });
+
+  const activeTab = () => {
+    if (inView) {
+      return "About Us";
+    } else if (inView1 && !inView2) {
+      return "About Us";
+    } else if (inView2) {
+      return "Our Services";
+    } else if (inView3) {
+      return "Featured Projects";
+    } else if (inView4) {
+      return "Why Us";
+    } else if (inView5) {
+      return "Get In Touch";
+    }
+  };
+
   React.useEffect(() => {
     Router.events.on("routeChangeStart", (url) => {
       NProgress.start();
@@ -43,9 +85,24 @@ export default function Home() {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <Navbar />
+      <Navbar activeTab={activeTab} />
       <main className="bg-white dark:bg-darkBg">
-        <HomePage projects={projects} />
+        <HomePage
+          projects={projects}
+          ref={ref}
+          ref1={ref1}
+          ref2={ref2}
+          ref3={ref3}
+          ref4={ref4}
+          ref5={ref5}
+          inView={inView}
+          inView1={inView1}
+          inView2={inView2}
+          inView3={inView3}
+          inView4={inView4}
+          inView5={inView5}
+          activeTab={activeTab}
+        />
       </main>
     </div>
   );

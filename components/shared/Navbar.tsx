@@ -54,13 +54,14 @@ const sms = [
 ];
 
 const Tab = ({ item, active, setActive }) => {
+  console.log(active, "tab active");
   return (
     <li
       onClick={() => {
-        setActive(item);
+        setActive(item.name);
       }}
       className={` ${
-        active === item ? "border-b-4 border-b-blue2" : ""
+        active === item.name ? "border-b-4 border-b-blue2" : ""
       }  px-3 py-2 text-sm  lg:text-base  cursor-pointer`}
     >
       <a href={`#${item.link}`}> {item.name}</a>
@@ -82,8 +83,9 @@ const MobileTab = ({ item, active, setActive, setIsOpen }) => {
     </li>
   );
 };
-const Navbar = () => {
-  const [active, setActive] = useState(navItems[0]);
+const Navbar = ({ activeTab }) => {
+  console.log(activeTab(), "nav active");
+  const [active, setActive] = useState(activeTab());
   const [isOpen, setIsOpen] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
 
@@ -117,7 +119,12 @@ const Navbar = () => {
         <div className="w-full md:w-5/6  xl:w-3/6 mx-auto ">
           <ul className="flex justify-between font-generalSans font-medium">
             {navItems.map((item, i) => (
-              <Tab key={i} item={item} active={active} setActive={setActive} />
+              <Tab
+                key={i}
+                item={item}
+                active={activeTab()}
+                setActive={setActive}
+              />
             ))}
           </ul>
         </div>
@@ -152,7 +159,7 @@ const Navbar = () => {
                 <MobileTab
                   key={i}
                   item={item}
-                  active={active}
+                  active={activeTab()}
                   setActive={setActive}
                   setIsOpen={setIsOpen}
                 />
