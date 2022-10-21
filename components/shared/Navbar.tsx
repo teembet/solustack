@@ -84,7 +84,10 @@ const MobileTab = ({ item, active, setActive, setIsOpen }) => {
     </li>
   );
 };
-const Navbar = ({ activeTab }) => {
+type Prop = {
+  activeTab: () => void;
+};
+const Navbar = ({ activeTab }: Prop) => {
   console.log(activeTab(), "nav active");
   const [active, setActive] = useState(activeTab());
   const [isOpen, setIsOpen] = useState(false);
