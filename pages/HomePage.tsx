@@ -23,13 +23,6 @@ const HomePage = ({
   ref5,
 
   inView,
-  inView1,
-  inView2,
-  inView3,
-  inView4,
-  inView5,
-
-  activeTab,
 }) => {
   // const items = [
   //   { reference: "ref", view:" inView", component: <Header /> },

@@ -96,12 +96,6 @@ export default function Home() {
           ref4={ref4}
           ref5={ref5}
           inView={inView}
-          inView1={inView1}
-          inView2={inView2}
-          inView3={inView3}
-          inView4={inView4}
-          inView5={inView5}
-          activeTab={activeTab}
         />
       </main>
     </div>
