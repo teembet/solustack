@@ -40,20 +40,23 @@ const Services = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{duration:1.5}}
+      transition={{ duration: 1.5 }}
       viewport={{ once: true }}
       id="services"
       className="w-full bg-dark1 relative  font-generalSans text-white overflow-x-clip"
     >
       <div className="absolute top-0 left-0 h-20 w-5 bg-blue1"></div>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-        <motion.div  initial={{ x: -100 }}
-          whileInView={{ x: 0, }}
+        <motion.div
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
           viewport={{ once: true }}
           transition={{
             delay: 0.4,
-            duration:2
-          }} className="lg:col-span-2 flex items-center justify-between">
+            duration: 2,
+          }}
+          className="lg:col-span-2 flex items-center justify-between"
+        >
           <div className="md:w-4/6 mx-auto my-auto p-6">
             <h3 className="font-semibold text-2xl  leading-loose">
               We Offer The <br /> Following Services
@@ -67,17 +70,17 @@ const Services = () => {
           </div>
         </motion.div>
         <motion.div
-         initial={{ x: 100 }}
-         whileInView={{ x: 0, }}
-         viewport={{ once: true }}
-         transition={{
-           delay: 0.4,
-           duration:2
-         }}
+          initial={{ x: 100 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration: 2,
+          }}
           className=" lg:col-span-3 p-6 bg-center bg-cover"
           style={{ backgroundImage: `url('${ServicesBg.src}')` }}
         >
-          <div className="grid grid-cols-2 gap-8 p-3">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 p-3">
             {services.map((item, i) => (
               <div key={i}>
                 <div>

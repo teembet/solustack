@@ -78,22 +78,24 @@ const Slide = ({ item }) => {
 
 const FeaturedProjects = ({ projects }) => {
   return (
-    <motion.div 
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration:2 }}
-    viewport={{ once: true }}
-    className="w-full p-4 ">
-      <div className="w-11/12 mx-auto flex md:items-center justify-between overflow-x-clip">
-        <motion.div 
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          delay: 0.4,
-          duration: 2,
-        }}
-        className="md:w-3/5 ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      className="w-full p-4 "
+    >
+      <div className="w-11/12 mx-auto flex-col items-center lg:flex-row flex md:items-center justify-between overflow-x-clip ">
+        <motion.div
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration: 2,
+          }}
+          className="md:w-3/5 "
+        >
           <h4 className="font-semibold text-2xl">Our Featured Projects</h4>
           <p className=" md:text-justify my-5 text-grey4 dark:text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -101,15 +103,16 @@ const FeaturedProjects = ({ projects }) => {
             ad minim veniam, quis.
           </p>
         </motion.div>
-        <motion.div 
-        initial={{ x: 100 }}
-        whileInView={{ x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          delay: 0.4,
-          duration: 2,
-        }}
-        className="md:w-2/5  text-end">
+        <motion.div
+          initial={{ x: 100 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration: 2,
+          }}
+          className="md:w-2/5  text-end"
+        >
           <a href="#contact">
             <button className="bg-blue1 py-2 px-12 text-white rounded">
               Get in Touch
@@ -118,12 +121,12 @@ const FeaturedProjects = ({ projects }) => {
         </motion.div>
       </div>
 
-      <div className="w-full relative ">
+      <div className="w-full relative mt-3 ">
         <Carousel
           swipeable={true}
           draggable={true}
-          showDots={false}
-          arrows={false}
+          showDots={true}
+          arrows={true}
           responsive={responsive}
           partialVisible={true}
           infinite={false}

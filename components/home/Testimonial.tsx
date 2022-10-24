@@ -25,7 +25,14 @@ const responsive = {
 const items = [
   {
     image: Avatar.src,
-    name: "Okori Inyene",
+    name: "Odi",
+    status: "Customer",
+    testimony:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita.",
+  },
+  {
+    image: Avatar.src,
+    name: "Timbet Ekanem",
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita.",
@@ -39,21 +46,7 @@ const items = [
   },
   {
     image: Avatar.src,
-    name: "Okori Inyene",
-    status: "Customer",
-    testimony:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita.",
-  },
-  {
-    image: Avatar.src,
-    name: "Okori Inyene",
-    status: "Customer",
-    testimony:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita.",
-  },
-  {
-    image: Avatar.src,
-    name: "Okori Inyene",
+    name: "Dara",
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita.",
@@ -98,40 +91,43 @@ const Testimonial = () => {
       className="w-full p-4 py-12 lg:py-20 font-generalSans relative overflow-x-clip"
     >
       <div>
-        <motion.div 
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          delay: 0.4,
-          duration: 2,
-        }}
+        <motion.div
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration: 2,
+          }}
         >
-        <h3 className="font-semibold  text-2xl mb-6 text-center">
-          Client Testimonials
-        </h3>
-        <div className="lg:w-4/5 xl:w-3/5 mx-auto mb-6 font-poppins">
-          <p className="text-base font-poppins text-dark1 text-center dark:text-white">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-          </p>
-        </div></motion.div>
+          <h3 className="font-semibold  text-2xl mb-6 text-center">
+            Client Testimonials
+          </h3>
+          <div className="lg:w-4/5 xl:w-3/5 mx-auto mb-6 font-poppins">
+            <p className="text-base font-poppins text-dark1 text-center dark:text-white">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores
+            </p>
+          </div>
+        </motion.div>
 
         <motion.div
-        initial={{ x: -200 }}
-        whileInView={{ x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          delay: 0.4,
-          duration: 2.5,
-        }}
-        className="w-full relative ">
+          initial={{ x: -200 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            duration: 2.5,
+          }}
+          className="w-full relative "
+        >
           <Carousel
             swipeable={true}
             draggable={true}
-            showDots={false}
-            arrows={false}
+            showDots={true}
+            arrows={true}
             responsive={responsive}
             partialVisible={true}
             infinite={false}

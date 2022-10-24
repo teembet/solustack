@@ -25,7 +25,7 @@ const emojiIcon: CSSProperties = {
 function Status({ inView }: Props) {
   return (
     <div style={{ position: "sticky", top: 0 }}>
-      <div style={statusElement}>
+      {/* <div style={statusElement}>
         {inView ? (
           <span role="img" aria-label="In view" style={emojiIcon}>
             ✅
@@ -35,7 +35,7 @@ function Status({ inView }: Props) {
             ❌
           </span>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
