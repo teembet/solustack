@@ -38,7 +38,7 @@ const Project = () => {
   useEffect(() => {
     if (router.asPath !== router.route) {
       const id = router.query.id;
-      console.log(router.query, "id");
+
       if (
         project && // 👈 null and undefined check
         Object.keys(project).length === 0 &&
@@ -62,7 +62,7 @@ const Project = () => {
 
       <div className="font-generalSans w-full  bg-white dark:bg-darkBg">
         <div
-          className="h-[60vh] bg-cover bg-center bg-no-repeat relative"
+          className="h-[60vh] bg-contain  bg-center bg-no-repeat relative"
           style={{
             backgroundImage: `url('${project.bg}')`,
           }}

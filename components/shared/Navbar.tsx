@@ -55,7 +55,6 @@ const sms = [
 ];
 
 const Tab = ({ item, active, setActive }) => {
-  console.log(active, "tab active");
   return (
     <li
       onClick={() => {
@@ -88,7 +87,7 @@ type Prop = {
   activeTab?: () => void;
 };
 const Navbar = ({ activeTab }: Prop) => {
-  console.log(activeTab(), "nav active");
+
   const [active, setActive] = useState(activeTab());
   const [isOpen, setIsOpen] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();

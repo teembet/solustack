@@ -44,7 +44,7 @@ const useFetchProjects = () => {
 
   const getProject = async (id) => {
     dispatch({ type: "GET_LOADING", payload: isLoading });
-    console.log(id, "id");
+
     setError(null);
 
     try {
@@ -54,7 +54,6 @@ const useFetchProjects = () => {
       const response = { ...(await data).data(), id: (await data).id };
       setProject(response);
       if (response) {
-        console.log(response, "response");
         setIsLoading(false);
         dispatch({ type: "GET_PROJECT", payload: response });
         dispatch({ type: "GET_LOADING", payload: isLoading });
