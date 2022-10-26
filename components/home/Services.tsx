@@ -40,13 +40,59 @@ const Services = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{duration:1.5}}
+      transition={{ duration: 1.5 }}
       viewport={{ once: true }}
       id="services"
-      className="w-full bg-dark1 relative  font-generalSans text-white overflow-x-clip"
+      className="w-full  relative bg-white dark:bg-darkBg font-supreme  text-white py-10 overflow-x-clip"
     >
-      <div className="absolute top-0 left-0 h-20 w-5 bg-blue1"></div>
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+      <div className="absolute top-0 left-0 h-[25%] w-[15%] bg-blue1 z-1"></div>
+      <div className="w-full lg:w-11/12  mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
+          <div className="col-span-1 p-3">
+            <div className="">
+              <h3 className="font-semibold text-2xl font-technor  leading-loose z-[2]">
+                We Offer The <br /> Following Services
+              </h3>
+              <p className="text-justify mt-4 text-base">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet
+              </p>
+            </div>
+          </div>
+          {services.map((item, i) => (
+            <div key={i} className="col-span-1">
+              <div className="glass-card px-4 py-6 font-supreme">
+                <motion.div
+                  whileHover={{
+                    rotateY: 180 ,
+                    transition: { duration: 1, },
+                  }}
+                  className=" w-fit"
+                >
+                  <Image
+                    src={item.icon}
+                    alt=""
+                    width={35}
+                    height={35}
+                    quality={100}
+                  />
+                </motion.div>
+                <p className="font-semibold text-2xl  my-2 font-technor">
+                  {item.title}
+                </p>
+                <p className="text-justify text-base ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis.
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <motion.div  initial={{ x: -100 }}
           whileInView={{ x: 0, }}
           viewport={{ once: true }}
@@ -55,7 +101,7 @@ const Services = () => {
             duration:2
           }} className="lg:col-span-2 flex items-center justify-between">
           <div className="md:w-4/6 mx-auto my-auto p-6">
-            <h3 className="font-semibold text-2xl  leading-loose">
+            <h3 className="font-semibold text-2xl font-technor  leading-loose">
               We Offer The <br /> Following Services
             </h3>
             <p className="text-justify mt-4 text-base">
@@ -65,6 +111,7 @@ const Services = () => {
               dolores et ea rebum. Stet
             </p>
           </div>
+          
         </motion.div>
         <motion.div
          initial={{ x: 100 }}
@@ -99,7 +146,7 @@ const Services = () => {
             ))}
           </div>
         </motion.div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

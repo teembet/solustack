@@ -38,7 +38,7 @@ const WhyUs = () => {
       transition={{ duration: 2 }}
       viewport={{ once: true }}
       id="why-us"
-      className="w-full py-10 px-4 lg:px-12 overflow-x-clip"
+      className="w-full py-10 px-4 lg:px-12 overflow-x-clip font-supreme"
     >
       <motion.div
         initial={{ x: -100 }}
@@ -49,9 +49,9 @@ const WhyUs = () => {
           duration: 2,
         }}
       >
-        <div className="w-full xl:w-2/6 mx-auto text-center">
-          <h3 className="font-semibold text-2xl xl:text-40 mb-6">
-            Why Choose Solustack <br />
+        <div className="w-full xl:w-2/5 mx-auto text-center">
+          <h3 className="font-semibold font-technor text-2xl xl:text-40 mb-6">
+            Why Choose Solustack 
             For Your Next Project
           </h3>
         </div>
@@ -78,7 +78,7 @@ const WhyUs = () => {
             <div className=" text-center flex justify-center">
               <Image src={item.icon} alt="" width={40} height={40} />
             </div>
-            <h5 className="font-semibold text-sm text-center my-1">
+            <h5 className="font-semibold font-technor text-sm text-center my-1">
               {item.title}
             </h5>
             <p className="text-black dark:text-white text-xs text-center">

@@ -44,9 +44,9 @@ const Process = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="w-full p-4 font-generalSans overflow-x-clip"
+      className="w-full p-4 font-supreme  overflow-x-clip"
     >
-      <div className="w-11/12 mx-auto py-2">
+      <div className="w-11/12 mx-auto py-2 mb-12">
         <motion.div
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
@@ -56,12 +56,12 @@ const Process = () => {
             duration: 1.5,
             ease: "easeIn"
           }}
-          className="w-full lg:w-3/5 "
+          className="w-full lg:w-3/5 mx-auto"
         >
-          <h4 className="font-semibold text-2xl">
+          <h4 className="font-semibold text-2xl text-center font-technor">
             Our 3 Step Process to Creating Scalable Apps
           </h4>
-          <p className="text-justify my-5 text-grey4 dark:text-white">
+          <p className="text-center my-5 text-grey4 dark:text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -78,13 +78,13 @@ const Process = () => {
             <motion.div
               variants={item_animate}
               key={i}
-              className="bg-dark1 p-6 text-white"
+              className="glass-card p-6 text-white"
             >
               <div className="mb-2">
                 <Image src={item.icon} alt="" width={40} height={40} />
               </div>
-              <p className="font-semibold text-xl my-3">{item.title}</p>
-              <p className=" text-sm">{item.text}</p>
+              <p className="font-semibold font-technor text-xl my-3">{item.title}</p>
+              <p className=" text-sm font-supreme">{item.text}</p>
             </motion.div>
           ))}
         </motion.div>

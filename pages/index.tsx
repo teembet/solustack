@@ -84,10 +84,12 @@ export default function Home() {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <link href="https://api.fontshare.com/v2/css?f[]=supreme@800,400,300,500,700&display=swap" rel="stylesheet"></link>
       </Head>
-      <Navbar activeTab={activeTab} />
+      
       <main className="bg-white dark:bg-darkBg">
-        <HomePage
+   <Navbar activeTab={activeTab} />     
+   <HomePage
           projects={projects}
           ref={ref}
           ref1={ref1}

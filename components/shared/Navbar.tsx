@@ -63,7 +63,7 @@ const Tab = ({ item, active, setActive }) => {
       }}
       className={` ${
         active === item.name ? "border-b-4 border-b-blue2" : ""
-      }  px-3 py-2 text-sm  lg:text-base  cursor-pointer`}
+      }  px-3 py-2 text-sm  lg:text-base  cursor-pointer font-supreme`}
     >
       <a href={`#${item.link}`}> {item.name}</a>
     </li>
@@ -78,7 +78,7 @@ const MobileTab = ({ item, active, setActive, setIsOpen }) => {
       }}
       className={` ${
         active === item ? "border-b-4 border-b-blue2" : ""
-      }  p-3 my-4 text-sm lg:text-base cursor-pointer`}
+      }  p-3 my-4 text-sm lg:text-base cursor-pointer font-supreme`}
     >
       <a href={`#${item.link}`}> {item.name}</a>
     </li>
@@ -111,11 +111,11 @@ const Navbar = ({ activeTab }: Prop) => {
     );
   };
   return (
-    <div className="sticky top-0 z-50 bg-white dark:bg-darkBg dark:text-white">
+    <div className="sticky top-0 z-50 bg-white dark:bg-darkBg dark:text-white font-supreme">
       <div className="w-full hidden md:block pt-4 relative">
         <div className="absolute top-3 right-3">{renderThemeToggle()}</div>
         <div className="w-fit  mx-auto ">
-          <h2 className="mx-auto  font-poppins font-semibold text-3xl py-3">
+          <h2 className="mx-auto  font-technor font-bold text-3xl py-3">
             <Link href={"/"}>Solustack</Link>
           </h2>
         </div>
@@ -124,8 +124,8 @@ const Navbar = ({ activeTab }: Prop) => {
           <motion.ul
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-between font-generalSans font-medium"
+            transition={{ duration: 0.8 }}
+            className="flex justify-between  font-medium"
           >
             {navItems.map((item, i) => (
               <Tab

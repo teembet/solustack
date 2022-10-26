@@ -19,14 +19,17 @@ const about = [
 
 const AboutSection = () => {
   return (
+    <div className="pb-4 bg-aboutBlue1 rounded-b-[96px] ">
+    <div className="pb-4 bg-aboutBlue2 rounded-b-[96px] ">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{duration:1.5}}
       viewport={{ once: true }}
       id="about-us"
-      className="w-full bg-dark1 p-4 text-white overflow-x-clip"
+      className="w-full bg-darkBg p-4 text-white overflow-x-clip rounded-b-[96px] "
     >
+      
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 xl:grid-cols-5">
           <motion.div 
@@ -65,7 +68,8 @@ const AboutSection = () => {
           ></motion.div>
         </div>
       </div>
-    </motion.div>
+   
+    </motion.div></div></div>
   );
 };
 

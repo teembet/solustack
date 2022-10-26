@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import CaretRight from "../../public/icons/caret-right.svg";
+import ProjectOne from "../../public/images/project-one.jpg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import useFetchProjects from "../../hooks/useFetchProjects";
@@ -83,8 +84,9 @@ const FeaturedProjects = ({ projects }) => {
     whileInView={{ opacity: 1 }}
     transition={{ duration:2 }}
     viewport={{ once: true }}
-    className="w-full p-4 ">
-      <div className="w-11/12 mx-auto flex md:items-center justify-between overflow-x-clip">
+    className="w-full  py-12 feature-project-bg font-supreme">
+      <div className="w-full border-b border-b-bg2 mb-4">
+      <div className="w-11/12 xl:w-10/12 mx-auto  flex md:items-center justify-between overflow-x-clip mb-4  ">
         <motion.div 
         initial={{ x: -100 }}
         whileInView={{ x: 0 }}
@@ -94,7 +96,7 @@ const FeaturedProjects = ({ projects }) => {
           duration: 2,
         }}
         className="md:w-3/5 ">
-          <h4 className="font-semibold text-2xl">Our Featured Projects</h4>
+          <h4 className="font-semibold text-3xl font-technor">Our Featured Projects</h4>
           <p className=" md:text-justify my-5 text-grey4 dark:text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -111,38 +113,86 @@ const FeaturedProjects = ({ projects }) => {
         }}
         className="md:w-2/5  text-end">
           <a href="#contact">
-            <button className="bg-blue1 py-2 px-12 text-white rounded">
+            <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-6 md:px-12 whitespace-nowrap  text-white rounded">
               Get in Touch
             </button>
           </a>
         </motion.div>
       </div>
+      </div>
 
       <div className="w-full relative ">
-        <Carousel
-          swipeable={true}
-          draggable={true}
-          showDots={false}
-          arrows={false}
-          responsive={responsive}
-          partialVisible={true}
-          infinite={false}
-          keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
-          containerClass="pb-10 "
-          sliderClass=""
-          dotListClass=""
-          itemClass="carousel-item-padding-40-px"
-          // renderDotsOutside={true}
-        >
-          {projects &&
-            projects.map((item, i) => (
-              <div key={i} className=" mx-4">
-                <Slide item={item} />
-              </div>
-            ))}
-        </Carousel>
+<div className="w-11/12 xl:w-10/12 mx-auto ">
+
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+<div className="my-6 ">
+  <h4 className="font-technor font-medium text-2xl ">Title of Project</h4>
+  <br/>
+  <p className="text-xs lg:text-sm">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+  <br/>
+  <p className="text-xs lg:text-sm">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+
+  <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded">
+              View Project
+            </button>
+
+</div>
+<div className=" flex flex-col justify-center align-center">
+  <div className=" ">
+  <Image src={ProjectOne} alt=""   />
+    </div>
+</div>
+
+
+  </div>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+<div className="my-6 ">
+  <h4 className="font-technor font-medium text-2xl ">Title of Project</h4>
+  <br/>
+  <p className="text-xs lg:text-sm">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+  <br/>
+  <p className="text-xs lg:text-sm">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+
+  <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded">
+              View Project
+            </button>
+
+</div>
+<div className=" flex flex-col justify-center align-center">
+  <div className=" ">
+  <Image src={ProjectOne} alt=""   />
+    </div>
+</div>
+
+
+  </div>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+<div className="my-6 ">
+  <h4 className="font-technor font-medium text-2xl ">Title of Project</h4>
+  <br/>
+  <p className="text-xs lg:text-sm">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+  <br/>
+  <p className="text-xs lg:text-sm">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+
+  <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded">
+              View Project
+            </button>
+
+</div>
+<div className=" flex flex-col justify-center align-center">
+  <div className=" ">
+  <Image src={ProjectOne} alt=""   />
+    </div>
+</div>
+
+
+  </div>
+
+</div>
+
       </div>
     </motion.div>
   );

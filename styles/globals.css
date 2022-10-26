@@ -17,6 +17,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* font-GeneralSans */
 
 @font-face {
   font-family: "GeneralSans";
@@ -50,6 +51,7 @@ code {
   font-display: swap;
   font-style: normal;
 }
+/* font-Graphie */
 
 @font-face {
   font-family: "Graphie";
@@ -73,12 +75,93 @@ code {
   font-style: normal;
 }
 
+/* font-Technor */
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Light.otf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Medium.otf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Semibold.otf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Black.otf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@layer utilities {
+  .base-background {
+    background: transparent
+      linear-gradient(168deg, #ffffff0a 0%, #ffffff0d 100%) 0% 0% no-repeat;
+    opacity: 1;
+    backdrop-filter: blur(33px);
+    -webkit-backdrop-filter: blur(33px);
+  }
+}
+.feature-project-bg {
+  background: transparent linear-gradient(140deg, #004dd2 0%, #004dd2 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 98px;
+  opacity: 1;
+  backdrop-filter: blur(33px);
+  -webkit-backdrop-filter: blur(33px);
+}
+
+.glass-card {
+  background: transparent linear-gradient(119deg, #ffffff66 0%, #ffffff0d 100%)
+    0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+
 .three-quarter-bg {
   background-size: 100% 70%;
 }
 .slant {
   transform: matrix(0.92, -0.39, 0.39, 0.92, 0, 0);
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .box {
   position: absolute;
   top: 90%;

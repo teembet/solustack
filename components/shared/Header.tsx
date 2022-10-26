@@ -52,7 +52,7 @@ const defaultOptions = {
 // });
 const Header = () => {
   return (
-    <motion.div className="min-h-[70vh]   font-generalSans">
+    <motion.div className="min-h-[70vh]   font-supreme">
       <div
         className="w-full h-full  relative bg-no-repeat bg-cover bg-center dark:!bg-none dark:!bg-darkBg  text-center py-10 flex flex-col justify-end"
         style={{
@@ -96,7 +96,7 @@ const Header = () => {
           className="z-[10] mt w-full  "
         >
           <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
-            <div className="mb-3">
+            <div className="mb-3 font-technor">
               <h1 className="font-bold text-dark1 text-3xl md:text-4xl lg:text-5xl dark:text-white ">
                 WE BUILD THE
               </h1>
@@ -111,7 +111,7 @@ const Header = () => {
               </h5>
             </div>
 
-            <div className="font-poppins mt-8 md:mt-20 lg:mb-5">
+            <div className=" mt-8 md:mt-20 lg:mb-5">
               <a href="#contact">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
@@ -127,7 +127,7 @@ const Header = () => {
 
         <div className="w-fit mx-auto opacity-40 my-8">
           <h3 className="mb-6 mt-6 text-sm font-medium">TRUSTED BY</h3>
-          {/* <ul className="flex items-center">
+          <ul className="flex items-center">
             {trustees.map((item, i) => (
               <li key={i} className="mr-8">
                 <Image
@@ -139,7 +139,7 @@ const Header = () => {
                 />
               </li>
             ))}
-          </ul> */}
+          </ul>
           <div className="box">
             <span></span>
             <span></span>
