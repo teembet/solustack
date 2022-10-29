@@ -54,7 +54,7 @@ const Header = () => {
   return (
     <motion.div className="min-h-[70vh]   font-supreme">
       <div
-        className="w-full h-full  relative bg-no-repeat bg-cover bg-center dark:!bg-none dark:!bg-darkBg  text-center py-10 flex flex-col justify-end"
+        className="w-full h-full  relative bg-no-repeat bg-cover bg-center dark:!bg-none dark:!bg-transparent  text-center py-10 flex flex-col justify-end"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)),url('${HeaderImage.src}')`,
         }}

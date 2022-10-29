@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -52,6 +54,13 @@ module.exports = {
       4: "4px",
       6: "6px",
     },
+    // backgroundImage: (theme) => ({
+    //   "bg-image-gradient-168": [
+    //     "168deg",
+    //     theme("colors.bg1"),
+    //     theme("colors.bg2"),
+    //   ],
+    // }),
     colors: {
       white: "#FFFFFF",
       black: "#000000",
@@ -70,12 +79,11 @@ module.exports = {
       purple2: "#674BD2",
       inputGrey: "rgba(193, 193, 193,0.2)",
       darkBg: "#0A182F",
-      bg1:"rgba(255, 255, 255, 0.04)",
-      bg2:"#FFFFFF0D",
+      bg1:"#0B1527",
+      bg2:"#004DD2",
       error: "rgba(255, 255, 255, 0.05)",
       aboutBlue1:"rgba(0, 77, 210, 0.19)",
       aboutBlue2:"rgba(3, 56, 148, 0.19)",
-      linear:"linear-gradient(168deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.05) 100%)"
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
@@ -85,5 +93,33 @@ module.exports = {
       supreme: ["Supreme", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+          {
+              'bg-gradient': (angle) => ({
+                  'background-image': `linear-gradient(${angle}, var(--tw-gradient-stops))`,
+              }),
+          },
+          {
+              // values from config and defaults you wish to use most
+              values: Object.assign(
+                  theme('bgGradientDeg', {}), // name of config key. Must be unique
+                  {
+                      10: '10deg', // bg-gradient-10
+                      15: '15deg',
+                      20: '20deg',
+                      25: '25deg',
+                      30: '30deg',
+                      45: '45deg',
+                      60: '60deg',
+                      90: '90deg',
+                      120: '120deg',
+                      168: '168deg',
+                  }
+              )
+          }
+       )
+    })
+  ],
 };

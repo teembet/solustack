@@ -111,7 +111,7 @@ const Navbar = ({ activeTab }: Prop) => {
     );
   };
   return (
-    <div className="sticky top-0 z-50 bg-white dark:bg-darkBg dark:text-white font-supreme">
+    <div className="sticky top-0 z-50 bg-white dark:bg-gradient-168 dark:from-bg1 dark:to-bg1  dark:backdrop-blur-xl dark:text-white font-supreme">
       <div className="w-full hidden md:block pt-4 relative">
         <div className="absolute top-3 right-3">{renderThemeToggle()}</div>
         <div className="w-fit  mx-auto ">

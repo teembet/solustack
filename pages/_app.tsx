@@ -8,24 +8,14 @@ import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={{
-        initial: {
-          opacity: 0,
-        },
-        animate: {
-          opacity: 1,
-        },
-      }}
-    >
+  
       <ThemeProvider enableSystem={false} attribute="class">
         <ContextProvider>
-          <Component {...pageProps} />
+          <div className="bg-white dark:bg-bg1">
+          <Component {...pageProps} /></div>
         </ContextProvider>
       </ThemeProvider>
-    </motion.div>
+   
   );
 }
 

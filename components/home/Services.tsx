@@ -43,7 +43,7 @@ const Services = () => {
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
       id="services"
-      className="w-full  relative bg-white dark:bg-darkBg font-supreme  text-white py-10 overflow-x-clip"
+      className="w-full  relative  font-supreme  text-white py-10 overflow-x-clip"
     >
       <div className="absolute top-0 left-0 h-[25%] w-[15%] bg-blue1 z-1"></div>
       <div className="w-full lg:w-11/12  mx-auto">

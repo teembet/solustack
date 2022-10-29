@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 code {
@@ -121,11 +121,10 @@ code {
 
 @layer utilities {
   .base-background {
-    background: transparent
-      linear-gradient(168deg, #ffffff0a 0%, #ffffff0d 100%) 0% 0% no-repeat;
-    opacity: 1;
-    backdrop-filter: blur(33px);
-    -webkit-backdrop-filter: blur(33px);
+    background: transparent linear-gradient(168deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+opacity: 1;
+backdrop-filter: blur(33px);
+-webkit-backdrop-filter: blur(33px);
   }
 }
 .feature-project-bg {
