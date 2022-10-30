@@ -3,12 +3,18 @@ import Instagram from "../../public/icons/instagram-white.svg";
 import Facebook from "../../public/icons/facebook-white.svg";
 import LinkedIn from "../../public/icons/linkedin-white.svg";
 import Twitter from "../../public/icons/twitter-white.svg";
+import Grid from "../../public/icons/footer-grid.svg";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="w-full  p-4 py-12 text-white font-supreme">
-      <div className="lg:w-11/12 mx-auto">
+    <div className="relative"> 
+    <div className="absolute -left-[5%] top-16 bottom-0 w-[20%] rounded-full bg-blue3">
+
+      </div>
+    <div className="w-full  p-4 py-12 text-white font-supreme relative dark:backdrop-blur-xl">
+     
+      <div className="lg:w-11/12 mx-auto z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
             <div className="">
@@ -55,8 +61,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
+       
       </div>
-    </div>
+       <div className="absolute bottom-0 right-20">
+          <Image src={Grid} alt="" height={150}  />
+          </div>
+    </div></div>
   );
 };
 

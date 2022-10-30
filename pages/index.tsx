@@ -90,7 +90,7 @@ export default function Home() {
         ></link>
       </Head>
 
-      <main className="bg-white dark:bg-gradient-168 dark:from-bg1 dark:to-bg1 dark:backdrop-blur-sm ">
+      <main className="bg-white dark:bg-dark4  dark:backdrop-blur-sm ">
         <Navbar activeTab={activeTab} />
         <HomePage
           projects={projects}

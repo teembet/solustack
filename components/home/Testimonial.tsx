@@ -82,8 +82,8 @@ const items = [
 const Slide = ({ item }) => {
   const { image, name, testimony, status } = item;
   return (
-    <div className="  glass-card rounded-[48px] p-5">
-      <p className="text-xs md:text-md text-justify leading-6 font-generalSans">
+    <div className="  testimonial-card backdrop-blur-[40px] rounded-[48px]  pt-5">
+      <p className="text-sm md:text-md text-justify leading-6 font-generalSans px-6">
         {testimony}
       </p>
       <div className="flex justify-between items-center">

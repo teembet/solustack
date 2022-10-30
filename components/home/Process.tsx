@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Collaborate from "../../public/icons/collaborate.svg";
 import Implement from "../../public/icons/implement.svg";
 import Scale from "../../public/icons/scale.svg";
+import Widget from "../../public/icons/services-lottie.png"
 import Image from "next/image";
 const process = [
   {
@@ -44,9 +45,14 @@ const Process = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="w-full p-4 font-supreme  overflow-x-clip"
+      className="w-full p-4 font-supreme  overflow-x-clip dark:bg-dark3"
     >
-      <div className="w-11/12 mx-auto py-2 mb-12">
+      <div className="w-11/12 mx-auto py-2 mb-12 relative">
+      <div className="absolute -top-8 left-0 right-0 ">
+        <div className="mx-auto w-fit animate-[spin_2s_linear_infinite]" >
+            <Image src={Widget} alt="" width={100} height={100}  />
+            </div>
+          </div>
         <motion.div
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
@@ -56,10 +62,11 @@ const Process = () => {
             duration: 1.5,
             ease: "easeIn"
           }}
-          className="w-full lg:w-3/5 mx-auto"
+          className="w-full lg:w-3/5 mx-auto "
         >
-          <h4 className="font-semibold text-2xl text-center font-technor">
-            Our 3 Step Process to Creating Scalable Apps
+          
+          <h4 className="font-semibold text-2xl text-center font-technor z-10">
+            Our 3 Step Process to Creating <br/> Scalable Apps
           </h4>
           <p className="text-center my-5 text-grey4 dark:text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -78,7 +85,7 @@ const Process = () => {
             <motion.div
               variants={item_animate}
               key={i}
-              className="glass-card p-6 text-white"
+              className="glass-card2 backdrop-blur-[40px] rounded-xl p-6 text-white"
             >
               <div className="mb-2">
                 <Image src={item.icon} alt="" width={40} height={40} />

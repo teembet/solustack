@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import AboutSectionImage from "../../public/images/about_section_bg.svg";
+import Angle from "../../public/icons/services-angle.svg";
+
 
 const about = [
   {
@@ -27,8 +30,12 @@ const AboutSection = () => {
       transition={{duration:1.5}}
       viewport={{ once: true }}
       id="about-us"
-      className="w-full bg-darkBg p-4 text-white overflow-x-clip rounded-b-[96px] "
+      className="w-full bg-dark4 p-4 text-white relative overflow-x-clip rounded-b-[96px] "
     >
+      <div className="absolute top-0 left-0 h-[28%] w-[12%] bg-blue3 z-0"></div>
+      <div className="absolute top-0 left-4  z-0 ">
+        <Image src={Angle} alt=""  width={60}  />
+      </div>
       
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 xl:grid-cols-5">
@@ -40,9 +47,9 @@ const AboutSection = () => {
             delay: 0.4,
             duration:2
           }}
-           className="xl:col-span-3 py-8">
+           className="xl:col-span-3 py-8 z-10">
             <div className="mb-10 xl:w-4/5">
-              <h3 className="font-semibold text-2xl xl:text-40 mb-2">
+              <h3 className="font-semibold text-2xl  mb-2">
                 About Us
               </h3>
               <p className="text-sm">

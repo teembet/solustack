@@ -1,21 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81" height="81" viewBox="0 0 81 81">
-  <defs>
-    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#32fbfc"/>
-      <stop offset="1" stop-color="#3214f2"/>
-    </linearGradient>
-    <filter id="Rectangle_9" x="0" y="0" width="81" height="81" filterUnits="userSpaceOnUse">
-      <feOffset dy="2" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feFlood flood-color="#0826a8" flood-opacity="0.149"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Group_8" data-name="Group 8" transform="translate(6.155 4.333)">
-    <g transform="matrix(1, 0, 0, 1, -6.15, -4.33)" filter="url(#Rectangle_9)">
-      <rect id="Rectangle_9-2" data-name="Rectangle 9" width="69" height="69" rx="14" transform="translate(6 4)" fill="url(#linear-gradient)"/>
-    </g>
-    <path id="app-menu" d="M24,24h6v6H24Zm-9,0h6v6H15ZM6,24h6v6H6Zm18-9h6v6H24Zm-9,0h6v6H15ZM6,15h6v6H6ZM24,6h6v6H24ZM15,6h6v6H15ZM6,6h6v6H6Z" transform="translate(16.845 16.667)" fill="#fff" fill-rule="evenodd"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106">
+  <g id="Group_10395" data-name="Group 10395" transform="translate(9.522 -0.374)">
+    <rect id="Rectangle_4022" data-name="Rectangle 4022" width="99" height="99" rx="6" transform="translate(-9.522 7.374)" fill="#032154"/>
+    <rect id="Rectangle_4028" data-name="Rectangle 4028" width="99" height="99" rx="6" transform="translate(-2.522 0.374)" fill="#004dd2"/>
+    <path id="app-menu" d="M41.168,41.168H52.891V52.891H41.168Zm-17.584,0H35.307V52.891H23.584ZM6,41.168H17.723V52.891H6ZM41.168,23.584H52.891V35.307H41.168Zm-17.584,0H35.307V35.307H23.584ZM6,23.584H17.723V35.307H6ZM41.168,6H52.891V17.723H41.168ZM23.584,6H35.307V17.723H23.584ZM6,6H17.723V17.723H6Z" transform="translate(17.952 20.222)" fill="#fff" fill-rule="evenodd"/>
   </g>
 </svg>

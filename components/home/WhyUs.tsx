@@ -63,7 +63,7 @@ const WhyUs = () => {
           </p>
         </div>
       </motion.div>
-      <div className="my-4 grid grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="my-4 grid grid-cols-2 lg:grid-cols-4 gap-3">
         {reasons.map((item, i) => (
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -74,14 +74,15 @@ const WhyUs = () => {
               duration: 2,
             }}
             key={i}
+            className="glass-card3 backdrop-blur-[40px] rounded-lg px-3 py-10 flex flex-col justify-between"
           >
-            <div className=" text-center flex justify-center">
-              <Image src={item.icon} alt="" width={40} height={40} />
+            <div className=" text-center flex justify-center my-16">
+              <Image src={item.icon} alt="" width={60} height={60} />
             </div>
-            <h5 className="font-semibold font-technor text-sm text-center my-1">
+            <h5 className="font-semibold font-technor text-md text-center mb-12">
               {item.title}
             </h5>
-            <p className="text-black dark:text-white text-xs text-center">
+            <p className="text-black dark:text-white text-sm text-center">
               {item.text}
             </p>
           </motion.div>

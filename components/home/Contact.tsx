@@ -44,7 +44,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           <div className="col-span-2">
             <div>
-              <h3 className="text-3xl text-blue1 font-technor font-bold">Solustack</h3>
+              <h3 className="text-3xl text-blue3 font-technor font-bold">Solustack</h3>
               <p className="text-2xl font-medium">
                 Lets Handle Your <br /> Next Project
               </p>
@@ -101,13 +101,13 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center mb-4">
-                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-[#004DD2] px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
                   iOS
                 </button>
-                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-[#004DD2] px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
                   Android
                 </button>
-                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-[#004DD2] px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
                   UI/UX Design
                 </button>
               </div>

@@ -119,14 +119,7 @@ code {
   font-style: normal;
 }
 
-@layer utilities {
-  .base-background {
-    background: transparent linear-gradient(168deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
-opacity: 1;
-backdrop-filter: blur(33px);
--webkit-backdrop-filter: blur(33px);
-  }
-}
+
 .feature-project-bg {
   background: transparent linear-gradient(140deg, #004dd2 0%, #004dd2 100%) 0%
     0% no-repeat padding-box;
@@ -137,12 +130,29 @@ backdrop-filter: blur(33px);
 }
 
 .glass-card {
-  background: transparent linear-gradient(119deg, #ffffff66 0%, #ffffff0d 30%)
+  background: transparent linear-gradient(119deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.01) 100%)
     0% 0% no-repeat padding-box;
   border-radius: 10px;
-  opacity: 1;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
+}
+
+.glass-card2{
+  background: transparent linear-gradient(120deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+border: 2px solid #1C1B1B99;
+
+}
+
+.glass-card3{
+  background: transparent linear-gradient(149deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+  border: 2px solid rgba(28, 27, 27, 0.6);
+
+}
+.testimonial-card{
+  background: transparent linear-gradient(113deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+border: 2px solid rgba(28, 27, 27, 0.6);
+border-radius: 48px;
+
 }
 
 
@@ -187,6 +197,8 @@ backdrop-filter: blur(33px);
   animation-delay: -0.4s;
 }
 
+
+
 @keyframes animate {
   0% {
     opacity: 0;
@@ -221,3 +233,4 @@ section {
     transform: scale(1.0);
   }
 }
+
