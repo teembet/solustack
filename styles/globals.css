@@ -137,7 +137,7 @@ backdrop-filter: blur(33px);
 }
 
 .glass-card {
-  background: transparent linear-gradient(119deg, #ffffff66 0%, #ffffff0d 100%)
+  background: transparent linear-gradient(119deg, #ffffff66 0%, #ffffff0d 30%)
     0% 0% no-repeat padding-box;
   border-radius: 10px;
   opacity: 1;
@@ -170,10 +170,10 @@ backdrop-filter: blur(33px);
 
 .box span {
   display: block;
-  width: 20px;
-  height: 20px;
-  border-bottom: 2px solid grey;
-  border-right: 2px solid grey;
+  width: 16px;
+  height: 16px;
+  border-bottom: 3px solid #2E95FF;
+  border-right: 3px solid #2E95FF;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
@@ -202,4 +202,22 @@ backdrop-filter: blur(33px);
 }
 section {
   height: "101vh";
+}
+
+.widen{
+  border-radius: 50%;
+  animation: widen 4s infinite linear;
+}
+
+@keyframes widen {
+  0% {
+    /* opacity: 0; */
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(3.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }

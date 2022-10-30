@@ -6,6 +6,7 @@ import Hybrid from "../../public/icons/hybrid.svg";
 import Web from "../../public/icons/web_dev.svg";
 import Design from "../../public/icons/design.svg";
 import ServicesBg from "../../public/images/service_bg.png";
+import Angle from "../../public/icons/services-angle.svg";
 import Image from "next/image";
 const services = [
   {
@@ -38,19 +39,23 @@ const services = [
 const Services = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.3 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
       id="services"
       className="w-full  relative  font-supreme  text-white py-10 overflow-x-clip"
     >
-      <div className="absolute top-0 left-0 h-[25%] w-[15%] bg-blue1 z-1"></div>
+      <div className="absolute top-0 left-0 h-[28%] w-[12%] bg-blue1 z-0"></div>
+      <div className="absolute top-0 left-4  z-0 ">
+        <Image src={Angle} alt="" height={110} width={70}  />
+      </div>
+
       <div className="w-full lg:w-11/12  mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
-          <div className="col-span-1 p-3">
+          <div className="col-span-1 p-3 z-10">
             <div className="">
-              <h3 className="font-semibold text-2xl font-technor  leading-loose z-[2]">
+              <h3 className="font-semibold text-2xl font-technor  leading-loose ">
                 We Offer The <br /> Following Services
               </h3>
               <p className="text-justify mt-4 text-base">

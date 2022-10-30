@@ -84,12 +84,15 @@ export default function Home() {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link href="https://api.fontshare.com/v2/css?f[]=supreme@800,400,300,500,700&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=supreme@800,400,300,500,700&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
-      
-      <main className="bg-white dark:bg-gradient-168 dark:from-bg1 dark:to-bg1 dark:backdrop-blur-2xl ">
-   <Navbar activeTab={activeTab} />     
-   <HomePage
+
+      <main className="bg-white dark:bg-gradient-168 dark:from-bg1 dark:to-bg1 dark:backdrop-blur-sm ">
+        <Navbar activeTab={activeTab} />
+        <HomePage
           projects={projects}
           ref={ref}
           ref1={ref1}

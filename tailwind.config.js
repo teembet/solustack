@@ -79,7 +79,7 @@ module.exports = {
       purple2: "#674BD2",
       inputGrey: "rgba(193, 193, 193,0.2)",
       darkBg: "#0A182F",
-      bg1:"#0B1527",
+      bg1:"#010101",
       bg2:"#004DD2",
       error: "rgba(255, 255, 255, 0.05)",
       aboutBlue1:"rgba(0, 77, 210, 0.19)",
