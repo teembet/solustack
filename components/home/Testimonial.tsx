@@ -46,6 +46,7 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+      stars:5
   },
   {
     image: Avatar.src,
@@ -53,6 +54,7 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+      stars:5
   },
   {
     image: Avatar.src,
@@ -60,6 +62,7 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+      stars:5
   },
   {
     image: Avatar.src,
@@ -67,6 +70,7 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+      stars:5
   },
  
   {
@@ -75,6 +79,7 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+      stars:5
   },
  
 ];
@@ -190,10 +195,6 @@ const Testimonial = () => {
           </Carousel> */}
         </motion.div>
       </div>
-      {/* <div className="h-6 w-6 bg-green rounded-[50%] absolute top-5 inset-x-1/2"></div>
-      <div className="h-4 w-4 bg-[#EEEDF2] rounded-[50%] absolute top-5 right-1/3 "></div>
-      <div className="h-4 w-4 bg-yellow rounded-[50%] absolute  left-[50%] lg:left-[44%] bottom-[55%]"></div>
-      <div className="h-3 w-3 bg-purple1 rounded-[50%] absolute left-[75%]  lg:left-[60%] bottom-[55%]"></div> */}
     </motion.div>
   );
 };

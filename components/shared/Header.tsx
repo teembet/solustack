@@ -70,7 +70,7 @@ const Header = () => {
       >
         {/* fix animation here */}
         <div className="h-1/2 p-2 absolute top-16   left-0 right-0  hidden lg:block ">
-          <div className="bg-blue1  w-28 h-28 blur-sm  rounded-full widen mx-auto"></div>
+          <div className="bg-blue1  w-28 h-28 blur-md  rounded-full widen mx-auto"></div>
         </div>
         {/* fix animation here */}
         <div className="z-[10]  w-full mt-12 lg:mt-20 ">

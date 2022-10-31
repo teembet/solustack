@@ -56,21 +56,19 @@ const Services = () => {
     >
       <div className="absolute top-0 left-0 h-[28%] w-[12%] bg-blue1 z-0"></div>
       <div className="absolute top-0 left-4  z-0 ">
-        <Image src={Angle} alt="" height={110} width={70} />
+        <Image src={Angle} alt="" height={90} width={70} />
       </div>
 
       <div className="w-full lg:w-11/12  mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
           <div className="col-span-1 p-3 z-10">
             <div className="">
-              <h3 className="font-semibold text-2xl font-technor  leading-loose ">
+              <h3 className="font-semibold text-2xl font-technor  leading-8 ">
                 We Offer The <br /> Following Services
               </h3>
               <p className="text-justify mt-4 text-base">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet
+                diam nonumy eirmod tempor invidunt ut labore et dolore .
               </p>
             </div>
           </div>

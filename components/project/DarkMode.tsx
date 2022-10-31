@@ -14,12 +14,12 @@ const DarkMode = () => {
 
   return (
     <>
-      <div className="w-full relative overflow-x-clip bg-[#1D2028] ">
+      <div className="w-full relative overflow-x-clip bg-[#1D2028] font-supreme">
         <div className="p-4 w-full lg:w-11/12 mx-auto py-40 ">
           <div className="flex justify-between items-center ">
             <div className="font-poppins flex flex-col mr-6 xl:mr-0">
               <h3 className="font-bold text-xl md:text-2xl xl:text-4xl mb-8 text-white">
-                <span className="text-purple2 mr-1 whitespace-nowrap">
+                <span className="text-blue3 mr-1 whitespace-nowrap font-technor">
                   <span className="font-light ">|</span> Dark
                 </span>
                 Mode{" "}
@@ -71,7 +71,7 @@ const DarkMode = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white dark:bg-darkBg h-[4rem] md:h-[8rem]  m-0 p-0"></div>
+      <div className="bg-white dark:bg-dark4 h-[4rem] md:h-[8rem]  m-0 p-0"></div>
     </>
   );
 };

@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Lottie from 'react-lottie';
 import Affordable from "../../public/icons/affordable.svg";
 import Expert from "../../public/icons/expert.svg";
 import Delivery from "../../public/icons/delivery.svg";
 import Support from "../../public/icons/support.svg";
+import QuestionMark from "../../public/images/question-mark.json";
 import Image from "next/image";
 
 const reasons = [
@@ -29,6 +31,14 @@ const reasons = [
     text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
   },
 ];
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: QuestionMark,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
 
 const WhyUs = () => {
   return (
@@ -50,6 +60,12 @@ const WhyUs = () => {
         }}
       >
         <div className="w-full xl:w-2/5 mx-auto text-center">
+        <div className="">
+      <Lottie 
+	    options={defaultOptions}
+        height={65}
+        width={65}
+      /></div>
           <h3 className="font-semibold font-technor text-2xl xl:text-40 mb-6">
             Why Choose Solustack 
             For Your Next Project

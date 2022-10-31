@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Lottie from 'react-lottie';
 import Collaborate from "../../public/icons/collaborate.svg";
 import Implement from "../../public/icons/implement.svg";
 import Scale from "../../public/icons/scale.svg";
 import Widget from "../../public/icons/services-lottie.png"
+import ProcessAnimation from "../../public/images/process.json";
 import Image from "next/image";
 const process = [
   {
@@ -37,6 +39,14 @@ const item_animate = {
   hidden: { opacity: 0, scale: 0.5 },
   show: { opacity: 1, scale: 1, transition: { duration: 2, ease: "easeIn" } },
 };
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: ProcessAnimation,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
 
 const Process = () => {
   return (
@@ -45,13 +55,16 @@ const Process = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="w-full p-4 font-supreme  overflow-x-clip dark:bg-dark3"
+      className="w-full p-4 font-supreme  overflow-x-clip "
     >
       <div className="w-11/12 mx-auto py-2 mb-12 relative">
-      <div className="absolute -top-8 left-0 right-0 ">
-        <div className="mx-auto w-fit animate-[spin_2s_linear_infinite]" >
-            <Image src={Widget} alt="" width={100} height={100}  />
-            </div>
+      <div className="absolute -top-6 left-0 right-0 ">
+      <div className="">
+      <Lottie 
+	    options={defaultOptions}
+        height={120}
+        width={120}
+      /></div>
           </div>
         <motion.div
           initial={{ x: -100 }}
@@ -65,7 +78,7 @@ const Process = () => {
           className="w-full lg:w-3/5 mx-auto "
         >
           
-          <h4 className="font-semibold text-2xl text-center font-technor z-10">
+          <h4 className="font-semibold text-2xl text-center font-technor z-10 ">
             Our 3 Step Process to Creating <br/> Scalable Apps
           </h4>
           <p className="text-center my-5 text-grey4 dark:text-white">

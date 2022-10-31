@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AboutSectionImage from "../../public/images/about_section_bg.svg";
-import Angle from "../../public/icons/services-angle.svg";
+import Angle from "../../public/icons/about-angle.svg";
 
 
 const about = [
@@ -30,11 +30,11 @@ const AboutSection = () => {
       transition={{duration:1.5}}
       viewport={{ once: true }}
       id="about-us"
-      className="w-full bg-dark4 p-4 text-white relative overflow-x-clip rounded-b-[96px] "
+      className="w-full bg-dark4 p-4 text-white font-supreme relative overflow-x-clip rounded-b-[96px] "
     >
-      <div className="absolute top-0 left-0 h-[28%] w-[12%] bg-blue3 z-0"></div>
-      <div className="absolute top-0 left-4  z-0 ">
-        <Image src={Angle} alt=""  width={60}  />
+      <div className="absolute top-0 left-0 h-[15%] md:h-1/4 lg:h-[28%] w-1/4 md:w-1/5 lg:w-[12%] bg-blue1 z-0"></div>
+      <div className="hidden md:block absolute md:w-12 md:top-16 xl:w-16 xl:top-16 left-0  z-0  ">
+        <Image src={Angle} alt=""    />
       </div>
       
       <div className="w-11/12 mx-auto">
@@ -49,7 +49,7 @@ const AboutSection = () => {
           }}
            className="xl:col-span-3 py-8 z-10">
             <div className="mb-10 xl:w-4/5">
-              <h3 className="font-semibold text-2xl  mb-2">
+              <h3 className="font-semibold font-technor text-2xl  mb-2">
                 About Us
               </h3>
               <p className="text-sm">
@@ -62,7 +62,7 @@ const AboutSection = () => {
               {about.map((item, i) => (
                 <div className="xl:w-5/6" key={i}>
                   <p className="font-semibold text-xl">{i + 1}.</p>
-                  <p className="font-semibold text-xl my-3">{item.title}</p>
+                  <p className="font-semibold text-xl my-3 font-technor">{item.title}</p>
                   <p className="font-normal text-sm">{item.text}</p>
                 </div>
               ))}
