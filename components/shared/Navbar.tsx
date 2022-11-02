@@ -109,7 +109,7 @@ const Navbar = ({ activeTab }: Prop) => {
   //   );
   // };
   return (
-    <div className="sticky top-0 z-50 bg-bg1/30  backdrop-blur-lg text-white font-supreme">
+    <div className={`sticky top-0 z-50  ${isOpen?  "bg-dark4" : "bg-bg1/30"}  backdrop-blur-lg text-white font-supreme`}>
       <div className="w-full hidden md:block pt-4 relative">
         {/* <div className="absolute top-3 right-3">{renderThemeToggle()}</div> */}
         <div className="w-fit  mx-auto ">
