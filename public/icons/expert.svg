@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106">
   <g id="Group_10395" data-name="Group 10395" transform="translate(9.858 -0.038)">
-    <rect id="Rectangle_4022" data-name="Rectangle 4022" width="98" height="98" rx="6" transform="translate(-9.858 8.038)" fill="#032154"/>
-    <rect id="Rectangle_4029" data-name="Rectangle 4029" width="98" height="98" rx="6" transform="translate(-1.858 0.038)" fill="#004dd2"/>
+    <rect id="Rectangle_4022" data-name="Rectangle 4022" width="98" height="98" rx="6" transform="translate(-9.858 8.038)" fill="#004dd2"/>
+    <rect id="Rectangle_4029" data-name="Rectangle 4029" width="98" height="98" rx="6" transform="translate(-1.858 0.038)" fill="#2293ee"/>
     <path id="bxs-brain" d="M6.013,39.167a7.6,7.6,0,0,0,7.3,5.06h.127a6.447,6.447,0,0,0,6.316,5.153,6.281,6.281,0,0,0,2.927-.727,2.3,2.3,0,0,0,1.194-2.045V5.38A2.313,2.313,0,0,0,22.052,3.1a5.39,5.39,0,0,0-3.431.465,5.042,5.042,0,0,0-2.737,4.587v.128a6.442,6.442,0,0,0-6.364,10.28,7.736,7.736,0,0,0-2.965,14.15,8,8,0,0,0-.543,6.456ZM42.862,18.562A6.442,6.442,0,0,0,36.5,8.282V8.154a5.044,5.044,0,0,0-2.74-4.587A5.38,5.38,0,0,0,30.331,3.1a2.314,2.314,0,0,0-1.82,2.279V46.607a2.3,2.3,0,0,0,1.2,2.045,6.251,6.251,0,0,0,2.924.728,6.447,6.447,0,0,0,6.316-5.154h.13a7.6,7.6,0,0,0,7.3-5.06,7.989,7.989,0,0,0-.543-6.456,7.737,7.737,0,0,0-2.97-14.148Z" transform="translate(20.739 23.058)" fill="#fff"/>
   </g>
 </svg>

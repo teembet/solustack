@@ -16,7 +16,7 @@ const about = [
   },
   {
     title: "The values that define us",
-    text: "Solustack is Team Work, Freedom,Inclusion, Creativity,Growth and Solution driven.",
+    text: "Solustack is Team Work, Freedom, Inclusion, Creativity, Growth and Solution driven.",
   },
 ];
 
@@ -33,7 +33,7 @@ const AboutSection = () => {
       className="w-full bg-dark4 p-4 text-white font-supreme relative overflow-x-clip rounded-b-[96px] "
     >
       <div className="absolute top-0 left-0 h-[15%] md:h-1/4 lg:h-[28%] w-1/4 md:w-1/5 lg:w-[12%] bg-blue1 z-0"></div>
-      <div className="hidden md:block absolute md:w-12 md:top-16 xl:w-16 xl:top-16 left-0  z-0  ">
+      <div className="hidden lg:block absolute md:w-12 md:top-16 xl:w-16 xl:top-16 left-0  z-0  ">
         <Image src={Angle} alt=""    />
       </div>
       

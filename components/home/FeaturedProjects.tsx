@@ -120,7 +120,7 @@ const FeaturedProjects = ({ projects }) => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
         viewport={{ once: true }}
-        className="w-full  py-12 bg-blue4 rounded-t-[96px] font-supreme"
+        className="w-full  py-12 bg-blue4 md:rounded-t-[96px] font-supreme"
       >
         <div className="w-full border-b border-b-[#FFFFFF30] mb-4">
           <div className="w-11/12 xl:w-10/12 mx-auto">
@@ -168,8 +168,8 @@ const FeaturedProjects = ({ projects }) => {
         <div className="w-full relative ">
           <div className="w-11/12 xl:w-10/12 mx-auto ">
             {projects.slice(0, sliceIndex).map((proj, i)=>(
-                <div key={i} className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-12 ">
-                <div className="">
+                <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12 ">
+                <div className="flex flex-col justify-center items-start">
                   <h4 className="font-technor font-medium text-2xl mb-3 capitalize">
                     {proj.name}
                   </h4>
@@ -184,157 +184,22 @@ const FeaturedProjects = ({ projects }) => {
                   <p className="text-xs lg:text-sm">
                    {proj.brief}
                   </p>
-                  {/* <br />
-                  <p className="text-xs lg:text-sm">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum dolor sit 
-                  </p> */}
   
-                 <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded" onClick={() => viewProject(proj.id)}>
+                 <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded " onClick={() => viewProject(proj.id)}>
                     View Project
                   </button>
                 </div>
                 <div className=" flex flex-col justify-center align-center">
-                  <div className=" max-w-[400px]">
-                    <Image src={proj.bg} alt="" height={400} width={600} />
+                  <div className=" mx-auto p-4">
+                    <Image src={proj.bg} alt="" width={800} height={700} />
                   </div>
                 </div>
               </div>
             ))}
-          
-
-            {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-12 ">
-              <div className="">
-                <h4 className="font-technor font-medium text-2xl mb-3">
-                  Title of Project
-                </h4>
-                <div className="mb-3">
-                  <button className="bg-blue2 py-1 px-6 text-sm text-white rounded-md mr-4">
-                    iOS
-                  </button>
-                  <button className="bg-blue2 py-1 px-6 text-sm text-white rounded-md mr-4">
-                    UI/UX Design
-                  </button>
-                </div>
-                <p className="text-xs lg:text-sm">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit 
-                </p>
-                <br />
-                <p className="text-xs lg:text-sm">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit 
-                </p>
-
-               <Link href={`/projects/${1}`}> 
-               <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded">
-                  View Project
-                </button>
-                </Link>
-              </div>
-              <div className=" flex flex-col justify-center align-center">
-                <div className=" ">
-                  <Image src={ProjectOne} alt="" />
-                </div>
-              </div>
-            </div> */}
-            {/* second */}
-            {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-12">
-              <div className=" md:order-last">
-                <h4 className="font-technor font-medium text-2xl mb-3">
-                  Title of Project
-                </h4>
-                <div className="mb-3">
-                  <button className="bg-blue2 py-1 px-6 text-sm text-white rounded-md mr-4">
-                    iOS
-                  </button>
-                  <button className="bg-blue2 py-1 px-6 text-sm text-white rounded-md mr-4">
-                    UI/UX Design
-                  </button>
-                </div>
-                <p className="text-xs lg:text-sm">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                  nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                </p>
-
-                <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded">
-                  View Project
-                </button>
-              </div>
-              <div className=" flex flex-col justify-center align-start ">
-                <div className=" ">
-                  <Image src={Pencils} alt="" />
-                </div>
-              </div>
-            </div> */}
-
-            {/* third */}
-            {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-12">
-              <div className=" ">
-                <h4 className="font-technor font-medium text-2xl mb-3">
-                  Title of Project
-                </h4>
-                <div className="mb-3">
-                  <button className="bg-blue2 py-1 px-6 text-sm text-white rounded-md mr-4">
-                    iOS
-                  </button>
-                  <button className="bg-blue2 py-1 px-6 text-sm text-white rounded-md mr-4">
-                    UI/UX Design
-                  </button>
-                </div>
-                <p className="text-xs lg:text-sm">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet
-                </p>
-                <br />
-                <p className="text-xs lg:text-sm">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit 
-                </p>
-
-                <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded">
-                  View Project
-                </button>
-              </div>
-              <div className=" flex flex-col justify-center align-center">
-                <div className=" ">
-                  <Image src={ProjectOne} alt="" />
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </motion.div>
-      <div className="w-full bg-[#005BA4] py-5 px-8 rounded-b-[96px]  ">
+      <div className="w-full bg-[#005BA4] py-5 px-8 md:rounded-b-[96px]  ">
         <div className="w-11/12 xl:w-10/12 mx-auto flex justify-end items-center">
           <div className="w-fit flex justify-end items-center cursor-pointer" onClick={()=>{
             increaseIndex
