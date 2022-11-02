@@ -1,21 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="81" viewBox="0 0 80 81">
-  <defs>
-    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#32fbfc"/>
-      <stop offset="1" stop-color="#3214f2"/>
-    </linearGradient>
-    <filter id="Rectangle_9" x="0" y="0" width="80" height="81" filterUnits="userSpaceOnUse">
-      <feOffset dy="2" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feFlood flood-color="#0826a8" flood-opacity="0.149"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Group_8" data-name="Group 8" transform="translate(5.644 4.333)">
-    <g transform="matrix(1, 0, 0, 1, -5.64, -4.33)" filter="url(#Rectangle_9)">
-      <rect id="Rectangle_9-2" data-name="Rectangle 9" width="68" height="69" rx="14" transform="translate(6 4)" fill="url(#linear-gradient)"/>
-    </g>
-    <path id="bxs-brain" d="M4.949,26.394a4.914,4.914,0,0,0,4.719,3.273H9.75A4.17,4.17,0,0,0,13.835,33a4.063,4.063,0,0,0,1.893-.47,1.488,1.488,0,0,0,.772-1.323V4.54a1.5,1.5,0,0,0-1.177-1.474,3.486,3.486,0,0,0-2.219.3,3.261,3.261,0,0,0-1.77,2.967v.083a4.167,4.167,0,0,0-4.116,6.649A5,5,0,0,0,5.3,22.218a5.171,5.171,0,0,0-.351,4.176ZM28.783,13.066a4.167,4.167,0,0,0-4.116-6.649V6.334A3.262,3.262,0,0,0,22.9,3.367a3.48,3.48,0,0,0-2.217-.3A1.5,1.5,0,0,0,19.5,4.54V31.206a1.488,1.488,0,0,0,.774,1.323A4.043,4.043,0,0,0,22.166,33a4.17,4.17,0,0,0,4.085-3.334h.084a4.915,4.915,0,0,0,4.719-3.273,5.167,5.167,0,0,0-.351-4.176,5,5,0,0,0-1.921-9.151Z" transform="translate(16.356 16.666)" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106">
+  <g id="Group_10395" data-name="Group 10395" transform="translate(9.858 -0.038)">
+    <rect id="Rectangle_4022" data-name="Rectangle 4022" width="98" height="98" rx="6" transform="translate(-9.858 8.038)" fill="#032154"/>
+    <rect id="Rectangle_4029" data-name="Rectangle 4029" width="98" height="98" rx="6" transform="translate(-1.858 0.038)" fill="#004dd2"/>
+    <path id="bxs-brain" d="M6.013,39.167a7.6,7.6,0,0,0,7.3,5.06h.127a6.447,6.447,0,0,0,6.316,5.153,6.281,6.281,0,0,0,2.927-.727,2.3,2.3,0,0,0,1.194-2.045V5.38A2.313,2.313,0,0,0,22.052,3.1a5.39,5.39,0,0,0-3.431.465,5.042,5.042,0,0,0-2.737,4.587v.128a6.442,6.442,0,0,0-6.364,10.28,7.736,7.736,0,0,0-2.965,14.15,8,8,0,0,0-.543,6.456ZM42.862,18.562A6.442,6.442,0,0,0,36.5,8.282V8.154a5.044,5.044,0,0,0-2.74-4.587A5.38,5.38,0,0,0,30.331,3.1a2.314,2.314,0,0,0-1.82,2.279V46.607a2.3,2.3,0,0,0,1.2,2.045,6.251,6.251,0,0,0,2.924.728,6.447,6.447,0,0,0,6.316-5.154h.13a7.6,7.6,0,0,0,7.3-5.06,7.989,7.989,0,0,0-.543-6.456,7.737,7.737,0,0,0-2.97-14.148Z" transform="translate(20.739 23.058)" fill="#fff"/>
   </g>
 </svg>

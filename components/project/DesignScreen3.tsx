@@ -8,7 +8,7 @@ const DesignScreen3 = () => {
       <div className="lg:w-10/12 mx-auto  flex justify-between relative">
         <div className="">
           <div
-            className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-poppins"
+            className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-technor"
             style={{ writingMode: "vertical-rl" }}
           >
             <span className="   text-purple2 p-5 tracking-wider">Design</span>

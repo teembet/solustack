@@ -4,19 +4,22 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* font-GeneralSans */
 
 @font-face {
   font-family: "GeneralSans";
@@ -50,6 +53,7 @@ code {
   font-display: swap;
   font-style: normal;
 }
+/* font-Graphie */
 
 @font-face {
   font-family: "Graphie";
@@ -73,12 +77,105 @@ code {
   font-style: normal;
 }
 
+/* font-Technor */
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Light.otf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Medium.otf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Semibold.otf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Technor";
+  src: url("../public/fonts/technor/Technor-Black.otf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+
+.feature-project-bg {
+  background: transparent linear-gradient(140deg, #004dd2 0%, #004dd2 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 98px;
+  opacity: 1;
+  backdrop-filter: blur(33px);
+  -webkit-backdrop-filter: blur(33px);
+}
+
+.glass-card {
+  background: transparent linear-gradient(119deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.01) 100%)
+    0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.glass-card2{
+  background: transparent linear-gradient(120deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+border: 2px solid #1C1B1B99;
+
+}
+
+.glass-card3{
+  background: transparent linear-gradient(149deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+  border: 2px solid rgba(28, 27, 27, 0.6);
+
+}
+.testimonial-card{
+  background: transparent linear-gradient(113deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+border: 2px solid rgba(28, 27, 27, 0.6);
+border-radius: 48px;
+
+}
+
+
+
+
 .three-quarter-bg {
   background-size: 100% 70%;
 }
 .slant {
   transform: matrix(0.92, -0.39, 0.39, 0.92, 0, 0);
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .box {
   position: absolute;
   top: 90%;
@@ -88,10 +185,10 @@ code {
 
 .box span {
   display: block;
-  width: 20px;
-  height: 20px;
-  border-bottom: 2px solid grey;
-  border-right: 2px solid grey;
+  width: 16px;
+  height: 16px;
+  border-bottom: 3px solid #2E95FF;
+  border-right: 3px solid #2E95FF;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
@@ -104,6 +201,8 @@ code {
 .box span:nth-child(3) {
   animation-delay: -0.4s;
 }
+
+
 
 @keyframes animate {
   0% {
@@ -121,3 +220,22 @@ code {
 section {
   height: "101vh";
 }
+
+.widen{
+  border-radius: 50%;
+  animation: widen 4s infinite linear;
+}
+
+@keyframes widen {
+  0% {
+    /* opacity: 0; */
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(3.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+

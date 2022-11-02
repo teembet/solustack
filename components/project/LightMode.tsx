@@ -4,12 +4,12 @@ import WhiteCard from "./WhiteCard";
 const LightMode = () => {
   return (
     <>
-      <div className="w-full relative overflow-x-clip  overflow-y-visible ">
+      <div className="w-full relative overflow-x-clip  overflow-y-visible font-supreme">
         <div className="p-4 w-full lg:w-11/12 mx-auto py-40 ">
           <div className="flex justify-between items-center ">
             <div className="font-poppins flex flex-col mr-6 xl:mr-0">
-              <h3 className="font-bold text-xl md:text-2xl xl:text-4xl mb-8">
-                <span className="text-purple2">Light</span> Mode
+              <h3 className="font-bold text-xl md:text-2xl xl:text-4xl mb-8 font-technor">
+                <span className="text-blue3">Light</span> Mode
               </h3>
 
               <div className="bg-purple2 h-8 w-8 rounded-[50%] shadow-[0px_3px_38px_#00000029] border-3 border-white mb-8"></div>
@@ -30,7 +30,7 @@ const LightMode = () => {
           </div>
         </div>
 
-        <div className="relative bg-purple2 h-[18rem] md:h-[28rem] xl:h-[42rem] flex justify-end">
+        <div className="relative bg-blue3 h-[18rem] md:h-[28rem] xl:h-[42rem] flex justify-end">
           <div className=" w-full xl:w-5/6  flex justify-end   slant">
             <div className="hidden lg:block absolute bottom-56 left-6  xl:left-20 ">
               <WhiteCard shadowMd={true} />

@@ -18,7 +18,7 @@ const DesignScreen2 = () => {
         </div>
           <div className="">
             <div
-            className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-poppins"
+            className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-technor"
               style={{ writingMode: "vertical-rl" }}
             >
               <span className=" text-white px-5 tracking-wider">ign</span>
@@ -30,7 +30,7 @@ const DesignScreen2 = () => {
       <div className=" px-4 bg-white   ">
         <div className="lg:w-10/12 mx-auto mb-[8rem] lg:mb-[15rem] flex justify-end text-end">
           <div
-            className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-poppins"
+            className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-technor"
             style={{ writingMode: "vertical-rl" }}
           >
             <span className="text-purple2 px-5 tracking-wider z-50">Des </span>

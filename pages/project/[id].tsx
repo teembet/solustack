@@ -12,13 +12,13 @@ import Navbar from "../../components/shared/Navbar";
 import Contact from "../../components/home/Contact";
 const Title = ({ title }) => {
   return (
-    <h4 className="font-semibold text-2xl lg:text-4xl xl:text-5xl mb-3">
+    <h4 className="font-semibold text-2xl lg:text-4xl xl:text-5xl mb-3 font-supreme">
       {title}
     </h4>
   );
 };
 const Text = ({ text }) => {
-  return <p className="text-sm  lg:text-base">{text}</p>;
+  return <p className="text-sm  lg:text-base font-technor">{text}</p>;
 };
 
 const Project = () => {
@@ -60,7 +60,7 @@ const Project = () => {
     <>
       <Navbar activeTab={activeTab} />
 
-      <div className="font-generalSans w-full  bg-white dark:bg-darkBg">
+      <div className="font-generalSans w-full  bg-white dark:bg-dark4">
         <div
           className="h-[60vh] bg-contain  bg-center bg-no-repeat relative"
           style={{
