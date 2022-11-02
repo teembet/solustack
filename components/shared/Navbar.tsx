@@ -160,7 +160,7 @@ const Navbar = ({ activeTab }: Prop) => {
         </div>
 
         {isOpen && (
-          <div className="absolute w-full mx-auto bg-darkBg text-white py-6 ">
+          <div className="absolute w-full mx-auto bg-dark4 text-white py-6 ">
             <ul className="flex  flex-col justify-between items-center font-supreme font-medium mb-4">
               {navItems.map((item, i) => (
                 <MobileTab
