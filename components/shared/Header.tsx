@@ -47,10 +47,10 @@ const Header = () => {
   return (
     <motion.div className="min-h-[85vh]   font-supreme ">
       <div
-        className="w-full h-full relative  bg-no-repeat bg-cover bg-center dark:!bg-none dark:!bg-bg1/20 dark:backdrop-blur-sm  text-center py-10 flex flex-col justify-end"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)),url('${HeaderImage.src}')`,
-        }}
+        className="w-full h-full relativebg-bg1/20 backdrop-blur-sm  text-center py-10 flex flex-col justify-end"
+        // style={{
+        //   backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)),url('${HeaderImage.src}')`,
+        // }}
       >
         {/* fix animation here */}
         <div className="h-1/2 p-2 absolute top-16   left-0 right-0  hidden lg:block ">
