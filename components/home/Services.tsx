@@ -50,10 +50,27 @@ const Services = () => {
   const [isHover, setIsHover] = React.useState(false);
 
   const handleMouseEnter = () => {
-    setIsHover(true);
+    // setIsHover(true);
+    return (
+    
+        <div className="bg-blue1  w-28 h-28 blur-sm  rounded-full  mx-auto"></div>
+      
+    );
   };
   const handleMouseLeave = () => {
-    setIsHover(false);
+    // setIsHover(false);
+    return null
+  };
+
+  const addHoverBlue = () => {
+    if (isHover) {
+      return (
+        <div className={` absolute bottom-8 right-4  `}>
+          <div className="bg-blue1  w-28 h-28 blur-sm  rounded-full  mx-auto"></div>
+        </div>
+      );
+    }
+    return;
   };
   return (
     <motion.div
@@ -66,37 +83,33 @@ const Services = () => {
     >
       <div className="absolute top-0 left-0 h-32 w-28 xl:w-32 bg-blue1 z-0"></div>
       <div className="hidden lg:block absolute top-0 left-4  z-0  w-20 ">
-        <Image src={Angle} alt=""  />
+        <Image src={Angle} alt="" />
       </div>
 
       <div className="w-full lg:w-11/12  mx-auto z-10">
-        
-      
-            <div className="w-full sm:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto">
-              <h3 className="font-semibold text-2xl font-technor  leading-8  text-center z-20">
-                We Offer The <br /> Following Services
-              </h3>
-              <p className="text-justify mt-6 text-base  ">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore .
-              </p>
-            </div>
-         
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-8 p-5 mt-5">
+        <div className="w-full sm:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto">
+          <h3 className="font-semibold text-2xl font-technor  leading-8  text-center z-20">
+            We Offer The <br /> Following Services
+          </h3>
+          <p className="text-center mt-6 text-base  lg:w-10/12 mx-auto">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore .
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:w-11/12 xl:w-10/12 mx-auto  gap-8 p-5 mt-5">
           {services.map((item, i) => (
             <div
               key={i}
               className="col-span-1 relative"
-              // onMouseEnter={handleMouseEnter}
-              // onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
-              {/* {isHover ? (
-                <div className={` absolute bottom-8 right-4  `}>
-                  <div className="bg-blue1  w-28 h-28 blur-sm  rounded-full  mx-auto"></div>
+             
+              <div className={` absolute bottom-8 right-4  `}>
                 </div>
-              ) : null} */}
 
-              <div className="glass-card px-4 py-6 font-supreme"  >
+              <div className="glass-card px-4 py-6 font-supreme">
                 <motion.div
                   whileHover={{
                     rotateY: 180,
@@ -115,15 +128,12 @@ const Services = () => {
                 <p className="font-semibold text-xl  my-2 font-technor">
                   {item.title}
                 </p>
-                <p className="text-justify text-sm ">
-                 {item.text}
-                </p>
+                <p className="text-justify text-sm ">{item.text}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-
     </motion.div>
   );
 };
