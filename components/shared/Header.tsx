@@ -12,9 +12,7 @@ import animationData from "../../public/air.json";
 import Lottie from "react-lottie";
 
 const trustees = [
-  // {
-  //   img: Netflix,
-  // },
+
   {
     img: AppleBlack,
   },
@@ -24,9 +22,7 @@ const trustees = [
   {
     img: Windows,
   },
-  // {
-  //   img: Synology,
-  // },
+
 ];
 const defaultOptions = {
   loop: true,
@@ -37,19 +33,7 @@ const defaultOptions = {
     preserveAspectRatio: "xMidYMid slice",
   },
 };
-// var animation = bodymovin.loadAnimation({
-//   container: document.getElementById("animation-container"),
 
-//   path: "Freelancer.json",
-
-//   renderer: "svg",
-
-//   loop: true,
-
-//   autoplay: true,
-
-//   name: "Demo Animation",
-// });
 const Header = () => {
   const [isHover, setIsHover] = useState(false);
 
@@ -75,16 +59,16 @@ const Header = () => {
         {/* fix animation here */}
         <div className="z-[10]  w-full mt-12 lg:mt-20 ">
           <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
-            <div className="mb-3 font-graphie">
-              <h1 className="font-bold text-dark1 text-3xl md:text-4xl lg:text-5xl dark:text-white ">
-                YOU&lsquo;VE GOT THE IDEAS, <br/> WE&lsquo;VE GOT THE SOLUTION
+            <div className="mb-3 font-technor">
+              <h1 className="font-bold  text-3xl md:text-4xl lg:text-5xl text-white ">
+               WE BUILD THE
               </h1>
-              {/* <h1 className="font-bold text-blue2  text-3xl md:text-4xl lg:text-5xl">
+              <h1 className="font-bold text-blue2  text-3xl md:text-4xl lg:text-5xl">
                 BEST DIGITAL EXPERIENCES.
-              </h1> */}
+              </h1>
             </div>
             <div className="w-11/12 xl:w-9/12 mx-auto ">
-              <h5 className="font-medium text-dark2 text-sm md:text-lg lg:text-xl  text-center dark:text-white">
+              <h5 className="font-medium text-sm md:text-lg lg:text-xl  text-center text-white">
               Our solutions are ahead of time. We’re always willing to help you build the best digital experience.
               </h5>
             </div>

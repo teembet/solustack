@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106">
   <g id="Group_10395" data-name="Group 10395" transform="translate(9.522 -0.374)">
-    <rect id="Rectangle_4022" data-name="Rectangle 4022" width="99" height="99" rx="6" transform="translate(-9.522 7.374)" fill="#032154"/>
-    <rect id="Rectangle_4028" data-name="Rectangle 4028" width="99" height="99" rx="6" transform="translate(-2.522 0.374)" fill="#004dd2"/>
+    <rect id="Rectangle_4022" data-name="Rectangle 4022" width="99" height="99" rx="6" transform="translate(-9.522 7.374)" fill="#004dd2"/>
+    <rect id="Rectangle_4028" data-name="Rectangle 4028" width="99" height="99" rx="6" transform="translate(-2.522 0.374)" fill="#2293ee"/>
     <path id="app-menu" d="M41.168,41.168H52.891V52.891H41.168Zm-17.584,0H35.307V52.891H23.584ZM6,41.168H17.723V52.891H6ZM41.168,23.584H52.891V35.307H41.168Zm-17.584,0H35.307V35.307H23.584ZM6,23.584H17.723V35.307H6ZM41.168,6H52.891V17.723H41.168ZM23.584,6H35.307V17.723H23.584ZM6,6H17.723V17.723H6Z" transform="translate(17.952 20.222)" fill="#fff" fill-rule="evenodd"/>
   </g>
 </svg>

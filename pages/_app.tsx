@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   
       <ThemeProvider enableSystem={false} attribute="class">
         <ContextProvider>
-          <div className="bg-white dark:bg-bg1">
+          <div className="bg-bg1">
           <Component {...pageProps} /></div>
         </ContextProvider>
       </ThemeProvider>

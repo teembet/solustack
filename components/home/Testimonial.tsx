@@ -115,7 +115,7 @@ const Testimonial = () => {
          
           <div className="gap-5 flex items-center flex-wrap lg:flex-nowrap ">
             {items.map((item, i) => (
-              <div key={i} className=" mr-8  mx-auto">
+              <div key={i} className="  mx-auto">
                 <Slide item={item} />
               </div>
             ))}

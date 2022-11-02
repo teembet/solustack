@@ -9,10 +9,10 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="relative"> 
-    <div className="absolute -left-[5%] top-16 bottom-0 w-[20%] rounded-full bg-blue3">
+    <div className="absolute -left-[5%] top-16 bottom-0 w-[20%] rounded-full bg-[#2D2DA0]">
 
       </div>
-    <div className="w-full  p-4 py-12 text-white font-supreme relative dark:backdrop-blur-xl">
+    <div className="w-full  p-4 py-12 text-white font-supreme relative backdrop-blur-xl">
      
       <div className="lg:w-11/12 mx-auto z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

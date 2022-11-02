@@ -90,29 +90,28 @@ const Navbar = ({ activeTab }: Prop) => {
 
   const [active, setActive] = useState(activeTab());
   const [isOpen, setIsOpen] = useState(false);
-  const { systemTheme, theme, setTheme } = useTheme();
 
-  const renderThemeToggle = () => {
-    const currentTheme = theme === "system" ? systemTheme : theme;
-    if (currentTheme === "dark") {
-      return (
-        <div className=" rounded-sm p-2 " onClick={() => setTheme("light")}>
-          {" "}
-          <Image src={Light} alt="" width={25} height={25} />{" "}
-        </div>
-      );
-    }
-    return (
-      <div className=" rounded-sm p-2 " onClick={() => setTheme("dark")}>
-        {" "}
-        <Image src={Dark} alt="" width={25} height={25} />{" "}
-      </div>
-    );
-  };
+  // const renderThemeToggle = () => {
+  //   const currentTheme = theme === "system" ? systemTheme : theme;
+  //   if (currentTheme === "dark") {
+  //     return (
+  //       <div className=" rounded-sm p-2 " onClick={() => setTheme("light")}>
+  //         {" "}
+  //         <Image src={Light} alt="" width={25} height={25} />{" "}
+  //       </div>
+  //     );
+  //   }
+  //   return (
+  //     <div className=" rounded-sm p-2 " onClick={() => setTheme("dark")}>
+  //       {" "}
+  //       <Image src={Dark} alt="" width={25} height={25} />{" "}
+  //     </div>
+  //   );
+  // };
   return (
-    <div className="sticky top-0 z-50 bg-white dark:bg-bg1/30  dark:backdrop-blur-lg dark:text-white font-supreme">
+    <div className="sticky top-0 z-50 bg-bg1/30  backdrop-blur-lg text-white font-supreme">
       <div className="w-full hidden md:block pt-4 relative">
-        <div className="absolute top-3 right-3">{renderThemeToggle()}</div>
+        {/* <div className="absolute top-3 right-3">{renderThemeToggle()}</div> */}
         <div className="w-fit  mx-auto ">
           <h2 className="mx-auto  font-technor font-bold text-3xl py-3">
             <Link href={"/"}>Solustack</Link>
@@ -140,12 +139,12 @@ const Navbar = ({ activeTab }: Prop) => {
       <div className="w-full pt-6 pb-2  md:hidden  relative">
         <div className="flex justify-between items-center px-6">
           <div>
-            <h2 className="  font-poppins font-semibold text-45 py-1">
+            <h2 className="  font-technor font-semibold text-40 py-1">
               <Link href={"/"}>Solustack</Link>
             </h2>
           </div>
 
-          <div className="">{renderThemeToggle()}</div>
+          {/* <div className="">{renderThemeToggle()}</div> */}
 
           <div className="">
             {isOpen ? (
@@ -161,8 +160,8 @@ const Navbar = ({ activeTab }: Prop) => {
         </div>
 
         {isOpen && (
-          <div className="absolute w-full mx-auto bg-white dark:bg-darkBg dark:text-white py-6 ">
-            <ul className="flex  flex-col justify-between items-center font-generalSans font-medium mb-4">
+          <div className="absolute w-full mx-auto bg-darkBg text-white py-6 ">
+            <ul className="flex  flex-col justify-between items-center font-supreme font-medium mb-4">
               {navItems.map((item, i) => (
                 <MobileTab
                   key={i}
