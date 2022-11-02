@@ -77,11 +77,11 @@ const Header = () => {
           <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
             <div className="mb-3 font-graphie">
               <h1 className="font-bold text-dark1 text-3xl md:text-4xl lg:text-5xl dark:text-white ">
-                WE BUILD THE
+                YOU&lsquo;VE GOT THE IDEAS, <br/> WE&lsquo;VE GOT THE SOLUTION
               </h1>
-              <h1 className="font-bold text-blue2  text-3xl md:text-4xl lg:text-5xl">
+              {/* <h1 className="font-bold text-blue2  text-3xl md:text-4xl lg:text-5xl">
                 BEST DIGITAL EXPERIENCES.
-              </h1>
+              </h1> */}
             </div>
             <div className="w-11/12 xl:w-9/12 mx-auto ">
               <h5 className="font-medium text-dark2 text-sm md:text-lg lg:text-xl  text-center dark:text-white">
