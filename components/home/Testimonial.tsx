@@ -4,42 +4,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Avatar from "../../public/images/avatar.jpeg";
 import YellowStar from "../../public/icons/yellow-star.svg";
-
 import Image from "next/image";
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1023 },
-    items: 3,
-    partialVisibilityGutter: 45, // this is needed to tell the amount of px that should be visible.
-  },
-  tablet: {
-    breakpoint: { max: 1023, min: 700 },
-    items: 2,
-    partialVisibilityGutter: 50, // this is needed to tell the amount of px that should be visible.
-  },
-  mobile: {
-    breakpoint: { max: 700, min: 0 },
-    items: 1,
-    partialVisibilityGutter: 50, // this is needed to tell the amount of px that should be visible.
-  },
-};
-const responsive2 = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1023 },
-    items: 3,
-    partialVisibilityGutter: 45, // this is needed to tell the amount of px that should be visible.
-  },
-  tablet: {
-    breakpoint: { max: 1023, min: 700 },
-    items: 2,
-    partialVisibilityGutter: 50, // this is needed to tell the amount of px that should be visible.
-  },
-  mobile: {
-    breakpoint: { max: 700, min: 0 },
-    items: 1,
-    partialVisibilityGutter: 50, // this is needed to tell the amount of px that should be visible.
-  },
-};
+
 
 const items = [
   {
@@ -48,7 +14,7 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
-      stars:5
+    stars: 5,
   },
   {
     image: Avatar.src,
@@ -56,7 +22,7 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
-      stars:5
+    stars: 5,
   },
   {
     image: Avatar.src,
@@ -64,26 +30,8 @@ const items = [
     status: "Customer",
     testimony:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
-      stars:5
+    stars: 5,
   },
-  {
-    image: Avatar.src,
-    name: "Louisa Guerrero",
-    status: "Customer",
-    testimony:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
-      stars:5
-  },
- 
-  {
-    image: Avatar.src,
-    name: "Diana Stanley",
-    status: "Customer",
-    testimony:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
-      stars:5
-  },
- 
 ];
 
 const Slide = ({ item }) => {
@@ -93,34 +41,31 @@ const Slide = ({ item }) => {
       <p className="text-sm md:text-md text-justify leading-6 font-generalSans px-6">
         {testimony}
       </p>
-      <div className="flex justify-between items-center">
-        <div className="flex items-center">
-          <div className="w-20 flex justify-center items-center h-20 rounded-full ">
+      <div className="flex justify-between items-center flex-wrap xl:flex-nowrap pr-3 gap-4">
+        <div className="flex items-center mx-auto">
+          <div className="w-20 flex justify-center items-center h-20 rounded-full mr-1 ">
             <Image
               src={image}
               alt=""
-              width={60}
-              height={60}
+              width={70}
+              height={70}
               className="rounded-full"
             />
           </div>
-          <div>
-            <h5 className="   font-medium text-sm">{name}</h5>
-            <p className="text-xs my-2  text-grey2">{status}</p>
+          <div className="font-supreme">
+            <h5 className=" font-bold text-sm lg:text-lg leading-5 whitespace-nowrap">{name}</h5>
+            <p className=" text-xs md:text-sm my-2  text-grey2">{status}</p>
           </div>
         </div>
 
-        <div className="flex items-center justify-end">
-          {new Array(stars).map((i)=>(
-            <div  key={`k+${i}`}>
-            <Image  src={YellowStar} alt="" width={20} height={20} />
+        <div className="flex items-center justify-end mx-auto">
+          {Array.from({ length: item.stars }, (i) => (
+            <div key={`k+${i}`} className="mx-1">
+              <Image src={YellowStar} alt="" width={28} height={28} />
             </div>
           ))}
-
         </div>
       </div>
-
-     
     </div>
   );
 };
@@ -167,43 +112,14 @@ const Testimonial = () => {
           }}
           className="w-full relative  overflow-scroll no-scrollbar"
         >
-          <div className="ml-32 mb-5 flex items-center">
-          {items.map((item, i) => (
-              <div key={i} className=" mr-8 min-w-[450px]">
-                <Slide item={item} />
-              </div>
-            ))}
-            </div>
-          <div className="flex items-center">
-          {items.map((item, i) => (
-              <div key={i} className=" mr-8 min-w-[450px]">
-                <Slide item={item} />
-              </div>
-            ))}
-            </div>
-          {/* <Carousel
-            swipeable={true}
-            draggable={true}
-            showDots={false}
-            arrows={false}
-            responsive={responsive}
-            partialVisible={true}
-            infinite={false}
-            keyBoardControl={true}
-            customTransition="all .5"
-            transitionDuration={500}
-            containerClass="pb-10 "
-            sliderClass=""
-            dotListClass=""
-            itemClass="carousel-item-padding-40-px"
-            // renderDotsOutside={true}
-          >
+         
+          <div className="gap-5 flex items-center flex-wrap lg:flex-nowrap ">
             {items.map((item, i) => (
-              <div key={i} className=" mr-8">
+              <div key={i} className=" mr-8  mx-auto">
                 <Slide item={item} />
               </div>
             ))}
-          </Carousel> */}
+          </div>
         </motion.div>
       </div>
     </motion.div>

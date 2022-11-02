@@ -64,24 +64,25 @@ const Services = () => {
       id="services"
       className="w-full  relative  font-supreme  text-white py-10 overflow-x-clip"
     >
-      <div className="absolute top-0 left-0 h-28 w-28 xl:w-32 bg-blue1 z-0"></div>
-      <div className="absolute top-0 left-4  z-0 ">
-        <Image src={Angle} alt="" height={90} width={70} />
+      <div className="absolute top-0 left-0 h-32 w-28 xl:w-32 bg-blue1 z-0"></div>
+      <div className="hidden lg:block absolute top-0 left-4  z-0  w-20 ">
+        <Image src={Angle} alt=""  />
       </div>
 
-      <div className="w-full lg:w-11/12  mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
-          <div className="col-span-1 p-3 z-10">
-            <div className="">
-              <h3 className="font-semibold text-2xl font-technor  leading-8 ">
+      <div className="w-full lg:w-11/12  mx-auto z-10">
+        
+      
+            <div className="w-full sm:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto">
+              <h3 className="font-semibold text-2xl font-technor  leading-8  text-center z-20">
                 We Offer The <br /> Following Services
               </h3>
-              <p className="text-justify mt-4 text-base">
+              <p className="text-justify mt-6 text-base  ">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore .
               </p>
             </div>
-          </div>
+         
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-8 p-5 mt-5">
           {services.map((item, i) => (
             <div
               key={i}
@@ -95,13 +96,13 @@ const Services = () => {
                 </div>
               ) : null} */}
 
-              <div className="glass-card px-4 py-6 font-supreme">
+              <div className="glass-card px-4 py-6 font-supreme"  >
                 <motion.div
                   whileHover={{
                     rotateY: 180,
                     transition: { duration: 1 },
                   }}
-                  className=" w-fit"
+                  className=" w-fit p-4"
                 >
                   <Image
                     src={item.icon}
