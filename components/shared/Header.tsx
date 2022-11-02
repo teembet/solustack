@@ -75,7 +75,7 @@ const Header = () => {
         {/* fix animation here */}
         <div className="z-[10]  w-full mt-12 lg:mt-20 ">
           <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
-            <div className="mb-3 font-technor">
+            <div className="mb-3 font-graphie">
               <h1 className="font-bold text-dark1 text-3xl md:text-4xl lg:text-5xl dark:text-white ">
                 WE BUILD THE
               </h1>
@@ -85,8 +85,7 @@ const Header = () => {
             </div>
             <div className="w-11/12 xl:w-9/12 mx-auto ">
               <h5 className="font-medium text-dark2 text-sm md:text-lg lg:text-xl  text-center dark:text-white">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore.
+              Our solutions are ahead of time. We’re always willing to help you build the best digital experience.
               </h5>
             </div>
 

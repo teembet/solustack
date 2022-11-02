@@ -8,15 +8,15 @@ import Angle from "../../public/icons/about-angle.svg";
 const about = [
   {
     title: "Vision",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+    text: "Empower the digital world with quick and easy access to quality mobile and web applications.",
   },
   {
     title: "Mission",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+    text: "Using technology as a means to provide transformative digital solutions to our clients.",
   },
   {
-    title: "Values",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+    title: "The values that define us",
+    text: "Solustack is Team Work, Freedom,Inclusion, Creativity,Growth and Solution driven.",
   },
 ];
 
@@ -49,13 +49,11 @@ const AboutSection = () => {
           }}
            className="xl:col-span-3 py-8 z-10">
             <div className="mb-10 xl:w-4/5">
-              <h3 className="font-semibold font-technor text-2xl  mb-2">
+              <h3 className="font-semibold font-technor text-2xl md:text-3xl  mb-2">
                 About Us
               </h3>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
+              At Solustack, we design, develop, and maintain full stack mobile/web applications.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">

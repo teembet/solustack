@@ -10,30 +10,40 @@ import Angle from "../../public/icons/services-angle.svg";
 import Image from "next/image";
 const services = [
   {
-    icon: `${Apple.src}`,
-    title: "iOS App Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
-  },
-  {
-    icon: `${Android.src}`,
-    title: "Android App Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+    icon: `${Design.src}`,
+    title: "Design",
+    text: "We create efficient and timeless UI/UX design solutions for any device, that increases the value of your product or service.",
   },
   {
     icon: `${Web.src}`,
-    title: "Web Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+    title: "Development",
+    text: "With years of experience, there’s no limit to what we can do. From web development,mobile applications and hybrid application development.",
   },
-  {
-    icon: `${Hybrid.src}`,
-    title: "Hybrid App Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
-  },
-  {
-    icon: `${Design.src}`,
-    title: "Web & Mobile UI/UX Design",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
-  },
+  // {
+  //   icon: `${Apple.src}`,
+  //   title: "iOS App Development",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+  // },
+  // {
+  //   icon: `${Android.src}`,
+  //   title: "Android App Development",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+  // },
+  // {
+  //   icon: `${Web.src}`,
+  //   title: "Web Development",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+  // },
+  // {
+  //   icon: `${Hybrid.src}`,
+  //   title: "Hybrid App Development",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+  // },
+  // {
+  //   icon: `${Design.src}`,
+  //   title: "Web & Mobile UI/UX Design",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+  // },
 ];
 
 const Services = () => {
@@ -54,7 +64,7 @@ const Services = () => {
       id="services"
       className="w-full  relative  font-supreme  text-white py-10 overflow-x-clip"
     >
-      <div className="absolute top-0 left-0 h-[28%] w-[12%] bg-blue1 z-0"></div>
+      <div className="absolute top-0 left-0 h-28 w-28 xl:w-32 bg-blue1 z-0"></div>
       <div className="absolute top-0 left-4  z-0 ">
         <Image src={Angle} alt="" height={90} width={70} />
       </div>
@@ -105,9 +115,7 @@ const Services = () => {
                   {item.title}
                 </p>
                 <p className="text-justify text-sm ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis.
+                 {item.text}
                 </p>
               </div>
             </div>

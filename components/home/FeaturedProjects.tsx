@@ -135,7 +135,7 @@ const FeaturedProjects = ({ projects }) => {
               }}
               className=" "
             >
-              <h4 className="font-semibold text-3xl font-technor">
+              <h4 className="font-semibold text-xl md:text-3xl font-technor">
                 Our Featured Projects
               </h4>
               
@@ -160,9 +160,7 @@ const FeaturedProjects = ({ projects }) => {
          <div className="md:w-3/5">
           
           <p className=" md:text-justify my-5 text-grey4 dark:text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis.
+          Check out some of the timeless projects, to have a sneak peek into our world of solutions.
               </p></div>
           </div>
         </div>
@@ -175,14 +173,14 @@ const FeaturedProjects = ({ projects }) => {
                   <h4 className="font-technor font-medium text-2xl mb-3 capitalize">
                     {proj.name}
                   </h4>
-                  <div className="mb-3">
+                 {/* <div className="mb-3">
                     {proj.tags.map((tag,i)=>(
                       <button key={i} className="bg-blue2 py-1 px-6 text-sm text-white rounded-md mr-4">
                       {tag}
                     </button>
                     ))}
                 
-                  </div>
+                  </div>  */}
                   <p className="text-xs lg:text-sm">
                    {proj.brief}
                   </p>

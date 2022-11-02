@@ -11,17 +11,17 @@ const process = [
   {
     icon: `${Collaborate.src}`,
     title: "Collaborate",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+    text: "We do our own research, while our experts collaborate with you to fully understand your goals and challenges.",
   },
   {
     icon: `${Implement.src}`,
     title: "Implement",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+    text: 'Our teams of designers, and developers, collaborate to bring your ideas to life. We make sure your application is well validated and meets our "definition of done” before releasing.',
   },
   {
     icon: `${Scale.src}`,
     title: "Maintain and Scale",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore",
+    text: "After sending out finalized deliverables, we provide affordable further support for our clients after the product is released. This is 100% recommended by our experts.",
   },
 ];
 
@@ -58,14 +58,14 @@ const Process = () => {
       className="w-full p-4 font-supreme  overflow-x-clip "
     >
       <div className="w-11/12 mx-auto py-2 mb-12 relative">
-      <div className="absolute -top-6 left-0 right-0 ">
-      <div className="">
-      <Lottie 
-	    options={defaultOptions}
-        height={120}
-        width={120}
-      /></div>
-          </div>
+        <div className="absolute -top-6 left-0 right-0 ">
+          <div className="">
+            <Lottie
+              options={defaultOptions}
+              height={120}
+              width={120}
+            /></div>
+        </div>
         <motion.div
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
@@ -77,9 +77,9 @@ const Process = () => {
           }}
           className="w-full lg:w-3/5 mx-auto "
         >
-          
-          <h4 className="font-semibold text-2xl text-center font-technor z-10 ">
-            Our 3 Step Process to Creating <br/> Scalable Apps
+
+          <h4 className="font-semibold text-xl md:text-3xl text-center font-technor z-10 ">
+            Our 3 Step Process to Creating <br /> Scalable Apps
           </h4>
           <p className="text-center my-5 text-grey4 dark:text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Lottie from 'react-lottie';
+import Lottie from "react-lottie";
 import Affordable from "../../public/icons/affordable.svg";
 import Expert from "../../public/icons/expert.svg";
 import Delivery from "../../public/icons/delivery.svg";
@@ -11,24 +11,23 @@ import Image from "next/image";
 const reasons = [
   {
     icon: `${Affordable.src}`,
-    title: "High Quality Applications At Affordable Prices",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+    title: "Top-notch quality",
+    text: "We make every effort to create unique high quality designs that exceed your expectations.",
   },
   {
     icon: `${Expert.src}`,
-    title:
-      "Experts With Over 10 Years Of Combined Experience In Mobile Application Development",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+    title: "Experience",
+    text: "Our team comprises of out of the box thinkers, who are dedicated to help you overcome challenges and achieve business goals.",
   },
   {
     icon: `${Delivery.src}`,
-    title: "Well Timed Product And Service Delivery",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+    title: "Fast Delivery",
+    text: "We always deliver projects on time.",
   },
   {
     icon: `${Support.src}`,
-    title: "Support To Our Clients",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+    title: "Communication",
+    text: "We make every effort to maintain an active and transparent relationship with our clients, to ensure 100% satisfaction.",
   },
 ];
 const defaultOptions = {
@@ -36,8 +35,8 @@ const defaultOptions = {
   autoplay: true,
   animationData: QuestionMark,
   rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice"
-  }
+    preserveAspectRatio: "xMidYMid slice",
+  },
 };
 
 const WhyUs = () => {
@@ -60,15 +59,11 @@ const WhyUs = () => {
         }}
       >
         <div className="w-full xl:w-2/5 mx-auto text-center">
-        <div className="">
-      <Lottie 
-	    options={defaultOptions}
-        height={65}
-        width={65}
-      /></div>
-          <h3 className="font-semibold font-technor text-2xl xl:text-40 mb-6">
-            Why Choose Solustack 
-            For Your Next Project
+          <div className="">
+            <Lottie options={defaultOptions} height={65} width={65} />
+          </div>
+          <h3 className="font-semibold font-technor text-xl md:text-3xl mb-6">
+            Why Choose Solustack For Your Next Project
           </h3>
         </div>
         <div className="lg:w-4/5 xl:w-3/5 mx-auto mb-6">
@@ -79,7 +74,7 @@ const WhyUs = () => {
           </p>
         </div>
       </motion.div>
-      <div className="my-4 grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {reasons.map((item, i) => (
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -90,12 +85,12 @@ const WhyUs = () => {
               duration: 2,
             }}
             key={i}
-            className="glass-card3 backdrop-blur-[40px] rounded-lg px-3 py-10 flex flex-col justify-between"
+            className="glass-card3 backdrop-blur-[40px] rounded-lg px-3 py-6 md:py-10 flex flex-col justify-between"
           >
-            <div className=" text-center flex justify-center my-16">
+            <div className=" text-center flex justify-center my-8 md:my-16">
               <Image src={item.icon} alt="" width={60} height={60} />
             </div>
-            <h5 className="font-semibold font-technor text-md text-center mb-12">
+            <h5 className="font-semibold font-technor text-md text-center mb-6 md:mb-12">
               {item.title}
             </h5>
             <p className="text-black dark:text-white text-sm text-center">

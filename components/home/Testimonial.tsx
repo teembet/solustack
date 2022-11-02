@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Avatar from "../../public/images/avatar.jpeg";
+import YellowStar from "../../public/icons/yellow-star.svg";
+
 import Image from "next/image";
 const responsive = {
   desktop: {
@@ -85,7 +87,7 @@ const items = [
 ];
 
 const Slide = ({ item }) => {
-  const { image, name, testimony, status } = item;
+  const { image, name, testimony, status, stars } = item;
   return (
     <div className="  testimonial-card backdrop-blur-[40px] rounded-[48px]  pt-5">
       <p className="text-sm md:text-md text-justify leading-6 font-generalSans px-6">
@@ -106,6 +108,15 @@ const Slide = ({ item }) => {
             <h5 className="   font-medium text-sm">{name}</h5>
             <p className="text-xs my-2  text-grey2">{status}</p>
           </div>
+        </div>
+
+        <div className="flex items-center justify-end">
+          {new Array(stars).map((i)=>(
+            <div  key={`k+${i}`}>
+            <Image  src={YellowStar} alt="" width={20} height={20} />
+            </div>
+          ))}
+
         </div>
       </div>
 

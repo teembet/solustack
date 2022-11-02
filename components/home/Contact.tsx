@@ -118,7 +118,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="text-end">
-                <button className="bg-blue1 py-2 px-12 font-medium rounded text-white">
+                <button className="bg-blue3 py-2 px-24 font-medium rounded text-white">
                   Submit
                 </button>
               </div>
