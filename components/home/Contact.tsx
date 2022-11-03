@@ -39,7 +39,7 @@ const sms = [
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full p-4 lg:py-12  dark:text-white font-supreme">
+    <div id="contact" className="w-full p-4 lg:py-12  text-white font-supreme">
       <div className="xl:w-11/12 mx-auto  py-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           <div className="col-span-2">
@@ -101,13 +101,13 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center mb-4">
-                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button className="bg-black border border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
                   iOS
                 </button>
-                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button className="bg-black border border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
                   Android
                 </button>
-                <button className="bg-[#3F3D38] dark:bg-black dark:border dark:border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button className="bg-black border border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
                   UI/UX Design
                 </button>
               </div>

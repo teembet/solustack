@@ -48,7 +48,7 @@ const AboutSection = () => {
             duration:2
           }}
            className="xl:col-span-3 py-8 z-10">
-            <div className="mb-10 xl:w-4/5">
+            <div className="mb-10 xl:w-4/5 text-white">
               <h3 className="font-semibold font-technor text-2xl md:text-3xl  mb-2">
                 About Us
               </h3>
@@ -56,7 +56,7 @@ const AboutSection = () => {
               At Solustack, we design, develop, and maintain full stack mobile/web applications.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5 text-white">
               {about.map((item, i) => (
                 <div className="xl:w-5/6" key={i}>
                   <p className="font-semibold text-xl">{i + 1}.</p>
