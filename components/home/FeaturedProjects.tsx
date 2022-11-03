@@ -120,7 +120,7 @@ const FeaturedProjects = ({ projects }) => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
         viewport={{ once: true }}
-        className="w-full  py-12 bg-blue4 md:rounded-t-[96px] font-supreme"
+        className="w-full  py-12 bg-blue4 md:rounded-t-[96px] font-supreme text-white"
       >
         <div className="w-full border-b border-b-[#FFFFFF30] mb-4">
           <div className="w-11/12 xl:w-10/12 mx-auto">
@@ -135,7 +135,7 @@ const FeaturedProjects = ({ projects }) => {
               }}
               className=" "
             >
-              <h4 className="font-semibold text-xl md:text-3xl font-technor">
+              <h4 className="font-semibold text-xl md:text-3xl font-technor text-white">
                 Our Featured Projects
               </h4>
               
@@ -151,7 +151,7 @@ const FeaturedProjects = ({ projects }) => {
               className="  text-end"
             >
               <a href="#contact">
-                <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-6 md:px-12 whitespace-nowrap  text-white rounded">
+                <button className="bg-white text-blue2 py-2 px-6 md:px-12 whitespace-nowrap   rounded">
                   Get in Touch
                 </button>
               </a>
@@ -159,7 +159,7 @@ const FeaturedProjects = ({ projects }) => {
           </div>
          <div className="md:w-3/5">
           
-          <p className=" md:text-justify my-5 text-grey4 dark:text-white">
+          <p className=" md:text-justify my-5text-white">
           Check out some of the timeless projects, to have a sneak peek into our world of solutions.
               </p></div>
           </div>
@@ -169,7 +169,7 @@ const FeaturedProjects = ({ projects }) => {
           <div className="w-11/12 xl:w-10/12 mx-auto ">
             {projects.slice(0, sliceIndex).map((proj, i)=>(
                 <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12 ">
-                <div className="flex flex-col justify-center items-start">
+                <div className="flex flex-col justify-center items-start text-white">
                   <h4 className="font-technor font-medium text-2xl mb-3 capitalize">
                     {proj.name}
                   </h4>
@@ -185,7 +185,7 @@ const FeaturedProjects = ({ projects }) => {
                    {proj.brief}
                   </p>
   
-                 <button className="bg-blue1 dark:bg-white dark:text-blue2 py-2 px-12 my-8  text-white rounded " onClick={() => viewProject(proj.id)}>
+                 <button className="bg-white text-blue2 py-2 px-12 my-8   rounded " onClick={() => viewProject(proj.id)}>
                     View Project
                   </button>
                 </div>

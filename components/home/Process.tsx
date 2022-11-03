@@ -55,7 +55,7 @@ const Process = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="w-full p-4 font-supreme  overflow-x-clip "
+      className="w-full p-4 font-supreme  overflow-x-clip text-white"
     >
       <div className="w-11/12 mx-auto py-2 mb-12 relative">
         <div className="absolute -top-6 left-0 right-0 ">
@@ -81,7 +81,7 @@ const Process = () => {
           <h4 className="font-semibold text-xl md:text-3xl text-center font-technor z-10 ">
             Our 3 Step Process to Creating <br /> Scalable Apps
           </h4>
-          <p className="text-center my-5 text-grey4 dark:text-white">
+          <p className="text-center my-5 text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores

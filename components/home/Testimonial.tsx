@@ -37,7 +37,7 @@ const items = [
 const Slide = ({ item }) => {
   const { image, name, testimony, status, stars } = item;
   return (
-    <div className="  testimonial-card backdrop-blur-[40px] rounded-[48px]  pt-5">
+    <div className="  testimonial-card backdrop-blur-[40px] rounded-[48px]  pt-5 text-white">
       <p className="text-sm md:text-md text-justify leading-6 font-generalSans px-6">
         {testimony}
       </p>
@@ -77,7 +77,7 @@ const Testimonial = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2 }}
       viewport={{ once: true }}
-      className="w-full p-4 py-12 lg:py-20 font-supreme relative overflow-x-clip  dark:text-white"
+      className="w-full p-4 py-12 lg:py-20 font-supreme relative overflow-x-clip  text-white"
     >
       <div>
         <motion.div
@@ -88,12 +88,13 @@ const Testimonial = () => {
             delay: 0.4,
             duration: 2,
           }}
+          className="text-white"
         >
           <h3 className="font-semibold font-technor  text-2xl mb-6 text-center">
             Client Testimonials
           </h3>
           <div className="lg:w-4/5 xl:w-3/5 mx-auto mb-6 font-poppins">
-            <p className="text-base font-poppins text-dark1 text-center dark:text-white">
+            <p className="text-base font-poppins  text-center text-white">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo

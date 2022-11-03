@@ -87,7 +87,7 @@ const Services = () => {
       <div className="w-full lg:w-11/12  mx-auto z-10">
         <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3   gap-8 p-5 mt-5">
           {/* <div className="w-full sm:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto"> */}
-          <div className="col-span-1 z-10 px-4">
+          <div className="col-span-1 z-10 px-4 text-white">
             <h3 className="font-semibold text-2xl font-technor  leading-8   z-20">
               We Offer The <br /> Following Services
             </h3>
@@ -106,7 +106,7 @@ const Services = () => {
             >
               <div className={` absolute bottom-8 right-4  `}></div>
 
-              <div className="glass-card px-4 py-6 font-supreme">
+              <div className="glass-card px-4 py-6 font-supreme text-white">
                 <motion.div
                   whileHover={{
                     rotateY: 180,

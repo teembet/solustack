@@ -47,7 +47,7 @@ const WhyUs = () => {
       transition={{ duration: 2 }}
       viewport={{ once: true }}
       id="why-us"
-      className="w-full py-10 px-4 lg:px-12 overflow-x-clip font-supreme"
+      className="w-full py-10 px-4 lg:px-12 overflow-x-clip font-supreme text-white"
     >
       <motion.div
         initial={{ x: -100 }}
@@ -58,7 +58,7 @@ const WhyUs = () => {
           duration: 2,
         }}
       >
-        <div className="w-full xl:w-2/5 mx-auto text-center">
+        <div className="w-full xl:w-2/5 mx-auto text-center text-white">
           <div className="">
             <Lottie options={defaultOptions} height={65} width={65} />
           </div>
@@ -67,14 +67,14 @@ const WhyUs = () => {
           </h3>
         </div>
         <div className="lg:w-4/5 xl:w-3/5 mx-auto mb-6">
-          <p className="text-sm text-grey4 text-center dark:text-white">
+          <p className="text-sm  text-center text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
           </p>
         </div>
       </motion.div>
-      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-white">
         {reasons.map((item, i) => (
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -85,7 +85,7 @@ const WhyUs = () => {
               duration: 2,
             }}
             key={i}
-            className="glass-card3 backdrop-blur-[40px] rounded-lg px-3 py-6 md:py-10 flex flex-col justify-between"
+            className="glass-card3 backdrop-blur-[40px] rounded-lg px-3 py-6 md:py-10 flex flex-col justify-between text-white"
           >
             <div className=" text-center flex justify-center my-8 md:my-16">
               <Image src={item.icon} alt="" width={60} height={60} />
