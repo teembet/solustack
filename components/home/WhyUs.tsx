@@ -90,10 +90,10 @@ const WhyUs = () => {
             <div className=" text-center flex justify-center my-8 md:my-16">
               <Image src={item.icon} alt="" width={60} height={60} />
             </div>
-            <h5 className="font-semibold font-technor text-md text-center mb-6 md:mb-12">
+            <h5 className="font-semibold font-technor text-md text-center mb-6 md:mb-12 text-white">
               {item.title}
             </h5>
-            <p className="text-black dark:text-white text-sm text-center">
+            <p className="  text-sm text-center text-white">
               {item.text}
             </p>
           </motion.div>

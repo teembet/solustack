@@ -207,7 +207,7 @@ const FeaturedProjects = ({ projects }) => {
           <div className="">
             <Lottie options={robotOptions} height={45} width={45} />
           </div>
-          <span className="font-technor text-md lg:text-2xl font-medium mx-3">
+          <span className="font-technor text-md lg:text-2xl font-medium mx-3 text-white">
             View More Projects
           </span>
 
