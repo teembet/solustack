@@ -4,8 +4,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -121,8 +122,6 @@ code {
   font-style: normal;
 }
 
-
-
 .feature-project-bg {
   background: transparent linear-gradient(140deg, #004dd2 0%, #004dd2 100%) 0%
     0% no-repeat padding-box;
@@ -133,33 +132,50 @@ code {
 }
 
 .glass-card {
-  background: transparent linear-gradient(119deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.01) 100%)
+  background: transparent
+    linear-gradient(
+      119deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    )
     0% 0% no-repeat padding-box;
   border-radius: 10px;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
 }
 
-.glass-card2{
-  background: transparent linear-gradient(120deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
-border: 2px solid #1C1B1B99;
-
+.glass-card2 {
+  background: transparent
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    )
+    0% 0% no-repeat padding-box;
+  border: 2px solid #1c1b1b99;
 }
 
-.glass-card3{
-  background: transparent linear-gradient(149deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
+.glass-card3 {
+  background: transparent
+    linear-gradient(
+      149deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    )
+    0% 0% no-repeat padding-box;
   border: 2px solid rgba(28, 27, 27, 0.6);
-
 }
-.testimonial-card{
-  background: transparent linear-gradient(113deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) 0% 0% no-repeat padding-box;
-border: 2px solid rgba(28, 27, 27, 0.6);
-border-radius: 48px;
-
+.testimonial-card {
+  background: transparent
+    linear-gradient(
+      113deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    )
+    0% 0% no-repeat padding-box;
+  border: 2px solid rgba(28, 27, 27, 0.6);
+  border-radius: 48px;
 }
-
-
-
 
 .three-quarter-bg {
   background-size: 100% 70%;
@@ -187,8 +203,8 @@ border-radius: 48px;
   display: block;
   width: 16px;
   height: 16px;
-  border-bottom: 3px solid #2E95FF;
-  border-right: 3px solid #2E95FF;
+  border-bottom: 3px solid #2e95ff;
+  border-right: 3px solid #2e95ff;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
@@ -201,8 +217,6 @@ border-radius: 48px;
 .box span:nth-child(3) {
   animation-delay: -0.4s;
 }
-
-
 
 @keyframes animate {
   0% {
@@ -221,7 +235,7 @@ section {
   height: "101vh";
 }
 
-.widen{
+.widen {
   border-radius: 50%;
   animation: widen 4s infinite linear;
 }
@@ -229,13 +243,12 @@ section {
 @keyframes widen {
   0% {
     /* opacity: 0; */
-    transform: scale(1.0);
+    transform: scale(1);
   }
   50% {
     transform: scale(3.5);
   }
   100% {
-    transform: scale(1.0);
+    transform: scale(1);
   }
 }
-
