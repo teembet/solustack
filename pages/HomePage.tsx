@@ -42,8 +42,6 @@ const HomePage = ({
           </section>
         </Wrapper>
 
-       
-
         <Wrapper ref={ref2}>
           <section>
             <Services />
@@ -58,7 +56,7 @@ const HomePage = ({
 
         <Wrapper ref={ref3}>
           <section>
-            {projects && <FeaturedProjects projects={projects} />}
+            {projects?.length && <FeaturedProjects projects={projects} />}
           </section>
         </Wrapper>
         <Wrapper ref={ref4}>
@@ -66,14 +64,14 @@ const HomePage = ({
             <WhyUs />
           </section>
         </Wrapper>
-     <Wrapper ref={ref1}>
+        <Wrapper ref={ref1}>
           <section>
             <AboutSection />
           </section>
         </Wrapper>
-          <Wrapper ref={ref5}>
+        {/* <Wrapper ref={ref5}>
             <Testimonial />
-          </Wrapper>
+          </Wrapper> */}
         <Wrapper ref={ref5}>
           <Contact />
         </Wrapper>

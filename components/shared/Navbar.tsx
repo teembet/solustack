@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { lazy, useState } from "react";
 import { motion } from "framer-motion";
 import Hamburger from "../../public/icons/nav_icon.svg";
 import Close from "../../public/icons/close_nav.svg";
@@ -15,10 +15,6 @@ import { useTheme } from "next-themes";
 
 const navItems = [
   {
-    name: "About Us",
-    link: "about-us",
-  },
-  {
     name: "Our Services",
     link: "services",
   },
@@ -30,6 +26,11 @@ const navItems = [
     name: "Why Us",
     link: "why-us",
   },
+  {
+    name: "About Us",
+    link: "about-us",
+  },
+
   {
     name: "Get In Touch",
     link: "contact",
@@ -61,10 +62,10 @@ const Tab = ({ item, active, setActive }) => {
         setActive(item.name);
       }}
       className={` ${
-        active === item.name ? "border-b-4 border-b-blue2" : ""
+        active === item.name ? "border-b-4 border-b-blue3" : ""
       }  px-3 py-2 text-sm  lg:text-base  cursor-pointer font-supreme`}
     >
-      <a href={`#${item.link}`}> {item.name}</a>
+      <a href={`/#${item.link}`}> {item.name}</a>
     </li>
   );
 };
@@ -87,7 +88,6 @@ type Prop = {
   activeTab?: () => void;
 };
 const Navbar = ({ activeTab }: Prop) => {
-
   const [active, setActive] = useState(activeTab());
   const [isOpen, setIsOpen] = useState(false);
 
@@ -109,7 +109,11 @@ const Navbar = ({ activeTab }: Prop) => {
   //   );
   // };
   return (
-    <div className={`sticky top-0 z-50  ${isOpen?  "bg-dark4" : "bg-bg1/30"}  backdrop-blur-lg text-white font-supreme`}>
+    <div
+      className={`sticky top-0 z-50  ${
+        isOpen ? "bg-dark4" : "bg-bg1/30"
+      }  backdrop-blur-lg text-white font-supreme`}
+    >
       <div className="w-full hidden md:block pt-4 relative">
         {/* <div className="absolute top-3 right-3">{renderThemeToggle()}</div> */}
         <div className="w-fit  mx-auto ">
@@ -119,10 +123,10 @@ const Navbar = ({ activeTab }: Prop) => {
         </div>
 
         <div className="w-full md:w-5/6  xl:w-3/6 mx-auto ">
-          <motion.ul
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+          <ul
+            // initial={{ opacity: 0, scale: 0.5 }}
+            // animate={{ opacity: 1, scale: 1 }}
+            // transition={{ duration: 0.8 }}
             className="flex justify-between  font-medium"
           >
             {navItems.map((item, i) => (
@@ -133,7 +137,7 @@ const Navbar = ({ activeTab }: Prop) => {
                 setActive={setActive}
               />
             ))}
-          </motion.ul>
+          </ul>
         </div>
       </div>
       <div className="w-full pt-6 pb-2  md:hidden  relative">
@@ -149,11 +153,23 @@ const Navbar = ({ activeTab }: Prop) => {
           <div className="">
             {isOpen ? (
               <div onClick={() => setIsOpen(false)}>
-                <Image src={Close} alt="" width={25} height={25} />
+                <Image
+                  src={Close}
+                  alt=""
+                  width={25}
+                  height={25}
+                  loading="lazy"
+                />
               </div>
             ) : (
               <div onClick={() => setIsOpen(true)}>
-                <Image src={Hamburger} alt="" width={25} height={25} />
+                <Image
+                  src={Hamburger}
+                  alt=""
+                  width={25}
+                  height={25}
+                  loading="lazy"
+                />
               </div>
             )}
           </div>

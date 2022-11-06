@@ -12,7 +12,6 @@ import animationData from "../../public/air.json";
 import Lottie from "react-lottie";
 
 const trustees = [
-
   {
     img: AppleBlack,
   },
@@ -22,7 +21,6 @@ const trustees = [
   {
     img: Windows,
   },
-
 ];
 const defaultOptions = {
   loop: true,
@@ -45,7 +43,7 @@ const Header = () => {
   };
 
   return (
-    <motion.div className="min-h-[85vh]   font-supreme ">
+    <div className="min-h-[85vh]   font-supreme ">
       <div
         className="w-full h-full relativebg-bg1/20 backdrop-blur-sm  text-center py-10 flex flex-col justify-end"
         // style={{
@@ -54,14 +52,14 @@ const Header = () => {
       >
         {/* fix animation here */}
         <div className="h-1/2 p-2 absolute top-16   left-0 right-0  hidden lg:block ">
-          <div className="bg-blue1  w-28 h-28 blur-md  rounded-full widen mx-auto"></div>
+          <div className="bg-blue3  w-28 h-28 blur-md  rounded-full widen mx-auto"></div>
         </div>
         {/* fix animation here */}
         <div className="z-[10]  w-full mt-12 lg:mt-20 ">
           <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
             <div className="mb-3 font-technor">
               <h1 className="font-bold  text-3xl md:text-4xl lg:text-5xl text-white ">
-               WE BUILD THE
+                WE BUILD THE
               </h1>
               <h1 className="font-bold text-blue2  text-3xl md:text-4xl lg:text-5xl">
                 BEST DIGITAL EXPERIENCES.
@@ -69,7 +67,8 @@ const Header = () => {
             </div>
             <div className="w-11/12 xl:w-9/12 mx-auto ">
               <h5 className="font-medium text-sm md:text-lg lg:text-xl  text-center text-white">
-              Our solutions are ahead of time. We’re always willing to help you build the best digital experience.
+                Our solutions are ahead of time. We’re always willing to help
+                you build the best digital experience.
               </h5>
             </div>
 
@@ -121,7 +120,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

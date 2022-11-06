@@ -17,11 +17,9 @@ const DesignScreen3 = () => {
         </div>
         <div className="flex">
           <div className=" mr-6 xl:mr-12">
-            <WhiteCard shadowLg={true} />
+            {/* <WhiteCard shadowLg={true} /> */}
           </div>
-          <div>
-            <DarkCard />
-          </div>
+          <div>{/* <DarkCard /> */}</div>
         </div>
       </div>
     </div>

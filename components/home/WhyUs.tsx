@@ -41,22 +41,22 @@ const defaultOptions = {
 
 const WhyUs = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-      viewport={{ once: true }}
+    <div
+      // initial={{ opacity: 0 }}
+      // whileInView={{ opacity: 1 }}
+      // transition={{ duration: 2 }}
+      // viewport={{ once: true }}
       id="why-us"
       className="w-full py-10 px-4 lg:px-12 overflow-x-clip font-supreme text-white"
     >
-      <motion.div
-        initial={{ x: -100 }}
-        whileInView={{ x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          delay: 0.4,
-          duration: 2,
-        }}
+      <div
+      // initial={{ x: -100 }}
+      // whileInView={{ x: 0 }}
+      // viewport={{ once: true }}
+      // transition={{
+      //   delay: 0.4,
+      //   duration: 2,
+      // }}
       >
         <div className="w-full xl:w-2/5 mx-auto text-center text-white">
           <div className="">
@@ -73,7 +73,7 @@ const WhyUs = () => {
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
           </p>
         </div>
-      </motion.div>
+      </div>
       <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-white">
         {reasons.map((item, i) => (
           <motion.div
@@ -93,13 +93,11 @@ const WhyUs = () => {
             <h5 className="font-semibold font-technor text-md text-center mb-6 md:mb-12 text-white">
               {item.title}
             </h5>
-            <p className="  text-sm text-center text-white">
-              {item.text}
-            </p>
+            <p className="  text-sm text-center text-white">{item.text}</p>
           </motion.div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

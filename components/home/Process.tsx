@@ -50,11 +50,11 @@ const defaultOptions = {
 
 const Process = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      viewport={{ once: true }}
+    <div
+      // initial={{ opacity: 0 }}
+      // whileInView={{ opacity: 1 }}
+      // transition={{ duration: 1.5 }}
+      // viewport={{ once: true }}
       className="w-full p-4 font-supreme  overflow-x-clip text-white"
     >
       <div className="w-11/12 mx-auto py-2 mb-12 relative">
@@ -66,15 +66,15 @@ const Process = () => {
               width={120}
             /></div>
         </div>
-        <motion.div
-          initial={{ x: -100 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.4,
-            duration: 1.5,
-            ease: "easeIn"
-          }}
+        <div
+          // initial={{ x: -100 }}
+          // whileInView={{ x: 0 }}
+          // viewport={{ once: true }}
+          // transition={{
+          //   delay: 0.4,
+          //   duration: 1.5,
+          //   ease: "easeIn"
+          // }}
           className="w-full lg:w-3/5 mx-auto "
         >
 
@@ -87,16 +87,16 @@ const Process = () => {
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
             et ea rebum. Stet
           </p>
-        </motion.div>
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
+        </div>
+        <div
+          // variants={container}
+          // initial="hidden"
+          // animate="show"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {process.map((item, i) => (
-            <motion.div
-              variants={item_animate}
+            <div
+              // variants={item_animate}
               key={i}
               className="glass-card2 backdrop-blur-[40px] rounded-xl p-6 text-white"
             >
@@ -105,11 +105,11 @@ const Process = () => {
               </div>
               <p className="font-semibold font-technor text-xl my-3">{item.title}</p>
               <p className=" text-sm font-supreme">{item.text}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -24,11 +24,11 @@ const AboutSection = () => {
   return (
     <div className="pb-4 bg-aboutBlue1 rounded-b-[96px] ">
     <div className="pb-4 bg-aboutBlue2 rounded-b-[96px] ">
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{duration:1.5}}
-      viewport={{ once: true }}
+    <div
+      // initial={{ opacity: 0 }}
+      // whileInView={{ opacity: 1 }}
+      // transition={{duration:1.5}}
+      // viewport={{ once: true }}
       id="about-us"
       className="w-full bg-dark4 p-4 text-white font-supreme relative overflow-x-clip rounded-b-[96px] "
     >
@@ -39,14 +39,14 @@ const AboutSection = () => {
       
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 xl:grid-cols-5">
-          <motion.div 
-          initial={{ x: -100 }}
-          whileInView={{ x: 0, }}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.4,
-            duration:2
-          }}
+          <div 
+          // initial={{ x: -100 }}
+          // whileInView={{ x: 0, }}
+          // viewport={{ once: true }}
+          // transition={{
+          //   delay: 0.4,
+          //   duration:2
+          // }}
            className="xl:col-span-3 py-8 z-10">
             <div className="mb-10 xl:w-4/5 text-white">
               <h3 className="font-semibold font-technor text-2xl md:text-3xl  mb-2">
@@ -65,16 +65,16 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="hidden xl:block xl:col-span-2 bg-cover bg-no-repeat bg-center"
             style={{ backgroundImage: `url('${AboutSectionImage.src}')` }}
-          ></motion.div>
+          ></div>
         </div>
       </div>
    
-    </motion.div></div></div>
+    </div></div></div>
   );
 };
 

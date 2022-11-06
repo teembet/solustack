@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 // import { ThemeContext } from "../../context/ThemeContext";
 import DarkCard from "./DarkCard";
-const DarkMode = () => {
+const DarkMode = ({ images }) => {
   // const { setTheme } = useContext(ThemeContext);
 
   // const toggleTheme = (val) => {
@@ -14,7 +14,7 @@ const DarkMode = () => {
 
   return (
     <>
-      <div className="w-full relative overflow-x-clip bg-[#1D2028] font-supreme">
+      <div className="w-full relative overflow-x-clip  font-supreme">
         <div className="p-4 w-full lg:w-11/12 mx-auto py-40 ">
           <div className="flex justify-between items-center ">
             <div className="font-poppins flex flex-col mr-6 xl:mr-0">
@@ -45,33 +45,37 @@ const DarkMode = () => {
             <div className="">
               <div className="flex justify-between slant ">
                 <div className=" mr-4 md:mr-8 xl:mr-16 ">
-                  <DarkCard purple={true} shadowLg={true} />
+                  {images?.[0] && (
+                    <DarkCard purple={true} shadowLg={true} image={images[0]} />
+                  )}
                 </div>
                 <div className="">
-                  <DarkCard shadowMd={true} />
+                  {images?.[1] && (
+                    <DarkCard purple={true} shadowLg={true} image={images[1]} />
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative  h-[18rem] md:h-[28rem] xl:h-[42rem] flex justify-end">
+        {/* <div className="relative  h-[18rem] md:h-[28rem] xl:h-[42rem] flex justify-end">
           <div className=" w-full xl:w-5/6  flex justify-end   slant">
             <div className="hidden lg:block absolute bottom-56 left-6  xl:left-20 ">
               <DarkCard shadowMd={true} />
             </div>
             <div className="w-3/5 flex justify-end mb-12   ">
-              <div className=" mr-6   ">
+              {/* <div className=" mr-6   ">
                 <DarkCard />
-              </div>
+              </div> *
               <div className=" mb-12">
                 <DarkCard />
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div className="bg-white dark:bg-dark4 h-[4rem] md:h-[8rem]  m-0 p-0"></div>
+      <div className="bg-dark4 h-[4rem] md:h-[8rem]  m-0 p-0"></div>
     </>
   );
 };

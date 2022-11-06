@@ -60,7 +60,7 @@ const Project = () => {
     <>
       <Navbar activeTab={activeTab} />
 
-      <div className="font-generalSans w-full  bg-white dark:bg-dark4">
+      <div className="font-generalSans w-full  bg-dark4">
         <div
           className="h-[60vh] bg-contain  bg-center bg-no-repeat relative"
           style={{
@@ -80,7 +80,7 @@ const Project = () => {
           </div>
         </div> */}
         </div>
-        <div className="p-4 w-full lg:w-11/12 mx-auto">
+        <div className="p-4 w-full lg:w-11/12 mx-auto text-white">
           <div className="lg:w-9/12 py-4">
             <div className="mb-8">
               <Title title="App Name" />
@@ -100,8 +100,8 @@ const Project = () => {
             </div>
           </div>
         </div>
-        <LightMode />
-        <DarkMode />
+        {<LightMode images={project.lightimg} />}
+        <DarkMode images={project.darkimg} />
         {/* <DesignScreen3 /> */}
         {/* <DesignScreen2 /> */}
         {/* <DesignScreen3 /> */}

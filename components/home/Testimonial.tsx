@@ -6,7 +6,6 @@ import Avatar from "../../public/images/avatar.jpeg";
 import YellowStar from "../../public/icons/yellow-star.svg";
 import Image from "next/image";
 
-
 const items = [
   {
     image: Avatar.src,
@@ -53,7 +52,9 @@ const Slide = ({ item }) => {
             />
           </div>
           <div className="font-supreme">
-            <h5 className=" font-bold text-sm lg:text-lg leading-5 whitespace-nowrap">{name}</h5>
+            <h5 className=" font-bold text-sm lg:text-lg leading-5 whitespace-nowrap">
+              {name}
+            </h5>
             <p className=" text-xs md:text-sm my-2  text-grey2">{status}</p>
           </div>
         </div>
@@ -72,22 +73,22 @@ const Slide = ({ item }) => {
 
 const Testimonial = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-      viewport={{ once: true }}
+    <div
+      // initial={{ opacity: 0 }}
+      // whileInView={{ opacity: 1 }}
+      // transition={{ duration: 2 }}
+      // viewport={{ once: true }}
       className="w-full p-4 py-12 lg:py-20 font-supreme relative overflow-x-clip  text-white"
     >
       <div>
-        <motion.div
-          initial={{ x: -100 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.4,
-            duration: 2,
-          }}
+        <div
+          // initial={{ x: -100 }}
+          // whileInView={{ x: 0 }}
+          // viewport={{ once: true }}
+          // transition={{
+          //   delay: 0.4,
+          //   duration: 2,
+          // }}
           className="text-white"
         >
           <h3 className="font-semibold font-technor  text-2xl mb-6 text-center">
@@ -101,19 +102,18 @@ const Testimonial = () => {
               dolores
             </p>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ x: -200 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.4,
-            duration: 2.5,
-          }}
+        <div
+          // initial={{ x: -200 }}
+          // whileInView={{ x: 0 }}
+          // viewport={{ once: true }}
+          // transition={{
+          //   delay: 0.4,
+          //   duration: 2.5,
+          // }}
           className="w-full relative  overflow-scroll no-scrollbar"
         >
-         
           <div className="gap-5 flex items-center flex-wrap lg:flex-nowrap ">
             {items.map((item, i) => (
               <div key={i} className="  mx-auto">
@@ -121,9 +121,9 @@ const Testimonial = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

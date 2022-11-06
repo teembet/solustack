@@ -1,5 +1,5 @@
 import React from "react";
-import WhiteCard from './WhiteCard';
+import WhiteCard from "./WhiteCard";
 import DarkCard from "./DarkCard";
 
 const DesignScreen2 = () => {
@@ -7,18 +7,15 @@ const DesignScreen2 = () => {
     <div className="w-full  py-10 relative ">
       <div className="bg-purple2  px-4   ">
         <div className="lg:w-10/12 mx-auto pt-[4rem] flex justify-end  relative">
-
-        <div className="absolute left-2 md:left-4 lg:left-6 xl:left-16  flex ">
-          <div className=" mr-6 xl:mr-12">
-            <WhiteCard shadowLg={true} />
+          <div className="absolute left-2 md:left-4 lg:left-6 xl:left-16  flex ">
+            <div className=" mr-6 xl:mr-12">
+              {/* <WhiteCard shadowLg={true} /> */}
+            </div>
+            <div>{/* <DarkCard /> */}</div>
           </div>
-          <div>
-            <DarkCard />
-          </div>
-        </div>
           <div className="">
             <div
-            className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-technor"
+              className="rotate-180 text-3xl md:text-5xl lg:text-7xl xl:text-[5.5rem] font-bold font-technor"
               style={{ writingMode: "vertical-rl" }}
             >
               <span className=" text-white px-5 tracking-wider">ign</span>

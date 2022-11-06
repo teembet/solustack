@@ -9,16 +9,6 @@ import ServicesBg from "../../public/images/service_bg.png";
 import Angle from "../../public/icons/services-angle.svg";
 import Image from "next/image";
 const services = [
-  // {
-  //   icon: `${Design.src}`,
-  //   title: "Design",
-  //   text: "We create efficient and timeless UI/UX design solutions for any device, that increases the value of your product or service.",
-  // },
-  // {
-  //   icon: `${Web.src}`,
-  //   title: "Development",
-  //   text: "With years of experience, there’s no limit to what we can do. From web development,mobile applications and hybrid application development.",
-  // },
   {
     icon: `${Apple.src}`,
     title: "iOS App Development",
@@ -71,11 +61,11 @@ const Services = () => {
     return;
   };
   return (
-    <motion.div
-      initial={{ opacity: 0.3 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      viewport={{ once: true }}
+    <div
+      // initial={{ opacity: 0.3 }}
+      // whileInView={{ opacity: 1 }}
+      // transition={{ duration: 1.5 }}
+      // viewport={{ once: true }}
       id="services"
       className="w-full  relative  font-supreme  text-white py-10 overflow-x-clip"
     >
@@ -131,7 +121,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
