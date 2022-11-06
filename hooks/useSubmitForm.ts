@@ -32,14 +32,7 @@ const useSubmitForm = () => {
         subject: subject,
         type: type,
       });
-      // await addDoc(ref, {
-      //   name: "dara",
-      //   email: "timbetekanem@gmail.com",
-      //   comment: "daramfon",
-      //   date: Timestamp.now().toDate(),
-      //   subject: "subject",
-      //   type: "type",
-      // });
+
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
