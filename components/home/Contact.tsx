@@ -47,9 +47,16 @@ const sms = [
   // },
 ];
 
+const tags = [
+  { id: "ios", tag: "iOS" },
+  { id: "android", tag: "Android" },
+  { id: "ui/ux", tag: "UI/UX" },
+];
+
 const Contact = () => {
   const { submitForm, isLoading } = useSubmitForm();
   const [loading, setLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState("ios");
   const submit = (e) => {
     e.preventDefault();
 
@@ -131,15 +138,28 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center mb-4">
-                <button className="bg-black border border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                {tags.map((tag, i) => (
+                  <button
+                    key={`jdn${i}`}
+                    onClick={() => setActiveTab(tag.id)}
+                    className={`${
+                      activeTab === tag.id
+                        ? "bg-white text-black"
+                        : "bg-black text-white border border-blue3"
+                    }  px-6 py-2  font-medium rounded text-sm mr-4`}
+                  >
+                    {tag.tag}
+                  </button>
+                ))}
+                {/* <button onClick={()=>setActiveTab('ios')} className={`${activeTab === 'ios' ?"bg-white text-black": "bg-black text-white border border-blue3"}  px-6 py-2  font-medium rounded text-sm mr-4`}>
                   iOS
                 </button>
-                <button className="bg-black border border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button onClick={()=>setActiveTab('android')} className={`${activeTab === 'android' ?"bg-white text-black": "bg-black text-white border border-blue3"}  px-6 py-2  font-medium rounded text-sm mr-4`}>
                   Android
                 </button>
-                <button className="bg-black border border-blue3 px-6 py-2 text-white font-medium rounded text-sm mr-4">
+                <button onClick={()=>setActiveTab('ui/ux')} className={`${activeTab === 'ui/ux' ?"bg-white text-black": "bg-black text-white border border-blue3"} px-6 py-2  font-medium rounded text-sm mr-4`}>
                   UI/UX Design
-                </button>
+                </button> */}
               </div>
               <div className="mb-4">
                 <textarea

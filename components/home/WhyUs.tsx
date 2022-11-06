@@ -85,10 +85,10 @@ const WhyUs = () => {
               duration: 2,
             }}
             key={i}
-            className="glass-card3 backdrop-blur-[40px] rounded-lg px-3 py-6 md:py-10 flex flex-col justify-between text-white"
+            className="glass-card3 backdrop-blur-[40px] rounded-lg px-8 py-6 md:py-8 flex flex-col  text-white"
           >
-            <div className=" text-center flex justify-center my-8 md:my-16">
-              <Image src={item.icon} alt="" width={60} height={60} />
+            <div className=" text-center flex justify-center my-8 md:my-12">
+              <Image src={item.icon} alt="" width={80} height={80} />
             </div>
             <h5 className="font-semibold font-technor text-md text-center mb-6 md:mb-12 text-white">
               {item.title}

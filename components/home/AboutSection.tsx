@@ -33,12 +33,12 @@ const AboutSection = () => {
       className="w-full bg-dark4 p-4 text-white font-supreme relative overflow-x-clip rounded-b-[96px] "
     >
       <div className="absolute top-0 left-0 h-[15%] md:h-1/4 lg:h-[28%] w-1/4 md:w-1/5 lg:w-[12%] bg-blue1 z-0"></div>
-      <div className="hidden lg:block absolute md:w-12 md:top-16 xl:w-16 xl:top-16 left-0  z-0  ">
+      <div className="hidden lg:block absolute md:w-12 md:top-16 xl:w-20 xl:top-16 left-0  z-0  ">
         <Image src={Angle} alt=""    />
       </div>
       
-      <div className="w-11/12 mx-auto">
-        <div className="grid grid-cols-1 xl:grid-cols-5">
+      <div className="w-full ">
+        <div className="grid grid-cols-1 xl:grid-cols-12">
           <div 
           // initial={{ x: -100 }}
           // whileInView={{ x: 0, }}
@@ -47,7 +47,7 @@ const AboutSection = () => {
           //   delay: 0.4,
           //   duration:2
           // }}
-           className="xl:col-span-3 py-8 z-10">
+           className="xl:col-span-7 py-8 z-10 w-10/12 mx-auto">
             <div className="mb-10 xl:w-4/5 text-white">
               <h3 className="font-semibold font-technor text-2xl md:text-3xl  mb-2">
                 About Us
@@ -56,9 +56,9 @@ const AboutSection = () => {
               At Solustack, we design, develop, and maintain full stack mobile/web applications.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 mt-5 text-white">
               {about.map((item, i) => (
-                <div className="xl:w-5/6" key={i}>
+                <div className="xl:w-10/12" key={i}>
                   <p className="font-semibold text-xl">{i + 1}.</p>
                   <p className="font-semibold text-xl my-3 font-technor">{item.title}</p>
                   <p className="font-normal text-sm">{item.text}</p>
@@ -68,9 +68,12 @@ const AboutSection = () => {
           </div>
 
           <div
-            className="hidden xl:block xl:col-span-2 bg-cover bg-no-repeat bg-center"
-            style={{ backgroundImage: `url('${AboutSectionImage.src}')` }}
-          ></div>
+            className="hidden xl:block xl:col-span-5 "
+            // style={{ backgroundImage: `url('${AboutSectionImage.src}')` }}
+          >
+            <div className="max-h-[700px] my-auto">
+            <Image src={AboutSectionImage} alt="" width={600} height={600} /></div>
+          </div>
         </div>
       </div>
    

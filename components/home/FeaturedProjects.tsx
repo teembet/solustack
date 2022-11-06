@@ -100,7 +100,7 @@ const robotOptions = {
 };
 
 const FeaturedProjects = ({ projects }) => {
-  const [sliceIndex, setSliceIndex] = useState<any>();
+  const [sliceIndex, setSliceIndex] = useState<any>(1);
   const { getProject } = useFetchProjects();
 
   const viewProject = (id) => {
@@ -108,9 +108,10 @@ const FeaturedProjects = ({ projects }) => {
   };
 
   function increaseIndex() {
-    if (sliceIndex < 2) {
+    if (sliceIndex < projects.length) {
       setSliceIndex(sliceIndex + 1);
-    } else return;
+    } else
+    return;
   }
   return (
     <>
@@ -203,9 +204,7 @@ const FeaturedProjects = ({ projects }) => {
         <div className="w-11/12 xl:w-10/12 mx-auto flex justify-end items-center">
           <div
             className="w-fit flex justify-end items-center cursor-pointer"
-            onClick={() => {
-              increaseIndex;
-            }}
+            onClick={increaseIndex}
           >
             <div className="">
               <Lottie options={robotOptions} height={45} width={45} />
