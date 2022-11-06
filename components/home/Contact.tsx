@@ -46,7 +46,6 @@ const sms = [
   //   link: "",
   // },
 ];
-
 const tags = [
   { id: "ios", tag: "iOS" },
   { id: "android", tag: "Android" },
@@ -57,11 +56,45 @@ const Contact = () => {
   const { submitForm, isLoading } = useSubmitForm();
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState("ios");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    comment: "",
+    subject: "",
+    type: "",
+  });
+
+  const onChange = (e) => {
+    setFormData((formData) => ({
+      ...formData,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   const submit = (e) => {
     e.preventDefault();
+    // setLoading(true)
+    // setTimeout(() => {
+    //   submitForm(
+    //     formData.name,
+    //     formData.email,
+    //     formData.comment,
+    //     formData.subject,
+    //     activeTab
+    //   );
+    //   setLoading(false)
+    // }, 4000);
+    console.log(formData);
+   
 
-    submitForm("name", "email", "comment");
-    setLoading(true);
+    submitForm(
+      formData.name,
+      formData.email,
+      formData.comment,
+      formData.subject,
+      activeTab
+    );
+   
   };
   return (
     <div id="contact" className="w-full p-4 lg:py-12  text-white font-supreme">
@@ -112,12 +145,15 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <div>
+            <form onSubmit={submit}>
               <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 mb-4 ">
                 <div>
                   <input
                     className="bg-inputGrey  border-0 p-3 w-full rounded text-sm placeholder:text-black50 focus:outline-none"
                     placeholder="Your name"
+                    name="name"
+                    value={formData.name}
+                    onChange={onChange}
                     required
                   />
                 </div>
@@ -125,6 +161,9 @@ const Contact = () => {
                   <input
                     className="bg-inputGrey  border-0 p-3 w-full rounded text-sm placeholder:text-black50 focus:outline-none"
                     placeholder="Your email"
+                    name="email"
+                    value={formData.email}
+                    onChange={onChange}
                     required
                   />
                 </div>
@@ -134,6 +173,9 @@ const Contact = () => {
                 <input
                   className="bg-inputGrey  border-0 p-3 w-full rounded text-sm placeholder:text-black50 focus:outline-none"
                   placeholder="Subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={onChange}
                 />
               </div>
 
@@ -142,6 +184,7 @@ const Contact = () => {
                   <button
                     key={`jdn${i}`}
                     onClick={() => setActiveTab(tag.id)}
+                    type="button"
                     className={`${
                       activeTab === tag.id
                         ? "bg-white text-black"
@@ -151,36 +194,31 @@ const Contact = () => {
                     {tag.tag}
                   </button>
                 ))}
-                {/* <button onClick={()=>setActiveTab('ios')} className={`${activeTab === 'ios' ?"bg-white text-black": "bg-black text-white border border-blue3"}  px-6 py-2  font-medium rounded text-sm mr-4`}>
-                  iOS
-                </button>
-                <button onClick={()=>setActiveTab('android')} className={`${activeTab === 'android' ?"bg-white text-black": "bg-black text-white border border-blue3"}  px-6 py-2  font-medium rounded text-sm mr-4`}>
-                  Android
-                </button>
-                <button onClick={()=>setActiveTab('ui/ux')} className={`${activeTab === 'ui/ux' ?"bg-white text-black": "bg-black text-white border border-blue3"} px-6 py-2  font-medium rounded text-sm mr-4`}>
-                  UI/UX Design
-                </button> */}
               </div>
               <div className="mb-4">
                 <textarea
                   className="bg-inputGrey  border-0 p-3 h-32 w-full rounded text-sm placeholder:text-black50 focus:outline-none resize-none"
                   placeholder="Message"
+                  name="comment"
+                  onChange={onChange}
+                  value={formData.comment}
                   required
                 ></textarea>
               </div>
               <div className="flex flex-wrap justify-evenly ">
                 <button
-                  onClick={(e) => submit(e)}
+                  // onClick={(e) => submit(e)}
                   className=" w-100 mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white"
+                  type="submit"
                 >
-                  submit
-                  {/* {loading ? <Spinner /> : "Submit"} */}
+                  {/* submit */}
+                  {isLoading ? <Spinner /> : "Submit"}
                 </button>
                 <button className="mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white">
                   <Calendly button={true} />
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

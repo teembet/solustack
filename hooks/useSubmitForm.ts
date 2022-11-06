@@ -22,16 +22,25 @@ const useSubmitForm = () => {
 
     try {
       setIsLoading(true);
+      // console.log(name, email, comment, subject, type);
       const ref = collection(database, "messages");
-
       await addDoc(ref, {
-        name: "dara",
-        email: "timbetekanem@gmail.com",
-        comment: "daramfon",
+        name: name,
+        email: email,
+        comment: comment,
         date: Timestamp.now().toDate(),
-        subject: "subject",
-        type: "type",
+        subject: subject,
+        type: type,
       });
+      // await addDoc(ref, {
+      //   name: "dara",
+      //   email: "timbetekanem@gmail.com",
+      //   comment: "daramfon",
+      //   date: Timestamp.now().toDate(),
+      //   subject: "subject",
+      //   type: "type",
+      // });
+      setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       console.log(error, "error");
