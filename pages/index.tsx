@@ -11,8 +11,7 @@ import { useInView } from "react-intersection-observer";
 export default function Home() {
   const { getProjects, getReviews, getSocials } = useFetchProjects();
   const { projects, isLoading, reviews, socials } = useProjectContext();
-  console.log(reviews, "reviews");
-  console.log(socials, "socials");
+
   React.useEffect(() => {
     getProjects();
     getReviews();
