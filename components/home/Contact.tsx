@@ -8,7 +8,9 @@ import LinkedIn from "../../public/icons/linkedin-nav.svg";
 import Image from "next/image";
 import useSubmitForm from "../../hooks/useSubmitForm";
 import dynamic from "next/dynamic";
+
 import Spinner from "../../element/spinner";
+import { useProjectContext } from "../../hooks/useProjectContext";
 const Calendly = dynamic(() => import("../../element/calendly"), {
   ssr: false,
 });
@@ -52,9 +54,13 @@ const tags = [
   { id: "ui/ux", tag: "UI/UX" },
   { id: "web", tag: "Web" },
 ];
+interface Props {
+  socials: any;
+}
 
-const Contact = ({ socials }) => {
+const Contact = () => {
   const { submitForm, isLoading } = useSubmitForm();
+  const { socials }: Props = useProjectContext();
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState("ios");
   const [formData, setFormData] = useState({
@@ -138,7 +144,7 @@ const Contact = ({ socials }) => {
             <div className="mt-5">
               <h5 className="font-semibold text-sm mb-4">Social Media</h5>
               <ul className="list-none flex ">
-                {socials.map((item, i) => (
+                {socials?.map((item, i) => (
                   <li key={i} className="mr-5">
                     <a href={item.link}>
                       <Image src={item.icon} alt="" width={20} height={20} />

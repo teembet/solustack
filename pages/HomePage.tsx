@@ -72,10 +72,10 @@ const HomePage = ({
           </section>
         </Wrapper>
         <Wrapper ref={ref5}>
-          {reviews.length && <Testimonial reviews={reviews} />}
+          {reviews?.length && <Testimonial reviews={reviews} />}
         </Wrapper>
         <Wrapper ref={ref5}>
-          <Contact socials={socials} />
+          <Contact />
         </Wrapper>
         {/* <Footer /> */}
       </div>

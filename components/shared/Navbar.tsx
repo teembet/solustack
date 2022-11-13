@@ -83,7 +83,7 @@ const MobileTab = ({ item, active, setActive, setIsOpen }) => {
 };
 type Prop = {
   activeTab?: () => void;
-  socials: any;
+  socials?: any;
 };
 const Navbar = ({ activeTab, socials }: Prop) => {
   const [active, setActive] = useState(activeTab());

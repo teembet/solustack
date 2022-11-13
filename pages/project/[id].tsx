@@ -83,7 +83,7 @@ const Project = () => {
           <div className="lg:w-9/12 py-4">
             <div className="mb-8">
               <Title title="App Name" />
-              <Text text={project.name} />
+              <Text text={project?.name} />
             </div>
             {/* <div className="mb-8">
               <Title title="Challenge" />
@@ -91,7 +91,7 @@ const Project = () => {
             </div> */}
             <div className="mb-8">
               <Title title="Brief" />
-              <Text text={project.brief} />
+              <Text text={project?.brief} />
             </div>
             <div className="mb-8">
               <Title title="Functional Requirements" />
