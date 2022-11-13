@@ -15,6 +15,8 @@ import ScrollWrapper from "../element/ScrollWrapper";
 import { useInView } from "react-intersection-observer";
 const HomePage = ({
   projects,
+  reviews,
+  socials,
   ref,
   ref1,
   ref2,
@@ -69,11 +71,11 @@ const HomePage = ({
             <AboutSection />
           </section>
         </Wrapper>
-        {/* <Wrapper ref={ref5}>
-            <Testimonial />
-          </Wrapper> */}
         <Wrapper ref={ref5}>
-          <Contact />
+          {reviews.length && <Testimonial reviews={reviews} />}
+        </Wrapper>
+        <Wrapper ref={ref5}>
+          <Contact socials={socials} />
         </Wrapper>
         {/* <Footer /> */}
       </div>

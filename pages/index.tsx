@@ -9,10 +9,14 @@ import { Router } from "next/router";
 import NProgress from "nprogress";
 import { useInView } from "react-intersection-observer";
 export default function Home() {
-  const { getProjects } = useFetchProjects();
-  const { projects, isLoading } = useProjectContext();
+  const { getProjects, getReviews, getSocials } = useFetchProjects();
+  const { projects, isLoading, reviews, socials } = useProjectContext();
+  console.log(reviews, "reviews");
+  console.log(socials, "socials");
   React.useEffect(() => {
     getProjects();
+    getReviews();
+    getSocials();
   }, []);
 
   const [ref, inView] = useInView({
@@ -94,6 +98,8 @@ export default function Home() {
         <Navbar activeTab={activeTab} />
         <HomePage
           projects={projects}
+          reviews={reviews}
+          socials={socials}
           ref={ref}
           ref1={ref1}
           ref2={ref2}

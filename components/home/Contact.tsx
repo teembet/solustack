@@ -53,7 +53,7 @@ const tags = [
   { id: "web", tag: "Web" },
 ];
 
-const Contact = () => {
+const Contact = ({ socials }) => {
   const { submitForm, isLoading } = useSubmitForm();
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState("ios");
@@ -138,10 +138,12 @@ const Contact = () => {
             <div className="mt-5">
               <h5 className="font-semibold text-sm mb-4">Social Media</h5>
               <ul className="list-none flex ">
-                {sms.map((item, i) => (
+                {socials.map((item, i) => (
                   <li key={i} className="mr-5">
-                    <Image src={item.icon} alt="" width={20} height={20} />
-                    {/* {item.icon} */}
+                    <a href={item.link}>
+                      <Image src={item.icon} alt="" width={20} height={20} />
+                      {/* {item.icon} */}
+                    </a>
                   </li>
                 ))}
               </ul>

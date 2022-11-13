@@ -7,6 +7,8 @@ import React, {
 
 interface ContextInterface {
   projects: [];
+  reviews: [];
+  socials: [];
   project: any;
   isLoading: boolean;
   dispatch: ({}) => void;
@@ -32,6 +34,16 @@ export const projectReducer = (state, action) => {
         ...state,
         project: action.payload,
       };
+    case "GET_ALL_REVIEWS":
+      return {
+        ...state,
+        reviews: action.payload,
+      };
+    case "GET_ALL_SOCIALS":
+      return {
+        ...state,
+        socials: action.payload,
+      };
 
     default:
       return state;
@@ -46,6 +58,8 @@ export const ContextProvider = ({ children }: Props) => {
     projects: [],
     project: {},
     isLoading: false,
+    reviews: [],
+    socials: [],
   });
 
   return (

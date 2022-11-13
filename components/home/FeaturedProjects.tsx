@@ -36,7 +36,7 @@ const FeaturedProjects = ({ projects }) => {
   function increaseIndex() {
     if (sliceIndex < projects.length) {
       setShow(true);
-      setSliceIndex(sliceIndex + 1);
+      setSliceIndex(projects.length);
     } else {
       setShow(false);
       setSliceIndex(1);
