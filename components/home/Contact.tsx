@@ -128,7 +128,7 @@ const Contact = () => {
               <div className="flex items-center text-sm">
                 <Image src={Phone.src} alt="" width={20} height={20} />
                 {/* <Email className="mr-3 w-6" /> */}
-                <span className="mx-2">
+                <span className="mx-2 text-purple2">
                   {" "}
                   <Calendly button={false} />
                 </span>
@@ -240,9 +240,9 @@ const Contact = () => {
                     "Submit"
                   )}
                 </button>
-                <button className="mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white">
+                <a className="mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white">
                   <Calendly button={true} />
-                </button>
+                </a>
               </div>
             </form>
           </div>

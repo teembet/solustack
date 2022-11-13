@@ -10,6 +10,7 @@ import useFetchProjects from "../../hooks/useFetchProjects";
 import { useProjectContext } from "../../hooks/useProjectContext";
 import Navbar from "../../components/shared/Navbar";
 import Contact from "../../components/home/Contact";
+import { formatText } from "../../element/util";
 const Title = ({ title }) => {
   return (
     <h4 className="font-semibold text-2xl lg:text-4xl xl:text-5xl mb-3 font-supreme">
@@ -18,7 +19,14 @@ const Title = ({ title }) => {
   );
 };
 const Text = ({ text }) => {
-  return <p className="text-sm  lg:text-base font-technor">{text}</p>;
+  return (
+    <p
+      className="text-sm  lg:text-base font-technor"
+      style={{ whiteSpace: "pre-line" }}
+    >
+      {formatText(text)}
+    </p>
+  );
 };
 
 const Project = () => {
@@ -26,15 +34,6 @@ const Project = () => {
 
   const { getProject } = useFetchProjects();
   const { project } = useProjectContext();
-  // const project = projects.find((item) => {
-  //   Number(item.id) == Number(router.query.id);
-  //   return item;
-  // });
-  // useEffect(() => {
-  //   if (router.asPath !== router.route) {
-  //     // router.query.lang is defined
-  //   }
-  // }, [router]);
   useEffect(() => {
     if (router.asPath !== router.route) {
       const id = router.query.id;
@@ -86,22 +85,22 @@ const Project = () => {
               <Title title="App Name" />
               <Text text={project.name} />
             </div>
-            <div className="mb-8">
+            {/* <div className="mb-8">
               <Title title="Challenge" />
               <Text text={project.challenge} />
-            </div>
+            </div> */}
             <div className="mb-8">
               <Title title="Brief" />
               <Text text={project.brief} />
             </div>
             <div className="mb-8">
               <Title title="Functional Requirements" />
-              <Text text={project.requirements} />
+              <Text text={project?.requirements} />
             </div>
           </div>
         </div>
-        {<LightMode images={project.lightimg} />}
-        <DarkMode images={project.darkimg} />
+        {project.lightimg && <LightMode images={project.lightimg} />}
+        {project.darkimg && <DarkMode images={project.darkimg} />}
         {/* <DesignScreen3 /> */}
         {/* <DesignScreen2 /> */}
         {/* <DesignScreen3 /> */}

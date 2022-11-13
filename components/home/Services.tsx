@@ -12,12 +12,12 @@ const services = [
   {
     icon: `${Apple.src}`,
     title: "iOS App Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+    text: "We develop world class IOS applications. The operating system is programmed in Objective-C/Swift. Swift offers benefit of performance thus improving the efficiency of your application.",
   },
   {
     icon: `${Android.src}`,
     title: "Android App Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+    text: "We develop 5 star rated Android applications using Kotlin supported by Google. Kotlin offers benefit of an easy to maintain and high performance product.",
   },
   {
     icon: `${Web.src}`,
@@ -27,12 +27,12 @@ const services = [
   {
     icon: `${Hybrid.src}`,
     title: "Hybrid App Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+    text: "We offer cross-platform app development services with React Native. React Native allows us to work on two different operating systems(Swift/Objective-C for iOS and Java/Kotlin forAndroid) using one platform. React also offers great benefits of performance and great UI for applications.",
   },
   {
     icon: `${Design.src}`,
-    title: "Web & Mobile UI/UX Design",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+    title: "UI/UX Design",
+    text: "We’ll work together to understand and empathize with the needs of your target audience, in order for us to design pleasant user interfaces and meaningful user experiences.",
   },
 ];
 
@@ -60,25 +60,26 @@ const Card = ({ item }) => {
       {/* {addHoverBlue()} */}
 
       <div className="glass-card backdrop-blur-[40px] px-4 py-6 font-supreme text-white ">
-        <motion.div
-          whileHover={{
-            rotateY: 180,
-            transition: { duration: 1 },
-          }}
+        <div
+          // whileHover={{
+          //   rotateY: 180,
+          //   transition: { duration: 1 },
+          // }}
           className=" w-fit p-4"
         >
           <Image src={item.icon} alt="" width={35} height={35} quality={100} />
-        </motion.div>
-        <p
-        className="font-semibold text-xl  my-2 font-technor ">{item.title}</p>
+        </div>
+        <p className="font-semibold text-xl  my-2 font-technor ">
+          {item.title}
+        </p>
         <p className="text-justify text-sm ">{item.text}</p>
       </div>
     </div>
-  );  ``
+  );
+  ``;
 };
 
 const Services = () => {
-
   return (
     <div
       // initial={{ opacity: 0.3 }}
@@ -101,8 +102,8 @@ const Services = () => {
               We Offer The <br /> Following Services
             </h3>
             <p className="text-justify mt-6 text-base  ">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore .
+              Solustack as a technology driven company offers the following
+              services
             </p>
           </div>
 

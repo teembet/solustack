@@ -68,9 +68,12 @@ const WhyUs = () => {
         </div>
         <div className="lg:w-4/5 xl:w-3/5 mx-auto mb-6">
           <p className="text-sm  text-center text-white">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            Solustack is a mobile development company that offers services that
+            will bring your ideas to life. We work closely with our clients to
+            make sure all their requirements are captured and our experts work
+            to provide the best possible product. We truly care about our
+            clients and their products so we are dedicated to providing the best
+            possible experience.
           </p>
         </div>
       </div>

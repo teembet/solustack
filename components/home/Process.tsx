@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Lottie from 'react-lottie';
+import Lottie from "react-lottie";
 import Collaborate from "../../public/icons/collaborate.svg";
 import Implement from "../../public/icons/implement.svg";
 import Scale from "../../public/icons/scale.svg";
-import Widget from "../../public/icons/services-lottie.png"
+import Widget from "../../public/icons/services-lottie.png";
 import ProcessAnimation from "../../public/images/process.json";
 import Image from "next/image";
 const process = [
@@ -44,8 +44,8 @@ const defaultOptions = {
   autoplay: true,
   animationData: ProcessAnimation,
   rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice"
-  }
+    preserveAspectRatio: "xMidYMid slice",
+  },
 };
 
 const Process = () => {
@@ -60,11 +60,8 @@ const Process = () => {
       <div className="w-11/12 mx-auto py-2 mb-12 relative">
         <div className="absolute -top-6 left-0 right-0 ">
           <div className="">
-            <Lottie
-              options={defaultOptions}
-              height={120}
-              width={120}
-            /></div>
+            <Lottie options={defaultOptions} height={120} width={120} />
+          </div>
         </div>
         <div
           // initial={{ x: -100 }}
@@ -77,16 +74,15 @@ const Process = () => {
           // }}
           className="w-full lg:w-3/5 mx-auto "
         >
-
           <h4 className="font-semibold text-xl md:text-3xl text-center font-technor z-10 ">
             Our 3 Step Process to Creating <br /> Scalable Apps
           </h4>
-          <p className="text-center my-5 text-white">
+          {/* <p className="text-center my-5 text-white">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
             et ea rebum. Stet
-          </p>
+          </p> */}
         </div>
         <div
           // variants={container}
@@ -103,7 +99,9 @@ const Process = () => {
               <div className="mb-2">
                 <Image src={item.icon} alt="" width={40} height={40} />
               </div>
-              <p className="font-semibold font-technor text-xl my-3">{item.title}</p>
+              <p className="font-semibold font-technor text-xl my-3">
+                {item.title}
+              </p>
               <p className=" text-sm font-supreme">{item.text}</p>
             </div>
           ))}

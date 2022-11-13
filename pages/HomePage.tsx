@@ -75,7 +75,7 @@ const HomePage = ({
         <Wrapper ref={ref5}>
           <Contact />
         </Wrapper>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </ScrollWrapper>
   );

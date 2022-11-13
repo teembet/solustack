@@ -1,13 +1,10 @@
 import React, { lazy, useState } from "react";
-import { motion } from "framer-motion";
 import Hamburger from "../../public/icons/nav_icon.svg";
 import Close from "../../public/icons/close_nav.svg";
 import Instagram from "../../public/icons/instagram-nav.svg";
 import Facebook from "../../public/icons/facebook-nav.svg";
 import Twitter from "../../public/icons/twitter-nav.svg";
 import LinkedIn from "../../public/icons/linkedin-nav.svg";
-import Light from "../../public/icons/sun.png";
-import Dark from "../../public/icons/moon.png";
 
 import Image from "next/image";
 import Link from "next/link";
