@@ -79,14 +79,14 @@ const WhyUs = () => {
       </div>
       <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-white">
         {reasons.map((item, i) => (
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.4,
-              duration: 2,
-            }}
+          <div
+            // initial={{ opacity: 0, x: -100 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // viewport={{ once: true }}
+            // transition={{
+            //   delay: 0.4,
+            //   duration: 2,
+            // }}
             key={i}
             className="glass-card3 backdrop-blur-[40px] rounded-lg px-8 py-6 md:py-8 flex flex-col  text-white"
           >
@@ -97,7 +97,7 @@ const WhyUs = () => {
               {item.title}
             </h5>
             <p className="  text-sm text-center text-white">{item.text}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

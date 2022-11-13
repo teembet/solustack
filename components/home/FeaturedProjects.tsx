@@ -51,7 +51,7 @@ const FeaturedProjects = ({ projects }) => {
         // viewport={{ once: true }}
         className="w-full  py-12  md:rounded-t-[96px] font-supreme text-white"
       >
-        <div className="w-full border-b border-b-[#FFFFFF30] mb-4">
+        <div className="w-full  mb-4">
           <div className="w-11/12 xl:w-10/12 mx-auto">
             <div className="  flex md:items-center justify-between overflow-x-clip mb-4  ">
               <div
@@ -132,7 +132,7 @@ const FeaturedProjects = ({ projects }) => {
             <div className="">
               <Lottie options={robotOptions} height={45} width={45} />
             </div>
-            <span className="font-technor text-md lg:text-2xl font-medium mx-3 text-white">
+            <span className="font-technor text-md lg:text-2xl font-medium mx-3 text-white hover:text-blue1  ">
               {!show ? "View More Projects" : "Collapse"}
             </span>
 

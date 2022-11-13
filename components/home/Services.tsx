@@ -22,7 +22,7 @@ const services = [
   {
     icon: `${Web.src}`,
     title: "Web Development",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
+    text: "We develop highly scalable and responsive Web application using the latest tools/frameworks which offer high performance and excellent seo",
   },
   {
     icon: `${Hybrid.src}`,
@@ -59,7 +59,7 @@ const Card = ({ item }) => {
       ></div>
       {/* {addHoverBlue()} */}
 
-      <div className="glass-card backdrop-blur-[40px] px-4 py-6 font-supreme text-white ">
+      <div className="glass-card backdrop-blur-[40px] px-4 py-6 font-supreme text-white h-[300px] ">
         <div
           // whileHover={{
           //   rotateY: 180,

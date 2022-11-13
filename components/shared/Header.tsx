@@ -56,7 +56,7 @@ const Header = () => {
         </div>
         {/* fix animation here */}
         <div className="my-auto z-[10]">
-          <div className="  w-full mt-12 lg:mt-20 ">
+          <div className="  w-full lg:mt-20 ">
             <div className="w-full md:w-5/6 xl:w-4/5 mx-auto">
               <div className="mb-3 font-technor">
                 <h1 className="font-bold  text-3xl md:text-4xl lg:text-5xl text-white shadow-text">
@@ -88,7 +88,7 @@ const Header = () => {
           </div>
 
           <div className="w-fit mx-auto  my-4">
-            <h3 className="mb-6 mt-6 text-sm font-medium">TRUSTED BY</h3>
+            {/* <h3 className="mb-6 mt-6 text-sm font-medium">TRUSTED BY</h3>
             <ul className="flex items-center mb-6">
               <li className="mr-8">
                 <Image
@@ -119,7 +119,7 @@ const Header = () => {
                   className=""
                 />
               </li>
-            </ul>
+            </ul> */}
             <div className="box my-8 ">
               <span></span>
               <span></span>

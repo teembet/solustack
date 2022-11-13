@@ -118,12 +118,12 @@ const Contact = () => {
 
               <div className="flex items-center text-sm ">
                 <Image src={Phone.src} alt="" width={20} height={20} />
-                <span className="mx-2">+509 1234 5678</span>
+                <span className="mx-2">+1(404)-827-8407</span>
               </div>
               <div className="flex items-center text-sm">
                 <Image src={Email.src} alt="" width={20} height={20} />
                 {/* <Email className="mr-3 w-6" /> */}
-                <span className="mx-2"> support@solustack.com</span>
+                <span className="mx-2">admin@solustack.app</span>
               </div>
               <div className="flex items-center text-sm">
                 <Image src={Phone.src} alt="" width={20} height={20} />
@@ -215,7 +215,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-wrap justify-evenly ">
                 <button
-                  className=" w-100 mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white"
+                  className=" w-100 mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white focus:ring-white"
                   type="submit"
                 >
                   {loading ? (
@@ -240,7 +240,7 @@ const Contact = () => {
                     "Submit"
                   )}
                 </button>
-                <a className="mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white">
+                <a className="mt-3 bg-blue3 py-2 px-24 font-medium rounded text-white focus:ring-white">
                   <Calendly button={true} />
                 </a>
               </div>
