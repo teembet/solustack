@@ -115,7 +115,7 @@ const FeaturedProjects = ({ projects }) => {
                 </div>
                 <div className=" flex flex-col justify-center align-center">
                   <div className=" mx-auto p-4">
-                    <Image src={proj.bg} alt="" width={400} height={300} />
+                    <Image src={proj.bg} alt="" width={600} height={300} />
                   </div>
                 </div>
               </div>
