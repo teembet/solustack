@@ -94,7 +94,7 @@ export default function Home() {
       </Head>
 
       <main className="bg-dark4 backdrop-blur-sm ">
-        <Navbar activeTab={activeTab} />
+        <Navbar activeTab={activeTab} socials={socials} />
         <HomePage
           projects={projects}
           reviews={reviews}

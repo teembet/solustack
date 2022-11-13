@@ -49,6 +49,7 @@ const FeaturedProjects = ({ projects }) => {
         // whileInView={{ opacity: 1 }}
         // transition={{ duration: 2 }}
         // viewport={{ once: true }}
+        id="projects"
         className="w-full  py-12  md:rounded-t-[96px] font-supreme text-white"
       >
         <div className="w-full  mb-4">

@@ -33,24 +33,24 @@ const navItems = [
     link: "contact",
   },
 ];
-const sms = [
-  {
-    icon: `${Facebook.src}`,
-    link: "",
-  },
-  {
-    icon: `${Instagram.src}`,
-    link: "",
-  },
-  {
-    icon: `${Twitter.src}`,
-    link: "",
-  },
-  {
-    icon: `${LinkedIn.src}`,
-    link: "",
-  },
-];
+// const sms = [
+//   {
+//     icon: `${Facebook.src}`,
+//     link: "",
+//   },
+//   {
+//     icon: `${Instagram.src}`,
+//     link: "",
+//   },
+//   {
+//     icon: `${Twitter.src}`,
+//     link: "",
+//   },
+//   {
+//     icon: `${LinkedIn.src}`,
+//     link: "",
+//   },
+// ];
 
 const Tab = ({ item, active, setActive }) => {
   return (
@@ -83,8 +83,9 @@ const MobileTab = ({ item, active, setActive, setIsOpen }) => {
 };
 type Prop = {
   activeTab?: () => void;
+  socials: any;
 };
-const Navbar = ({ activeTab }: Prop) => {
+const Navbar = ({ activeTab, socials }: Prop) => {
   const [active, setActive] = useState(activeTab());
   const [isOpen, setIsOpen] = useState(false);
 
@@ -186,9 +187,11 @@ const Navbar = ({ activeTab }: Prop) => {
               ))}
             </ul>
             <ul className="list-none flex justify-center ">
-              {sms.map((item, i) => (
+              {socials.map((item, i) => (
                 <li key={i} className="mr-5">
-                  <Image src={item.icon} alt="" width={20} height={20} />
+                  <a href={item.link}>
+                    <Image src={item.icon} alt="" width={20} height={20} />
+                  </a>
                 </li>
               ))}
             </ul>
