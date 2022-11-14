@@ -8,6 +8,8 @@ import { useProjectContext } from "../hooks/useProjectContext";
 import { Router } from "next/router";
 import NProgress from "nprogress";
 import { useInView } from "react-intersection-observer";
+import ScrollToTop from "react-scroll-to-top";
+
 export default function Home() {
   const { getProjects, getReviews, getSocials } = useFetchProjects();
   const { projects, isLoading, reviews, socials } = useProjectContext();
@@ -117,6 +119,7 @@ export default function Home() {
 
       <main className="bg-dark4 backdrop-blur-sm ">
         <Navbar activeTab={activeTab} socials={socials} />
+
         <HomePage
           projects={projects}
           reviews={reviews}

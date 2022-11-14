@@ -195,7 +195,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-4 flex-wrap">
                 {tags.map((tag, i) => (
                   <button
                     key={`jdn${i}`}
@@ -205,7 +205,7 @@ const Contact = () => {
                       activeTab === tag.id
                         ? "bg-white text-black"
                         : "bg-black text-white border border-blue3"
-                    }  px-6 py-2  font-medium rounded text-sm mr-4`}
+                    }  px-6 py-2  font-medium rounded text-sm mr-4 mt-2`}
                   >
                     {tag.tag}
                   </button>
