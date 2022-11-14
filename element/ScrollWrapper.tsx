@@ -3,8 +3,6 @@ import { CSSProperties } from "react";
 import Status from "./Status";
 
 const defaultStyle: CSSProperties = {
-  scrollBehavior: "smooth",
-
   //height: "101vh",
   // textAlign: "center",
   // display: "flex",

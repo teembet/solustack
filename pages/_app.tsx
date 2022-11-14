@@ -8,14 +8,11 @@ import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  
-      <ThemeProvider enableSystem={false} attribute="class">
-        <ContextProvider>
-          <div className="bg-bg1">
-          <Component {...pageProps} /></div>
-        </ContextProvider>
-      </ThemeProvider>
-   
+    <ThemeProvider enableSystem={false} attribute="class">
+      <ContextProvider>
+        <Component {...pageProps} />
+      </ContextProvider>
+    </ThemeProvider>
   );
 }
 

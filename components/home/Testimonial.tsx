@@ -60,8 +60,8 @@ const Slide = ({ item }) => {
         </div>
 
         <div className="flex items-center justify-end mx-auto">
-          {Array.from({ length: rating }, (i) => (
-            <div key={`k+${i}`} className="mx-1">
+          {Array.from({ length: rating }, (i: number) => (
+            <div key={i} className="mx-1">
               <Image src={YellowStar} alt="" width={28} height={28} />
             </div>
           ))}

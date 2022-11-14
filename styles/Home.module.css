@@ -1,7 +1,9 @@
 /* .container {
   padding: 0 2rem;
 } */
-
+/* html {
+  scroll-behavior: smooth;
+} */
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -10,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-behavior: smooth;
 }
 
 .footer {
