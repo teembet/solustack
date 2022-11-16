@@ -17,7 +17,7 @@ const HomePage = ({
   projects,
   reviews,
 
-  // ref,
+  ref,
   ref1,
   ref2,
   ref3,
@@ -26,12 +26,12 @@ const HomePage = ({
 
   inView,
 }) => {
-  // console.log(ref);
-  // console.log(ref1);
-  // console.log(ref2);
-  // console.log(ref3);
-  // console.log(ref4);
-  // console.log(ref5);
+  console.log(ref);
+  console.log(ref1);
+  console.log(ref2);
+  console.log(ref3);
+  console.log(ref4);
+  console.log(ref5);
   // const items = [
   //   { reference: "ref", view:" inView", component: <Header /> },
   //   { reference: "ref1", view: "inView1", component: <AboutSection/>},
@@ -44,7 +44,7 @@ const HomePage = ({
   return (
     <ScrollWrapper inView={inView}>
       <div>
-        <Wrapper>
+        <Wrapper ref={ref}>
           <section>
             <Header />
           </section>

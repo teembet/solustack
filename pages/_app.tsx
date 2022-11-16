@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider enableSystem={false} attribute="class">
       <ContextProvider>
-        <Component {...pageProps} />
+        <div className="bg-bg1">
+          <Component {...pageProps} />
+        </div>
       </ContextProvider>
     </ThemeProvider>
   );

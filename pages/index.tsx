@@ -123,7 +123,7 @@ export default function Home() {
         <HomePage
           projects={projects}
           reviews={reviews}
-          //  ref={ref}
+          ref={ref}
           ref1={ref1}
           ref2={ref2}
           ref3={ref3}

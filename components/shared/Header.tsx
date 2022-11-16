@@ -10,6 +10,7 @@ import Synology from "../../public/icons/synology.png";
 import Image from "next/image";
 import animationData from "../../public/air.json";
 import Lottie from "react-lottie";
+import Link from "next/link";
 
 const trustees = [
   {
@@ -43,7 +44,7 @@ const Header = () => {
   };
 
   return (
-    <div className="h-[80vh] min-h-[500px]  font-supreme ">
+    <div className="h-[80vh] min-h-[500px]  font-supreme" id="home">
       <div
         className="w-full h-full relative bg-bg1/20 backdrop-blur-sm  text-center py-10 flex flex-col justify-end"
         // style={{
@@ -74,7 +75,7 @@ const Header = () => {
               </div>
 
               <div className=" mt-8  ">
-                <a href="#contact">
+                <a href={`/#contact`}>
                   <button
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
